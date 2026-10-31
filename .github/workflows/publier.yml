@@ -1,0 +1,57 @@
+name: Publier le catalogue
+
+on:
+  push:
+    branches: [main]
+    paths: ["app/**", "catalogue.csv", "donnees/**", "scripts/**", ".github/workflows/**"]
+  workflow_dispatch:
+    inputs:
+      tout:
+        description: "Récupérer à nouveau toutes les fiches LibriVox"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  publier:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploiement.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Récupérer sur LibriVox les livres ajoutés au catalogue
+        run: python3 scripts/actualiser.py ${{ inputs.tout && '--tout' || '' }}
+
+      - name: Construire la webapp
+        run: python3 scripts/construire.py
+
+      - name: Enregistrer les fiches LibriVox et SOURCES.md s'ils ont changé
+        run: |
+          git add donnees/librivox.json SOURCES.md
+          if ! git diff --cached --quiet; then
+            git config user.name "github-actions"
+            git config user.email "github-actions@users.noreply.github.com"
+            git commit -m "Mise à jour des fiches LibriVox et de SOURCES.md"
+            git push
+          fi
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - id: deploiement
+        uses: actions/deploy-pages@v4

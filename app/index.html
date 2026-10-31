@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Classiques à écouter</title>
+<meta name="description" content="Livres audio gratuits et libres de droits des classiques de la littérature française — biblio.gironde">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,500;7..72,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --papier: #f6f1e7; --carte: #fffdf8; --encre: #1f2a37; --doux: #5d6672;
+    --accent: #8a2f3c; --accent-fonce: #6c2330; --vert: #2f6b4a; --vert-clair: #e3f0e7;
+    --bleu: #2c4f7c; --bleu-clair: #e4ebf5;
+    --ligne: #e3dccd; --alerte: #fdf0d8; --alerte-bord: #d9a43a;
+    --rayon: 14px; --ombre: 0 1px 2px rgba(31,42,55,.06), 0 6px 20px rgba(31,42,55,.06);
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body { background: var(--papier); color: var(--encre); font: 18px/1.5 "Source Sans 3", system-ui, sans-serif; }
+  h1, h2, h3 { font-family: Literata, Georgia, serif; line-height: 1.2; margin: 0; }
+  button { font: inherit; cursor: pointer; color: inherit; }
+  a { color: var(--accent); }
+  .page { max-width: 880px; margin: 0 auto; padding: 24px 16px 150px; }
+  .cache { display: none !important; }
+
+  header { display: flex; align-items: center; gap: 14px; margin-bottom: 18px; flex-wrap: wrap; }
+  .logo { width: 46px; height: 46px; border-radius: 12px; background: var(--accent); color: #fff;
+          display: grid; place-items: center; flex: none; }
+  .logo svg { width: 26px; height: 26px; }
+  header .titres { flex: 1; min-width: 220px; }
+  header h1 { font-size: 26px; }
+  header p { margin: 0; color: var(--doux); font-size: 15px; }
+  .lien-epub { display: inline-flex; align-items: center; gap: 8px; text-decoration: none; color: var(--encre);
+               border: 2px solid var(--ligne); background: var(--carte); border-radius: 10px; padding: 8px 14px;
+               font-weight: 600; font-size: 16px; }
+  .lien-epub:hover { border-color: var(--encre); }
+
+  .carte { background: var(--carte); border-radius: var(--rayon); box-shadow: var(--ombre); padding: 24px; }
+  .carte + .carte { margin-top: 16px; }
+  .intro { color: var(--doux); margin: 0 0 14px; font-size: 18px; }
+
+  .gros-bouton { display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+                 min-height: 54px; padding: 0 24px; border: 0; border-radius: 14px; background: var(--accent);
+                 color: #fff; font-size: 19px; font-weight: 700; text-decoration: none; transition: background .15s; }
+  .gros-bouton:hover { background: var(--accent-fonce); }
+  .gros-bouton:disabled { background: #b9b2a6; cursor: not-allowed; }
+  .bouton { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 48px;
+            padding: 0 16px; border-radius: 12px; border: 2px solid var(--ligne); background: var(--carte);
+            color: var(--encre); font-weight: 600; font-size: 16px; text-decoration: none; }
+  .bouton:hover { border-color: var(--encre); }
+  .gros-bouton svg, .bouton svg { width: 20px; height: 20px; flex: none; }
+  .gros-bouton:focus-visible, .bouton:focus-visible, .livre:focus-visible, .chap button:focus-visible,
+  .lecteur button:focus-visible { outline: 3px solid #e7b04a; outline-offset: 2px; }
+
+  .recherche { width: 100%; min-height: 52px; border: 2px solid var(--ligne); border-radius: 12px;
+               padding: 0 16px; font: inherit; background: var(--carte); color: var(--encre); }
+  .recherche:focus { outline: none; border-color: var(--encre); }
+  .puces { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+  .puces button { border: 2px solid var(--ligne); background: var(--carte); border-radius: 999px; padding: 4px 14px;
+                  font-size: 15px; font-weight: 600; }
+  .puces button[aria-pressed="true"] { background: var(--encre); border-color: var(--encre); color: #fff; }
+  .resume-cat { color: var(--doux); font-size: 15px; margin: 12px 0 0; }
+
+  .siecle h2 { font-size: 22px; margin: 26px 0 8px; padding-bottom: 6px; border-bottom: 2px solid var(--accent); }
+  .liste { list-style: none; margin: 0; padding: 0; }
+  .livre { display: flex; align-items: center; gap: 14px; width: 100%; text-align: left; background: none; border: 0;
+           padding: 12px 10px; border-radius: 10px; border-bottom: 1px solid var(--ligne); }
+  .liste li:last-child .livre { border-bottom: 0; }
+  .livre:hover { background: var(--carte); }
+  .livre .ico { width: 42px; height: 42px; border-radius: 50%; background: var(--accent); color: #fff; flex: none;
+                display: grid; place-items: center; }
+  .livre .ico svg { width: 18px; height: 18px; margin-left: 2px; }
+  .livre.externe .ico { background: var(--ligne); color: var(--doux); }
+  .livre .txt { flex: 1; min-width: 0; }
+  .livre .t { font-weight: 700; display: block; }
+  .livre .a { color: var(--doux); font-size: 16px; }
+  .livre .meta { margin-left: auto; text-align: right; font-size: 14px; color: var(--doux); white-space: nowrap; }
+  .pastille { display: inline-block; border-radius: 999px; padding: 1px 9px; font-size: 13px; font-weight: 700; }
+  .p-epub { background: var(--bleu-clair); color: var(--bleu); }
+  .p-ext { background: var(--papier); color: var(--doux); }
+  .p-cours { background: var(--vert-clair); color: var(--vert); }
+  .vide { color: var(--doux); padding: 20px 4px; }
+  details.autres summary { cursor: pointer; color: var(--doux); font-size: 16px; font-weight: 600; padding: 10px; }
+  details.autres summary:hover { color: var(--encre); }
+
+  /* Fiche d'un livre */
+  dialog#fiche { border: 0; border-radius: 18px; padding: 0; max-width: 760px; width: calc(100% - 24px);
+    max-height: calc(100vh - 32px); background: var(--carte); color: var(--encre); box-shadow: 0 20px 60px rgba(31,42,55,.3); }
+  dialog#fiche[open] { display: flex; flex-direction: column; }
+  dialog#fiche::backdrop { background: rgba(31,42,55,.55); }
+  .f-entete { padding: 22px 24px 16px; border-bottom: 1px solid var(--ligne); position: relative; }
+  .f-entete h2 { font-size: 27px; padding-right: 52px; }
+  .f-entete .a { color: var(--doux); margin: 4px 0 0; }
+  .f-entete .infos { color: var(--doux); font-size: 15px; margin: 6px 0 0; }
+  .fermer { position: absolute; top: 14px; right: 14px; width: 44px; height: 44px; border-radius: 50%; border: 0;
+            background: var(--papier); font-size: 26px; line-height: 1; }
+  .fermer:hover { background: var(--ligne); }
+  .f-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+  .f-corps { overflow: auto; padding: 6px 24px 22px; }
+  .f-corps h3 { font-size: 19px; margin: 18px 0 6px; }
+  .chaps { list-style: none; margin: 0; padding: 0; counter-reset: c; }
+  .chap { display: flex; align-items: center; gap: 10px; border-bottom: 1px solid var(--ligne); padding: 4px 0; }
+  .chap:last-child { border-bottom: 0; }
+  .chap .jouer { flex: 1; min-width: 0; display: flex; align-items: center; gap: 12px; text-align: left; background: none;
+                 border: 0; padding: 8px 6px; border-radius: 8px; }
+  .chap .jouer:hover { background: var(--papier); }
+  .chap .num { width: 32px; height: 32px; border-radius: 50%; border: 2px solid var(--ligne); display: grid;
+               place-items: center; font-size: 13px; font-weight: 700; color: var(--doux); flex: none; }
+  .chap.actif .num { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .chap .ct { flex: 1; min-width: 0; }
+  .chap .ct span { display: block; }
+  .chap .ct .lu { font-size: 14px; color: var(--doux); }
+  .chap .dur { font-size: 14px; color: var(--doux); white-space: nowrap; }
+  .chap .tele { width: 40px; height: 40px; display: grid; place-items: center; border-radius: 8px; color: var(--doux);
+                text-decoration: none; flex: none; }
+  .chap .tele:hover { background: var(--papier); color: var(--encre); }
+  .chap .tele svg { width: 20px; height: 20px; }
+  .f-pied { font-size: 14px; color: var(--doux); margin: 18px 0 0; }
+  .alerte { background: var(--alerte); border-left: 5px solid var(--alerte-bord); border-radius: 10px;
+            padding: 12px 16px; margin: 14px 0 0; font-size: 16px; }
+  .alerte.erreur { background: #fbe4e4; border-color: #c0392b; }
+  .alerte.bien { background: var(--vert-clair); border-color: var(--vert); }
+
+  /* Copie sur lecteur MP3 */
+  .copie { background: var(--papier); border-radius: 12px; padding: 16px; margin-top: 14px; }
+  .copie h3 { margin: 0 0 6px; }
+  .copie ol { margin: 6px 0 12px; padding-left: 22px; } .copie li { margin: 4px 0; }
+  .jauge { height: 14px; background: var(--carte); border-radius: 999px; overflow: hidden; margin: 12px 0 6px; }
+  .jauge div { height: 100%; width: 0; background: var(--vert); transition: width .2s; }
+
+  /* Lecteur fixé en bas */
+  .lecteur { position: fixed; left: 0; right: 0; bottom: 0; background: var(--encre); color: #fff; z-index: 50;
+             box-shadow: 0 -6px 20px rgba(31,42,55,.2); }
+  .lecteur .dedans { max-width: 880px; margin: 0 auto; padding: 10px 16px 12px; }
+  .l-haut { display: flex; align-items: center; gap: 12px; }
+  .l-titre { flex: 1; min-width: 0; background: none; border: 0; text-align: left; padding: 0; }
+  .l-titre b, .l-titre span { display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .l-titre span { font-size: 14px; opacity: .75; }
+  .l-btns { display: flex; align-items: center; gap: 4px; }
+  .l-btns button { width: 46px; height: 46px; border-radius: 50%; border: 0; background: transparent; color: #fff;
+                   display: grid; place-items: center; }
+  .l-btns button:hover { background: rgba(255,255,255,.12); }
+  .l-btns button svg { width: 22px; height: 22px; }
+  .l-btns .pp { width: 54px; height: 54px; background: #fff; color: var(--encre); }
+  .l-btns .pp:hover { background: #f0e9dc; }
+  .l-btns .pp svg { width: 24px; height: 24px; }
+  .l-btns .vit { width: auto; padding: 0 10px; border-radius: 999px; font-size: 15px; font-weight: 700; }
+  .l-bas { display: flex; align-items: center; gap: 10px; font-size: 13px; font-variant-numeric: tabular-nums; margin-top: 4px; }
+  .l-bas input { flex: 1; accent-color: #e7b04a; }
+  footer { margin-top: 34px; color: var(--doux); font-size: 14px; text-align: center; }
+  footer a { color: inherit; }
+
+  @media (max-width: 640px) {
+    .carte { padding: 18px; }
+    .livre .meta .dur-txt { display: none; }
+    .l-btns .saut { display: none; }
+    .f-entete h2 { font-size: 23px; }
+    .f-actions .gros-bouton, .f-actions .bouton { flex: 1 1 100%; }
+  }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-play" viewBox="0 0 24 24"><path fill="currentColor" d="M7 4.5v15a1 1 0 0 0 1.5.86l12.5-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5z"/></symbol>
+  <symbol id="i-pause" viewBox="0 0 24 24"><path fill="currentColor" d="M6 4h4v16H6zM14 4h4v16h-4z"/></symbol>
+  <symbol id="i-prec" viewBox="0 0 24 24"><path fill="currentColor" d="M6 5h2v14H6zM20 5v14L9 12z"/></symbol>
+  <symbol id="i-suiv" viewBox="0 0 24 24"><path fill="currentColor" d="M16 5h2v14h-2zM4 5v14l11-7z"/></symbol>
+  <symbol id="i-recul" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M4 12a8 8 0 1 0 2.3-5.6M4 4v4h4"/><text x="12" y="15.5" font-size="7.5" font-weight="700" text-anchor="middle" fill="currentColor" font-family="sans-serif">30</text></symbol>
+  <symbol id="i-avance" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M20 12a8 8 0 1 1-2.3-5.6M20 4v4h-4"/><text x="12" y="15.5" font-size="7.5" font-weight="700" text-anchor="middle" fill="currentColor" font-family="sans-serif">30</text></symbol>
+  <symbol id="i-tele" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 4v11m-5-5 5 5 5-5M5 20h14"/></symbol>
+  <symbol id="i-casque" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M4 15v-3a8 8 0 0 1 16 0v3"/><rect x="3" y="14" width="5" height="7" rx="2" fill="currentColor"/><rect x="16" y="14" width="5" height="7" rx="2" fill="currentColor"/></symbol>
+  <symbol id="i-ext" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></symbol>
+</svg>
+
+<div class="page">
+  <header>
+    <div class="logo" aria-hidden="true"><svg><use href="#i-casque"/></svg></div>
+    <div class="titres">
+      <h1>Classiques à écouter</h1>
+      <p>Livres audio gratuits et libres de droits — biblio.gironde</p>
+    </div>
+    <a class="lien-epub" id="lienEpub" href="https://bibliogironde.github.io/Kit-Liseuses-Les-Classiques-En-Numerique/">📖 Les textes pour liseuses</a>
+  </header>
+
+  <section class="carte">
+    <p class="intro">Choisissez un livre pour l'écouter ici, le télécharger, ou le copier sur un lecteur MP3 ou une clé USB.
+      Les enregistrements sont lus par les bénévoles de <a href="https://librivox.org" target="_blank" rel="noopener">LibriVox</a>
+      et sont dans le domaine public.</p>
+    <input class="recherche" id="recherche" type="search" placeholder="Rechercher un titre ou un auteur…" aria-label="Rechercher un titre ou un auteur">
+    <div class="puces" id="puces" role="group" aria-label="Filtrer par siècle"></div>
+    <p class="resume-cat" id="resumeCat">Chargement du catalogue…</p>
+  </section>
+
+  <div id="liste"></div>
+
+  <footer>
+    Enregistrements <a href="https://librivox.org" target="_blank" rel="noopener">LibriVox</a> (domaine public), hébergés sur archive.org.
+    · <a href="https://github.com/biblioGironde/Kit-Liseuses-Les-Classiques-En-Numerique-Audio" target="_blank" rel="noopener">Le projet sur GitHub</a>
+    · <a href="https://github.com/biblioGironde/Kit-Liseuses-Les-Classiques-En-Numerique-Audio/blob/main/SOURCES.md" target="_blank" rel="noopener">Sources et lecteurs</a>
+  </footer>
+</div>
+
+<!-- Fiche d'un livre -->
+<dialog id="fiche" aria-labelledby="fTitre">
+  <div class="f-entete">
+    <h2 id="fTitre"></h2>
+    <p class="a" id="fAuteur"></p>
+    <p class="infos" id="fInfos"></p>
+    <div class="f-actions" id="fActions"></div>
+    <button class="fermer" type="button" id="fFermer" aria-label="Fermer">×</button>
+  </div>
+  <div class="f-corps" id="fCorps"></div>
+</dialog>
+
+<!-- Lecteur -->
+<div class="lecteur cache" id="lecteur" role="region" aria-label="Lecteur audio">
+  <div class="dedans">
+    <div class="l-haut">
+      <button class="l-titre" id="lTitre" type="button" title="Afficher le livre"><b id="lLivre"></b><span id="lChap"></span></button>
+      <div class="l-btns">
+        <button type="button" id="lPrec" aria-label="Chapitre précédent"><svg><use href="#i-prec"/></svg></button>
+        <button type="button" class="saut" id="lRecul" aria-label="Reculer de 30 secondes"><svg><use href="#i-recul"/></svg></button>
+        <button type="button" class="pp" id="lPP" aria-label="Lecture"><svg><use href="#i-play"/></svg></button>
+        <button type="button" class="saut" id="lAvance" aria-label="Avancer de 30 secondes"><svg><use href="#i-avance"/></svg></button>
+        <button type="button" id="lSuiv" aria-label="Chapitre suivant"><svg><use href="#i-suiv"/></svg></button>
+        <button type="button" class="vit" id="lVit" aria-label="Vitesse de lecture">1×</button>
+      </div>
+    </div>
+    <div class="l-bas">
+      <span id="lPos">0:00</span>
+      <input type="range" id="lBarre" min="0" max="1000" value="0" aria-label="Position dans le chapitre">
+      <span id="lDur">0:00</span>
+    </div>
+  </div>
+</div>
+<audio id="audio" preload="none"></audio>
+
+<script>
+"use strict";
+const DOSSIER = "Livres audio";
+const $ = (id) => document.getElementById(id);
+const audio = $("audio");
+let CAT = null, filtreSiecle = "", livreOuvert = null, detailOuvert = null;
+let lecture = null; // { livre, detail, chapitres, index }
+let copieAnnulee = false;
+
+/* ---------- Utilitaires ---------- */
+const memo = {
+  lire(cle) { try { return JSON.parse(localStorage.getItem(cle) || "null"); } catch (e) { return null; } },
+  ecrire(cle, v) { try { localStorage.setItem(cle, JSON.stringify(v)); } catch (e) { /* stockage indisponible */ } },
+};
+function esc(t) { return String(t ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c])); }
+function sansAccents(t) {
+  return t.replace(/œ/g, "oe").replace(/Œ/g, "Oe").replace(/æ/g, "ae").replace(/[’‘'`]/g, " ")
+    .normalize("NFKD").replace(/[̀-ͯ]/g, "").replace(/[^A-Za-z0-9 \-]/g, "").replace(/\s+/g, " ").trim();
+}
+function norm(t) { return sansAccents(t).toLowerCase(); }
+function duree(s) {
+  const m = Math.round(s / 60), h = Math.floor(m / 60), r = m % 60;
+  if (h && r) return `${h} h ${String(r).padStart(2, "0")}`;
+  if (h) return `${h} h`;
+  return `${Math.max(r, 1)} min`;
+}
+function horloge(s) {
+  if (!isFinite(s)) s = 0;
+  s = Math.floor(s);
+  const h = Math.floor(s / 3600), m = Math.floor((s % 3600) / 60), x = s % 60;
+  return (h ? `${h}:${String(m).padStart(2, "0")}` : `${m}`) + `:${String(x).padStart(2, "0")}`;
+}
+function svg(id) { return `<svg aria-hidden="true"><use href="#${id}"/></svg>`; }
+function pluriel(n, mot, pl) { return `${n} ${n > 1 ? (pl || mot + "s") : mot}`; }
+function siecleCourt(s) { return { 15: "XVe", 16: "XVIe", 17: "XVIIe", 18: "XVIIIe", 19: "XIXe", 20: "XXe" }[s] || s; }
+
+/* ---------- Catalogue ---------- */
+async function charger() {
+  try {
+    const r = await fetch("catalogue.json", { cache: "no-cache" });
+    CAT = await r.json();
+  } catch (e) {
+    $("resumeCat").textContent = "Le catalogue n'a pas pu être chargé. Vérifiez la connexion Internet puis rechargez la page.";
+    return;
+  }
+  if (CAT.epub) $("lienEpub").href = CAT.epub;
+  const siecles = [...new Set(CAT.livres.map((l) => l.siecle))];
+  $("puces").innerHTML = `<button type="button" data-s="" aria-pressed="true">Tous</button>` +
+    siecles.map((s) => `<button type="button" data-s="${s}" aria-pressed="false">${siecleCourt(s)} siècle</button>`).join("");
+  $("puces").addEventListener("click", (e) => {
+    const b = e.target.closest("button"); if (!b) return;
+    filtreSiecle = b.dataset.s;
+    $("puces").querySelectorAll("button").forEach((x) => x.setAttribute("aria-pressed", x === b ? "true" : "false"));
+    afficher();
+  });
+  afficher();
+  ouvrirDepuisAdresse();
+}
+
+function afficher() {
+  const q = norm($("recherche").value);
+  const livres = CAT.livres.filter((l) => (!filtreSiecle || l.siecle === filtreSiecle) &&
+    (!q || norm(`${l.titre} ${l.auteur}`).includes(q)));
+  const audio = livres.filter((l) => l.duree);
+  const total = audio.reduce((a, l) => a + l.duree, 0);
+  $("resumeCat").textContent = livres.length
+    ? `${pluriel(audio.length, "livre audio", "livres audio")} (${duree(total)} d'écoute)` +
+      (livres.length > audio.length ? ` · ${livres.length - audio.length} autres titres à écouter sur d'autres sites` : "")
+    : "Aucun livre ne correspond à la recherche.";
+  const enCours = memo.lire("positions") || {};
+  let html = "";
+  const ordre = Object.keys(CAT.siecles).sort((a, b) => !livres.some((l) => l.siecle === a && l.duree) - !livres.some((l) => l.siecle === b && l.duree) || a - b);
+  for (const s of ordre) {
+    const ls = livres.filter((l) => l.siecle === s);
+    if (!ls.length) continue;
+    const ligne = (l) => {
+      const ext = !l.duree;
+      const badges = [];
+      if (enCours[l.id]) badges.push(`<span class="pastille p-cours">En cours</span>`);
+      if (l.epub) badges.push(`<span class="pastille p-epub" title="Le texte est aussi disponible pour les liseuses">Texte</span>`);
+      return `<li><button type="button" class="livre${ext ? " externe" : ""}" data-id="${esc(l.id)}">
+        <span class="ico">${svg(ext ? "i-ext" : "i-play")}</span>
+        <span class="txt"><span class="t">${esc(l.titre)}</span><span class="a">${esc(l.auteur)}${l.annee ? ` · ${esc(l.annee)}` : ""}</span></span>
+        <span class="meta">${ext ? "" : `<span class="dur-txt">${duree(l.duree)}</span><br>`}${badges.join(" ")}</span>
+      </button></li>`;
+    };
+    const avec = ls.filter((l) => l.duree), sans = ls.filter((l) => !l.duree);
+    html += `<section class="siecle"><h2>${esc(CAT.siecles[s])}</h2>`;
+    if (avec.length) html += `<ul class="liste">${avec.map(ligne).join("")}</ul>`;
+    if (sans.length) {
+      html += `<details class="autres"${q || !avec.length ? " open" : ""}><summary>${sans.length > 1
+        ? `${sans.length} autres titres` : "1 autre titre"} pas encore enregistré${sans.length > 1 ? "s" : ""} sur LibriVox, à écouter sur d'autres sites</summary>
+        <ul class="liste">${sans.map(ligne).join("")}</ul></details>`;
+    }
+    html += `</section>`;
+  }
+  $("liste").innerHTML = html || `<p class="vide">Aucun livre ne correspond à « ${esc($("recherche").value)} ».</p>`;
+}
+
+$("recherche").addEventListener("input", () => { if (CAT) afficher(); });
+$("liste").addEventListener("click", (e) => {
+  const b = e.target.closest(".livre"); if (!b) return;
+  ouvrirFiche(CAT.livres.find((l) => l.id === b.dataset.id));
+});
+
+/* ---------- Fiche d'un livre ---------- */
+const cacheDetails = {};
+async function detail(livre) {
+  if (!cacheDetails[livre.id]) {
+    const r = await fetch(`livres/${encodeURIComponent(livre.id)}.json`);
+    if (!r.ok) throw new Error("introuvable");
+    cacheDetails[livre.id] = await r.json();
+  }
+  return cacheDetails[livre.id];
+}
+function chapitres(d) {
+  const out = [];
+  d.parties.forEach((p, ip) => p.chapitres.forEach((c) => out.push({ ...c, partie: p.titre, ip })));
+  return out;
+}
+
+async function ouvrirFiche(livre) {
+  if (!livre) return;
+  livreOuvert = livre; detailOuvert = null;
+  $("fTitre").textContent = livre.titre;
+  $("fAuteur").textContent = livre.auteur + (livre.annee ? ` · ${livre.annee}` : "");
+  $("fInfos").textContent = "";
+  $("fActions").innerHTML = "";
+  $("fCorps").innerHTML = "";
+  try { history.replaceState(null, "", "#" + livre.id); } catch (e) { /* adresse inchangée */ }
+  const fiche = $("fiche");
+  if (!fiche.open) fiche.showModal();
+
+  const lienTexte = livre.epub
+    ? `<a class="bouton" href="${esc(CAT.epub)}" target="_blank" rel="noopener">📖 Le texte pour liseuse</a>` : "";
+
+  if (!livre.duree) {
+    $("fInfos").textContent = "Pas encore d'enregistrement libre de droits sur LibriVox.";
+    $("fActions").innerHTML = `<a class="gros-bouton" href="${esc(livre.autres)}" target="_blank" rel="noopener">${svg("i-ext")} Chercher sur Littérature audio</a>${lienTexte}`;
+    $("fCorps").innerHTML = `<div class="alerte">Le site <b>Littérature audio</b> propose de nombreuses lectures gratuites.
+      On peut les écouter et les télécharger pour un usage personnel, mais elles appartiennent à leurs lecteurs :
+      elles ne sont donc pas reprises ici. Le site <a href="https://www.audiocite.net" target="_blank" rel="noopener">Audiocité</a>
+      est une autre bonne adresse.</div>`;
+    return;
+  }
+
+  $("fInfos").textContent = `${duree(livre.duree)} · ${pluriel(livre.nb, "chapitre")} · lu par ${livre.lecteurs.join(", ")}${livre.nbLecteurs > livre.lecteurs.length ? " et d'autres" : ""}`;
+  $("fCorps").innerHTML = `<p class="vide">Chargement des chapitres…</p>`;
+  let d;
+  try { d = await detail(livre); } catch (e) {
+    $("fCorps").innerHTML = `<div class="alerte erreur">Les chapitres n'ont pas pu être chargés. Vérifiez la connexion Internet.</div>`;
+    return;
+  }
+  if (livreOuvert !== livre) return;
+  detailOuvert = d;
+  const pos = (memo.lire("positions") || {})[livre.id];
+  const ch = chapitres(d);
+  const reprise = pos && pos.i < ch.length;
+  const zips = d.parties.filter((p) => p.zip);
+  const peutCopier = "showDirectoryPicker" in window;
+
+  $("fActions").innerHTML =
+    `<button class="gros-bouton" type="button" id="fEcouter">${svg("i-play")} ${reprise ? `Reprendre (chapitre ${pos.i + 1})` : "Écouter"}</button>` +
+    (reprise ? `<button class="bouton" type="button" id="fDebut">Depuis le début</button>` : "") +
+    `<button class="bouton" type="button" id="fCopier">💾 Copier sur un lecteur MP3</button>` +
+    (zips.length === 1 ? `<a class="bouton" href="${esc(zips[0].zip)}" rel="noopener">${svg("i-tele")} Tout télécharger (ZIP)</a>` : "") +
+    lienTexte;
+
+  let html = `<div id="zoneCopie"></div>`;
+  d.parties.forEach((p, ip) => {
+    if (d.parties.length > 1) {
+      html += `<h3>${esc(p.titre)} <span style="font:400 15px 'Source Sans 3';color:var(--doux)">· ${duree(p.duree)}${p.zip ? ` · <a href="${esc(p.zip)}" rel="noopener">ZIP</a>` : ""}</span></h3>`;
+    } else {
+      html += `<h3>Chapitres</h3>`;
+    }
+    html += `<ol class="chaps">`;
+    p.chapitres.forEach((c) => {
+      const i = ch.findIndex((x) => x.mp3 === c.mp3);
+      html += `<li class="chap" data-i="${i}">
+        <button type="button" class="jouer" data-i="${i}"><span class="num">${i + 1}</span>
+          <span class="ct"><span>${esc(c.t)}</span>${c.l ? `<span class="lu">lu par ${esc(c.l)}</span>` : ""}</span>
+          <span class="dur">${horloge(c.d)}</span></button>
+        <a class="tele" href="${esc(c.mp3)}" download title="Télécharger ce chapitre (MP3)" aria-label="Télécharger le chapitre ${i + 1}">${svg("i-tele")}</a>
+      </li>`;
+    });
+    html += `</ol>`;
+  });
+  const p0 = d.parties[0];
+  html += `<p class="f-pied">Enregistrement <a href="${esc(p0.librivox)}" target="_blank" rel="noopener">LibriVox</a>, domaine public.
+    ${p0.rss ? `· <a href="${esc(p0.rss)}" target="_blank" rel="noopener">Écouter en podcast</a> (copier ce lien dans une appli de podcasts)` : ""}
+    ${p0.texte ? `· <a href="${esc(p0.texte)}" target="_blank" rel="noopener">Texte lu</a>` : ""}</p>`;
+  $("fCorps").innerHTML = html;
+  marquerActif();
+
+  $("fEcouter").onclick = () => jouer(livre, d, reprise ? pos.i : 0, reprise ? pos.t : 0);
+  if ($("fDebut")) $("fDebut").onclick = () => jouer(livre, d, 0, 0);
+  $("fCopier").onclick = () => preparerCopie(livre, d, peutCopier);
+  $("fCorps").querySelectorAll(".jouer").forEach((b) => b.onclick = () => jouer(livre, d, +b.dataset.i, 0));
+}
+
+function fermerFiche() {
+  $("fiche").close();
+}
+$("fFermer").onclick = fermerFiche;
+$("fiche").addEventListener("close", () => {
+  livreOuvert = null;
+  try { history.replaceState(null, "", location.pathname + location.search); } catch (e) { /* rien */ }
+  if (CAT) afficher();
+});
+$("fiche").addEventListener("click", (e) => { if (e.target === $("fiche")) fermerFiche(); });
+
+function ouvrirDepuisAdresse() {
+  const id = decodeURIComponent(location.hash.slice(1));
+  if (id) ouvrirFiche(CAT.livres.find((l) => l.id === id));
+}
+window.addEventListener("hashchange", () => {
+  const id = decodeURIComponent(location.hash.slice(1));
+  if (CAT && id && (!livreOuvert || livreOuvert.id !== id)) ouvrirDepuisAdresse();
+});
+
+/* ---------- Lecture ---------- */
+function jouer(livre, d, index, depart) {
+  lecture = { livre, detail: d, chapitres: chapitres(d), index };
+  chargerChapitre(depart || 0, true);
+  $("lecteur").classList.remove("cache");
+}
+function chargerChapitre(depart, lancer) {
+  const c = lecture.chapitres[lecture.index];
+  audio.src = c.mp3;
+  audio.preload = "auto";
+  const demarrer = () => {
+    if (depart) { try { audio.currentTime = depart; } catch (e) { /* position ignorée */ } }
+    if (lancer) audio.play().catch(() => majBoutons());
+  };
+  audio.addEventListener("loadedmetadata", demarrer, { once: true });
+  audio.load();
+  audio.playbackRate = vitesses[iVitesse];
+  $("lLivre").textContent = `${lecture.livre.titre} — ${lecture.livre.auteur}`;
+  $("lChap").textContent = `${lecture.index + 1}/${lecture.chapitres.length} · ${c.partie ? c.partie + " · " : ""}${c.t}`;
+  $("lDur").textContent = horloge(c.d);
+  marquerActif();
+  sauverPosition();
+  if ("mediaSession" in navigator) {
+    try {
+      navigator.mediaSession.metadata = new MediaMetadata({ title: c.t, artist: lecture.livre.auteur, album: lecture.livre.titre });
+    } catch (e) { /* non pris en charge */ }
+  }
+}
+function marquerActif() {
+  document.querySelectorAll(".chap").forEach((li) => li.classList.toggle("actif",
+    !!lecture && livreOuvert === lecture.livre && +li.dataset.i === lecture.index));
+}
+function sauverPosition() {
+  if (!lecture) return;
+  const p = memo.lire("positions") || {};
+  const fini = lecture.index === lecture.chapitres.length - 1 && audio.ended;
+  if (fini) delete p[lecture.livre.id];
+  else p[lecture.livre.id] = { i: lecture.index, t: Math.floor(audio.currentTime || 0) };
+  memo.ecrire("positions", p);
+}
+function changer(delta) {
+  if (!lecture) return;
+  const n = lecture.index + delta;
+  if (n < 0 || n >= lecture.chapitres.length) return;
+  lecture.index = n;
+  chargerChapitre(0, true);
+}
+function majBoutons() {
+  const enPause = audio.paused;
+  $("lPP").innerHTML = svg(enPause ? "i-play" : "i-pause");
+  $("lPP").setAttribute("aria-label", enPause ? "Lecture" : "Pause");
+}
+const vitesses = [1, 1.25, 1.5, 0.8];
+let iVitesse = 0;
+$("lVit").onclick = () => {
+  iVitesse = (iVitesse + 1) % vitesses.length;
+  audio.playbackRate = vitesses[iVitesse];
+  $("lVit").textContent = String(vitesses[iVitesse]).replace(".", ",") + "×";
+};
+$("lPP").onclick = () => { if (!audio.src) return; audio.paused ? audio.play() : audio.pause(); };
+$("lPrec").onclick = () => (audio.currentTime > 5 ? (audio.currentTime = 0) : changer(-1));
+$("lSuiv").onclick = () => changer(1);
+$("lRecul").onclick = () => { audio.currentTime = Math.max(0, audio.currentTime - 30); };
+$("lAvance").onclick = () => { audio.currentTime = Math.min(audio.duration || 0, audio.currentTime + 30); };
+$("lTitre").onclick = () => { if (lecture) ouvrirFiche(lecture.livre); };
+let glisse = false;
+$("lBarre").addEventListener("input", () => {
+  glisse = true;
+  if (audio.duration) $("lPos").textContent = horloge($("lBarre").value / 1000 * audio.duration);
+});
+$("lBarre").addEventListener("change", () => {
+  if (audio.duration) audio.currentTime = $("lBarre").value / 1000 * audio.duration;
+  glisse = false;
+});
+let dernierSave = 0;
+audio.addEventListener("timeupdate", () => {
+  if (!glisse && audio.duration) {
+    $("lBarre").value = Math.round(audio.currentTime / audio.duration * 1000);
+    $("lPos").textContent = horloge(audio.currentTime);
+    $("lDur").textContent = horloge(audio.duration);
+  }
+  if (Date.now() - dernierSave > 5000) { dernierSave = Date.now(); sauverPosition(); }
+});
+audio.addEventListener("play", majBoutons);
+audio.addEventListener("pause", () => { majBoutons(); sauverPosition(); });
+audio.addEventListener("ended", () => {
+  if (lecture && lecture.index < lecture.chapitres.length - 1) changer(1);
+  else { sauverPosition(); majBoutons(); }
+});
+audio.addEventListener("error", () => {
+  if (!lecture) return;
+  $("lChap").textContent = "Ce chapitre ne peut pas être lu pour l'instant (archive.org indisponible ?). Réessayez plus tard.";
+});
+if ("mediaSession" in navigator) {
+  const ms = navigator.mediaSession;
+  try {
+    ms.setActionHandler("play", () => audio.play());
+    ms.setActionHandler("pause", () => audio.pause());
+    ms.setActionHandler("previoustrack", () => changer(-1));
+    ms.setActionHandler("nexttrack", () => changer(1));
+    ms.setActionHandler("seekbackward", () => { audio.currentTime = Math.max(0, audio.currentTime - 30); });
+    ms.setActionHandler("seekforward", () => { audio.currentTime += 30; });
+  } catch (e) { /* actions non prises en charge */ }
+}
+document.addEventListener("keydown", (e) => {
+  if (e.code !== "Space" || !audio.src || $("fiche").open ||
+      ["INPUT", "TEXTAREA", "BUTTON", "A", "SELECT"].includes(document.activeElement.tagName)) return;
+  e.preventDefault(); audio.paused ? audio.play() : audio.pause();
+});
+
+/* ---------- Copie sur un lecteur MP3 ou une clé USB ---------- */
+function preparerCopie(livre, d, possible) {
+  const z = $("zoneCopie");
+  const taille = Math.round(livre.duree * 8 / 1024); // MP3 64 kbit/s ≈ 8 Ko par seconde
+  if (!possible) {
+    const zips = d.parties.filter((p) => p.zip);
+    z.innerHTML = `<div class="copie"><h3>Copier sur un lecteur MP3</h3>
+      <p style="margin:0">La copie directe fonctionne avec <b>Google Chrome</b> ou <b>Microsoft Edge</b> sur un ordinateur.
+      Avec ce navigateur, téléchargez plutôt ${zips.length ? `le fichier ZIP (environ ${taille} Mo), puis décompressez-le dans le lecteur MP3` : "les chapitres un par un (bouton ⬇ à droite de chaque chapitre)"}.</p>
+      ${zips.map((p) => `<p style="margin:10px 0 0"><a class="bouton" href="${esc(p.zip)}" rel="noopener">${svg("i-tele")} ${esc(p.titre || "Tout télécharger")} (ZIP)</a></p>`).join("")}</div>`;
+    return;
+  }
+  z.innerHTML = `<div class="copie"><h3>Copier sur un lecteur MP3 ou une clé USB</h3>
+    <ol><li>Branchez le lecteur MP3 ou la clé USB à l'ordinateur.</li>
+      <li>Cliquez sur « Choisir le lecteur », puis cliquez sur son nom dans la colonne de gauche et sur <b>Sélectionner</b>.</li>
+      <li>Autorisez la modification des fichiers.</li></ol>
+    <p style="margin:0 0 12px;color:var(--doux);font-size:16px">${pluriel(livre.nb, "fichier")} MP3, environ ${taille} Mo, rangés dans le dossier
+      « ${DOSSIER} / ${esc(sansAccents(livre.auteur))} - ${esc(sansAccents(livre.titre))} ».</p>
+    <button class="gros-bouton" type="button" id="btnChoisir">Choisir le lecteur</button>
+    <div id="etatCopie"></div></div>`;
+  z.scrollIntoView({ behavior: "smooth", block: "nearest" });
+  $("btnChoisir").onclick = () => copier(livre, d);
+}
+
+async function copier(livre, d) {
+  let racine;
+  try { racine = await window.showDirectoryPicker({ id: "lecteur-mp3", mode: "readwrite" }); }
+  catch (e) { return; } // fenêtre fermée
+  const etat = $("etatCopie");
+  const ch = chapitres(d);
+  copieAnnulee = false;
+  $("btnChoisir").disabled = true;
+  etat.innerHTML = `<div class="jauge"><div id="jaugeCopie"></div></div><p id="txtCopie" style="margin:0"></p>
+    <p style="margin:10px 0 0"><button class="bouton" type="button" id="btnAnnuler">Arrêter la copie</button></p>`;
+  $("btnAnnuler").onclick = () => { copieAnnulee = true; };
+  let erreurs = 0, copies = 0, deja = 0;
+  try {
+    const base = await racine.getDirectoryHandle(DOSSIER, { create: true });
+    const dossier = await base.getDirectoryHandle(`${sansAccents(livre.auteur)} - ${sansAccents(livre.titre)}`.slice(0, 120), { create: true });
+    const chiffres = String(ch.length).length < 2 ? 2 : String(ch.length).length;
+    for (let i = 0; i < ch.length; i++) {
+      if (copieAnnulee) break;
+      const c = ch[i];
+      const nom = `${String(i + 1).padStart(chiffres, "0")} - ${sansAccents(c.t).slice(0, 80) || "chapitre"}.mp3`;
+      $("txtCopie").textContent = `Chapitre ${i + 1} sur ${ch.length} : ${c.t}`;
+      try {
+        const existant = await dossier.getFileHandle(nom).then((h) => h.getFile()).catch(() => null);
+        if (existant && existant.size > 10000) { deja++; continue; }
+        const r = await fetch(c.mp3);
+        if (!r.ok) throw new Error(r.status);
+        const fichier = await dossier.getFileHandle(nom, { create: true });
+        const flux = await fichier.createWritable();
+        await r.body.pipeTo(flux);
+        copies++;
+      } catch (e) {
+        erreurs++;
+      }
+      $("jaugeCopie").style.width = `${Math.round((i + 1) / ch.length * 100)}%`;
+    }
+  } catch (e) {
+    etat.innerHTML = `<div class="alerte erreur">Impossible d'écrire dans ce dossier. Vérifiez que le lecteur est bien branché et que la modification des fichiers est autorisée.</div>`;
+    $("btnChoisir").disabled = false;
+    return;
+  }
+  $("btnChoisir").disabled = false;
+  const zip = d.parties.find((p) => p.zip);
+  if (copieAnnulee) {
+    etat.innerHTML = `<div class="alerte">Copie arrêtée : ${pluriel(copies + deja, "chapitre")} sur ${ch.length} sont sur le lecteur. Relancez la copie pour la terminer : les chapitres déjà copiés ne seront pas recopiés.</div>`;
+  } else if (erreurs) {
+    etat.innerHTML = `<div class="alerte erreur">${pluriel(erreurs, "chapitre")} n'${erreurs > 1 ? "ont" : "a"} pas pu être copié${erreurs > 1 ? "s" : ""} (connexion interrompue ou archive.org indisponible).
+      Relancez la copie : seuls les chapitres manquants seront copiés.${zip ? ` Vous pouvez aussi <a href="${esc(zip.zip)}" rel="noopener">télécharger le ZIP</a>.` : ""}</div>`;
+  } else {
+    etat.innerHTML = `<div class="alerte bien"><b>C'est terminé !</b> ${pluriel(ch.length, "chapitre")} sur le lecteur${deja ? ` (dont ${deja} déjà présent${deja > 1 ? "s" : ""})` : ""}.
+      Avant de débrancher, <b>éjectez</b> le lecteur : clic droit sur son nom dans l'Explorateur ou le Finder › <b>Éjecter</b>.</div>`;
+  }
+}
+
+charger();
+</script>
+</body>
+</html>

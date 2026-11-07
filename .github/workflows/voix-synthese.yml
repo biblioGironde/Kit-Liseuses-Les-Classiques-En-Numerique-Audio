@@ -29,7 +29,7 @@ on:
         options: [estelle, marius, javert, caro_davy, bill_boerst, peter_yearsley, stuart_bell]
       vitesse:
         description: "Vitesse de lecture : 1 = normale, 0.9 = 10 % plus lente, 0.85 = 15 % plus lente (la voix ne change pas)"
-        default: "0.9"
+        default: "0.85"
       pause:
         description: "Silences entre phrases et paragraphes : 1 = normaux, 1.3 = 30 % plus longs"
         default: "1.2"

@@ -100,7 +100,7 @@ licence CC BY 4.0), directement sur les machines gratuites de GitHub Actions.
 - l'adresse de l'EPUB exporté de **Wikisource** (texte du domaine public), de la forme
   `https://ws-export.wmcloud.org/?lang=fr&page=<titre de la page Wikisource>&format=epub-3` ;
 - les chapitres à lire (`1-3`, ou vide pour tout le livre) et le nombre de machines en parallèle ;
-- la vitesse (`0.9` par défaut : 10 % plus lent que la voix d'origine, sans changer son timbre)
+- la vitesse (`0.85` par défaut : 15 % plus lent que la voix d'origine, sans changer son timbre)
   et la longueur des silences entre phrases et paragraphes (`1.2` par défaut) ;
 - la voix : seules les voix de Pocket TTS dont l'enregistrement d'origine est libre (CC0) sont proposées
   (`estelle`, voix française par défaut, `marius`, `javert`, `caro_davy`…).

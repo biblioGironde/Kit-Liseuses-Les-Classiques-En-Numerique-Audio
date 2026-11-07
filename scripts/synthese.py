@@ -129,13 +129,40 @@ def lire_epub(chemin):
         ex._couper()
         morceaux = [(t, x) for t, x in ex.morceaux if re.search(r"\w", x)]
         textes = [x for t, x in morceaux if t == "texte"]
+        premier = next((x for t, x in morceaux if t == "titre"), "")
+        if re.match(r"(table|index|annexe|errata|notes?\b|bibliographie|achevé d.imprimer|à propos de cette édition)",
+                    premier.strip().lower()):
+            continue
         if sum(len(x) for _, x in morceaux) < 200:
             continue
         # page de titre ou table des matières : beaucoup de lignes très courtes
         if textes and sum(len(x) for x in textes) / len(textes) < 70 and len(textes) > 8:
             continue
-        chapitres.append(morceaux)
+        chapitres.extend(decouper(morceaux))
     return chapitres
+
+
+TAILLE_MAX = 90_000  # caractères (~1 h 15 d'écoute) : au-delà, le chapitre est lu en plusieurs fichiers
+
+
+def decouper(morceaux):
+    """Coupe un chapitre très long (recueil entier dans un seul fichier, long acte…) en parties."""
+    if sum(len(x) for _, x in morceaux) <= TAILLE_MAX:
+        return [morceaux]
+    parties, courante, taille = [], [], 0
+    titre = next((x for t, x in morceaux if t == "titre"), "")
+    for m in morceaux:
+        if courante and taille + len(m[1]) > TAILLE_MAX * 0.8 and m[0] == "texte":
+            parties.append(courante)
+            courante, taille = [], 0
+        courante.append(m)
+        taille += len(m[1])
+    if courante:
+        parties.append(courante)
+    for k, partie in enumerate(parties[1:], 2):
+        if titre:
+            partie.insert(0, ("titre", f"{titre.rstrip('.')} (suite {k - 1})"))
+    return parties
 
 
 # ---------------------------------------------------------------- préparation du texte
@@ -382,7 +409,7 @@ def main():
             duree = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of",
                                           "csv=p=0", str(sortie / f"{base}.mp3")],
                                          capture_output=True, text=True).stdout or 0)
-        rapport.append({"chapitre": n, "titre": nom, "duree": round(duree, 1), "calcul": round(calcul, 1),
+        rapport.append({"chapitre": n, "total": len(chapitres), "titre": nom, "duree": round(duree, 1), "calcul": round(calcul, 1),
                         "caracteres": sum(len(t) for _, t in prep), "fichier": f"{base}.mp3"})
         print(f"{n:3}  {nom[:60]:60}  {duree / 60:5.1f} min d'audio en {calcul / 60:5.1f} min "
               f"(×{duree / calcul:.2f} temps réel)", flush=True)

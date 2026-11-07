@@ -122,6 +122,29 @@ python3 scripts/synthese.py --epub "<adresse>" --liste
 python3 scripts/synthese.py --epub "<adresse>" --chapitres 1 --texte-seul --sortie essai/
 ```
 
+### Faire lire tout le catalogue
+
+L'action *Voix de synthèse — tout le catalogue* fait lire tous les livres du catalogue liés au
+dépôt des liseuses :
+
+1. `scripts/textes.py` trouve le texte Wikisource de chaque livre (l'EPUB du dépôt des liseuses
+   quand il vient de Wikisource, sinon l'export Wikisource de la même œuvre) et l'écrit dans
+   `donnees/textes.csv`, avec le nombre de chapitres et la durée d'écoute estimée ;
+2. `scripts/plan.py` répartit les chapitres pas encore lus en lots d'environ 2 h 30 d'écoute ;
+3. 20 machines lisent les lots en parallèle ;
+4. `scripts/assembler.py` publie les MP3 dans une Release par livre (`ia-<identifiant>`), ajoute
+   un ZIP quand le livre est complet, et met à jour `donnees/synthese.json` ; la webapp est
+   ensuite republiée.
+
+Chaque passage traite au plus le nombre de lots demandé (60 par défaut) ; l'action repart
+chaque nuit là où elle s'était arrêtée, jusqu'à ce que tout soit lu. Un livre n'apparaît dans
+la webapp que lorsque tous ses chapitres sont lus. Quand un livre a les deux versions, la
+fiche propose « Voix humaine (LibriVox) » ou « Voix de synthèse (IA) ».
+
+Le bilan de chaque passage liste les textes trouvés. Pour corriger une édition mal choisie,
+écrire la bonne page Wikisource dans la colonne `page` de `donnees/textes.csv` et effacer le
+`statut` de la ligne.
+
 ## Tester en local
 
 Il faut Python 3.8 ou plus récent, sans bibliothèque à installer.

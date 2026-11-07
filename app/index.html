@@ -81,6 +81,11 @@
   .p-epub { background: var(--bleu-clair); color: var(--bleu); }
   .p-ext { background: var(--papier); color: var(--doux); }
   .p-cours { background: var(--vert-clair); color: var(--vert); }
+  .p-ia { background: #efe6f5; color: #6a3d8a; }
+  .versions { display: inline-flex; border: 2px solid var(--ligne); border-radius: 12px; overflow: hidden; margin-top: 14px; }
+  .versions button { border: 0; background: var(--carte); padding: 8px 14px; font-weight: 600; font-size: 15px; min-height: 42px; }
+  .versions button + button { border-left: 2px solid var(--ligne); }
+  .versions button[aria-pressed="true"] { background: var(--encre); color: #fff; }
   .vide { color: var(--doux); padding: 20px 4px; }
   details.autres summary { cursor: pointer; color: var(--doux); font-size: 16px; font-weight: 600; padding: 10px; }
   details.autres summary:hover { color: var(--encre); }
@@ -187,7 +192,7 @@
   <section class="carte">
     <p class="intro">Choisissez un livre pour l'écouter ici, le télécharger, ou le copier sur un lecteur MP3 ou une clé USB.
       Les enregistrements sont lus par les bénévoles de <a href="https://librivox.org" target="_blank" rel="noopener">LibriVox</a>
-      et sont dans le domaine public.</p>
+      ou, pour certains livres, par une voix de synthèse ; tous sont dans le domaine public.</p>
     <input class="recherche" id="recherche" type="search" placeholder="Rechercher un titre ou un auteur…" aria-label="Rechercher un titre ou un auteur">
     <div class="puces" id="puces" role="group" aria-label="Filtrer par siècle"></div>
     <p class="resume-cat" id="resumeCat">Chargement du catalogue…</p>
@@ -271,6 +276,8 @@ function horloge(s) {
 }
 function svg(id) { return `<svg aria-hidden="true"><use href="#${id}"/></svg>`; }
 function pluriel(n, mot, pl) { return `${n} ${n > 1 ? (pl || mot + "s") : mot}`; }
+const ecoutable = (l) => !!(l.duree || l.ia);
+const dureeDe = (l) => l.duree || (l.ia ? l.ia.duree : 0);
 function siecleCourt(s) { return { 15: "XVe", 16: "XVIe", 17: "XVIIe", 18: "XVIIIe", 19: "XIXe", 20: "XXe" }[s] || s; }
 
 /* ---------- Catalogue ---------- */
@@ -300,35 +307,36 @@ function afficher() {
   const q = norm($("recherche").value);
   const livres = CAT.livres.filter((l) => (!filtreSiecle || l.siecle === filtreSiecle) &&
     (!q || norm(`${l.titre} ${l.auteur}`).includes(q)));
-  const audio = livres.filter((l) => l.duree);
-  const total = audio.reduce((a, l) => a + l.duree, 0);
+  const audio = livres.filter(ecoutable);
+  const total = audio.reduce((a, l) => a + dureeDe(l), 0);
   $("resumeCat").textContent = livres.length
     ? `${pluriel(audio.length, "livre audio", "livres audio")} (${duree(total)} d'écoute)` +
       (livres.length > audio.length ? ` · ${livres.length - audio.length} autres titres à écouter sur d'autres sites` : "")
     : "Aucun livre ne correspond à la recherche.";
   const enCours = memo.lire("positions") || {};
   let html = "";
-  const ordre = Object.keys(CAT.siecles).sort((a, b) => !livres.some((l) => l.siecle === a && l.duree) - !livres.some((l) => l.siecle === b && l.duree) || a - b);
+  const ordre = Object.keys(CAT.siecles).sort((a, b) => !livres.some((l) => l.siecle === a && ecoutable(l)) - !livres.some((l) => l.siecle === b && ecoutable(l)) || a - b);
   for (const s of ordre) {
     const ls = livres.filter((l) => l.siecle === s);
     if (!ls.length) continue;
     const ligne = (l) => {
-      const ext = !l.duree;
+      const ext = !ecoutable(l);
       const badges = [];
-      if (enCours[l.id]) badges.push(`<span class="pastille p-cours">En cours</span>`);
+      if (enCours[l.id] || enCours[l.id + ":ia"]) badges.push(`<span class="pastille p-cours">En cours</span>`);
+      if (l.ia) badges.push(`<span class="pastille p-ia" title="Aussi lu par une voix de synthèse">Voix IA</span>`);
       if (l.epub) badges.push(`<span class="pastille p-epub" title="Le texte est aussi disponible pour les liseuses">Texte</span>`);
       return `<li><button type="button" class="livre${ext ? " externe" : ""}" data-id="${esc(l.id)}">
         <span class="ico">${svg(ext ? "i-ext" : "i-play")}</span>
         <span class="txt"><span class="t">${esc(l.titre)}</span><span class="a">${esc(l.auteur)}${l.annee ? ` · ${esc(l.annee)}` : ""}</span></span>
-        <span class="meta">${ext ? "" : `<span class="dur-txt">${duree(l.duree)}</span><br>`}${badges.join(" ")}</span>
+        <span class="meta">${ext ? "" : `<span class="dur-txt">${duree(dureeDe(l))}</span><br>`}${badges.join(" ")}</span>
       </button></li>`;
     };
-    const avec = ls.filter((l) => l.duree), sans = ls.filter((l) => !l.duree);
+    const avec = ls.filter(ecoutable), sans = ls.filter((l) => !ecoutable(l));
     html += `<section class="siecle"><h2>${esc(CAT.siecles[s])}</h2>`;
     if (avec.length) html += `<ul class="liste">${avec.map(ligne).join("")}</ul>`;
     if (sans.length) {
       html += `<details class="autres"${q || !avec.length ? " open" : ""}><summary>${sans.length > 1
-        ? `${sans.length} autres titres` : "1 autre titre"} pas encore enregistré${sans.length > 1 ? "s" : ""} sur LibriVox, à écouter sur d'autres sites</summary>
+        ? `${sans.length} autres titres` : "1 autre titre"} pas encore enregistré${sans.length > 1 ? "s" : ""}, à écouter sur d'autres sites</summary>
         <ul class="liste">${sans.map(ligne).join("")}</ul></details>`;
     }
     html += `</section>`;
@@ -358,6 +366,11 @@ function chapitres(d) {
   return out;
 }
 
+function vueIA(ia, livre) {
+  return { cle: livre.id + ":ia", ia: true,
+    parties: [{ titre: "", librivox: "", zip: ia.zip, rss: "", texte: ia.texte, duree: ia.duree, chapitres: ia.chapitres }] };
+}
+
 async function ouvrirFiche(livre) {
   if (!livre) return;
   livreOuvert = livre; detailOuvert = null;
@@ -366,6 +379,7 @@ async function ouvrirFiche(livre) {
   $("fInfos").textContent = "";
   $("fActions").innerHTML = "";
   $("fCorps").innerHTML = "";
+  document.querySelectorAll("#fiche .versions").forEach((x) => x.remove());
   try { history.replaceState(null, "", "#" + livre.id); } catch (e) { /* adresse inchangée */ }
   const fiche = $("fiche");
   if (!fiche.open) fiche.showModal();
@@ -373,8 +387,8 @@ async function ouvrirFiche(livre) {
   const lienTexte = livre.epub
     ? `<a class="bouton" href="${esc(CAT.epub)}" target="_blank" rel="noopener">📖 Le texte pour liseuse</a>` : "";
 
-  if (!livre.duree) {
-    $("fInfos").textContent = "Pas encore d'enregistrement libre de droits sur LibriVox.";
+  if (!ecoutable(livre)) {
+    $("fInfos").textContent = "Pas encore d'enregistrement libre de droits.";
     $("fActions").innerHTML = `<a class="gros-bouton" href="${esc(livre.autres)}" target="_blank" rel="noopener">${svg("i-ext")} Chercher sur Littérature audio</a>${lienTexte}`;
     $("fCorps").innerHTML = `<div class="alerte">Le site <b>Littérature audio</b> propose de nombreuses lectures gratuites.
       On peut les écouter et les télécharger pour un usage personnel, mais elles appartiennent à leurs lecteurs :
@@ -383,27 +397,47 @@ async function ouvrirFiche(livre) {
     return;
   }
 
-  $("fInfos").textContent = `${duree(livre.duree)} · ${pluriel(livre.nb, "chapitre")} · lu par ${livre.lecteurs.join(", ")}${livre.nbLecteurs > livre.lecteurs.length ? " et d'autres" : ""}`;
   $("fCorps").innerHTML = `<p class="vide">Chargement des chapitres…</p>`;
-  let d;
-  try { d = await detail(livre); } catch (e) {
+  let brut;
+  try { brut = await detail(livre); } catch (e) {
     $("fCorps").innerHTML = `<div class="alerte erreur">Les chapitres n'ont pas pu être chargés. Vérifiez la connexion Internet.</div>`;
     return;
   }
   if (livreOuvert !== livre) return;
+  const dispo = [];
+  if (brut.parties && brut.parties.length) dispo.push("humaine");
+  if (brut.ia) dispo.push("ia");
+  const choix = (memo.lire("versions") || {})[livre.id];
+  const version = dispo.includes(choix) ? choix : dispo[0];
+  const d = version === "ia" ? vueIA(brut.ia, livre) : { ...brut, cle: livre.id };
   detailOuvert = d;
-  const pos = (memo.lire("positions") || {})[livre.id];
+  $("fInfos").textContent = version === "ia"
+    ? `${duree(brut.ia.duree)} · ${pluriel(brut.ia.chapitres.length, "chapitre")} · voix de synthèse (IA), voix « ${brut.ia.voix} »`
+    : `${duree(livre.duree)} · ${pluriel(livre.nb, "chapitre")} · lu par ${livre.lecteurs.join(", ")}${livre.nbLecteurs > livre.lecteurs.length ? " et d'autres" : ""}`;
+  const pos = (memo.lire("positions") || {})[d.cle];
   const ch = chapitres(d);
   const reprise = pos && pos.i < ch.length;
   const zips = d.parties.filter((p) => p.zip);
-  const peutCopier = "showDirectoryPicker" in window;
+  const peutCopier = "showDirectoryPicker" in window && version !== "ia";
 
   $("fActions").innerHTML =
     `<button class="gros-bouton" type="button" id="fEcouter">${svg("i-play")} ${reprise ? `Reprendre (chapitre ${pos.i + 1})` : "Écouter"}</button>` +
     (reprise ? `<button class="bouton" type="button" id="fDebut">Depuis le début</button>` : "") +
-    `<button class="bouton" type="button" id="fCopier">💾 Copier sur un lecteur MP3</button>` +
+    (version === "ia" ? "" : `<button class="bouton" type="button" id="fCopier">💾 Copier sur un lecteur MP3</button>`) +
     (zips.length === 1 ? `<a class="bouton" href="${esc(zips[0].zip)}" rel="noopener">${svg("i-tele")} Tout télécharger (ZIP)</a>` : "") +
     lienTexte;
+  if (dispo.length > 1) {
+    const seg = document.createElement("div");
+    seg.className = "versions"; seg.setAttribute("role", "group"); seg.setAttribute("aria-label", "Choisir la lecture");
+    seg.innerHTML = `<button type="button" data-v="humaine" aria-pressed="${version === "humaine"}">Voix humaine (LibriVox)</button>` +
+      `<button type="button" data-v="ia" aria-pressed="${version === "ia"}">Voix de synthèse (IA)</button>`;
+    seg.onclick = (e) => {
+      const b = e.target.closest("button"); if (!b || b.dataset.v === version) return;
+      const v = memo.lire("versions") || {}; v[livre.id] = b.dataset.v; memo.ecrire("versions", v);
+      ouvrirFiche(livre);
+    };
+    $("fActions").before(seg);
+  }
 
   let html = `<div id="zoneCopie"></div>`;
   d.parties.forEach((p, ip) => {
@@ -425,7 +459,11 @@ async function ouvrirFiche(livre) {
     html += `</ol>`;
   });
   const p0 = d.parties[0];
-  html += `<p class="f-pied">Enregistrement <a href="${esc(p0.librivox)}" target="_blank" rel="noopener">LibriVox</a>, domaine public.
+  if (version === "ia") {
+    html += `<p class="f-pied">Lu par une <b>voix de synthèse</b> (intelligence artificielle) : Pocket TTS © <a href="https://kyutai.org" target="_blank" rel="noopener">Kyutai</a>
+      (CC BY 4.0), voix « ${esc(brut.ia.voix)} ». Enregistrement placé dans le domaine public (CC0).
+      ${brut.ia.texte ? `· <a href="${esc(brut.ia.texte)}" target="_blank" rel="noopener">Texte lu (Wikisource)</a>` : ""}</p>`;
+  } else html += `<p class="f-pied">Enregistrement <a href="${esc(p0.librivox)}" target="_blank" rel="noopener">LibriVox</a>, domaine public.
     ${p0.rss ? `· <a href="${esc(p0.rss)}" target="_blank" rel="noopener">Écouter en podcast</a> (copier ce lien dans une appli de podcasts)` : ""}
     ${p0.texte ? `· <a href="${esc(p0.texte)}" target="_blank" rel="noopener">Texte lu</a>` : ""}</p>`;
   $("fCorps").innerHTML = html;
@@ -433,7 +471,7 @@ async function ouvrirFiche(livre) {
 
   $("fEcouter").onclick = () => jouer(livre, d, reprise ? pos.i : 0, reprise ? pos.t : 0);
   if ($("fDebut")) $("fDebut").onclick = () => jouer(livre, d, 0, 0);
-  $("fCopier").onclick = () => preparerCopie(livre, d, peutCopier);
+  if ($("fCopier")) $("fCopier").onclick = () => preparerCopie(livre, d, peutCopier);
   $("fCorps").querySelectorAll(".jouer").forEach((b) => b.onclick = () => jouer(livre, d, +b.dataset.i, 0));
 }
 
@@ -487,14 +525,16 @@ function chargerChapitre(depart, lancer) {
 }
 function marquerActif() {
   document.querySelectorAll(".chap").forEach((li) => li.classList.toggle("actif",
-    !!lecture && livreOuvert === lecture.livre && +li.dataset.i === lecture.index));
+    !!lecture && livreOuvert === lecture.livre && detailOuvert && detailOuvert.cle === lecture.detail.cle &&
+    +li.dataset.i === lecture.index));
 }
 function sauverPosition() {
   if (!lecture) return;
   const p = memo.lire("positions") || {};
   const fini = lecture.index === lecture.chapitres.length - 1 && audio.ended;
-  if (fini) delete p[lecture.livre.id];
-  else p[lecture.livre.id] = { i: lecture.index, t: Math.floor(audio.currentTime || 0) };
+  const cle = lecture.detail.cle || lecture.livre.id;
+  if (fini) delete p[cle];
+  else p[cle] = { i: lecture.index, t: Math.floor(audio.currentTime || 0) };
   memo.ecrire("positions", p);
 }
 function changer(delta) {

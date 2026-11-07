@@ -1,0 +1,159 @@
+name: Voix de synthèse — tout le catalogue
+
+# Fait lire par la voix de synthèse tous les livres du catalogue dont le texte est sur Wikisource.
+# Chaque passage lit au plus « lots » morceaux d'environ 2 h 30 ; les chapitres déjà publiés ne sont
+# jamais relus. Relancer (ou laisser le passage automatique de la nuit) jusqu'à ce que tout soit lu.
+
+on:
+  workflow_dispatch:
+    inputs:
+      lots:
+        description: "Nombre de lots pour ce passage (1 lot ≈ 2 h 30 d'écoute, 20 machines en parallèle)"
+        default: "60"
+      livres:
+        description: "Seulement ces livres (identifiants séparés par des virgules, vide = tous)"
+        default: ""
+      voix:
+        description: "Voix (pour les livres pas encore commencés)"
+        type: choice
+        default: estelle
+        options: [estelle, marius, javert, caro_davy, bill_boerst, peter_yearsley, stuart_bell]
+      vitesse:
+        description: "Vitesse (pour les livres pas encore commencés)"
+        default: "0.9"
+      verifier_textes:
+        description: "Revérifier tous les textes Wikisource"
+        type: boolean
+        default: false
+  schedule:
+    - cron: "23 1 * * *"   # chaque nuit : continue là où le passage précédent s'est arrêté
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: voix-synthese-catalogue
+  cancel-in-progress: false
+
+env:
+  VOIX: ${{ inputs.voix || 'estelle' }}
+  VITESSE: ${{ inputs.vitesse || '0.9' }}
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      lots: ${{ steps.plan.outputs.lots }}
+      nombre: ${{ steps.plan.outputs.nombre }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -q num2words
+      - uses: actions/cache@v4
+        with:
+          path: textes
+          key: textes-${{ github.run_id }}
+          restore-keys: textes-
+      - name: Trouver et vérifier les textes Wikisource
+        run: python3 scripts/textes.py ${{ inputs.verifier_textes && '--tout' || '' }}
+      - name: Enregistrer la liste des textes si elle a changé
+        run: |
+          git add donnees/textes.csv
+          if ! git diff --cached --quiet; then
+            git config user.name "github-actions"
+            git config user.email "github-actions@users.noreply.github.com"
+            git commit -m "Textes Wikisource pour la voix de synthèse"
+            git push
+          fi
+      - id: plan
+        run: |
+          python3 scripts/plan.py --max-lots "${{ inputs.lots || '60' }}" --livres "${{ inputs.livres }}" \
+            --voix "$VOIX" --vitesse "$VITESSE" --resume resume.md
+          cat resume.md >> "$GITHUB_STEP_SUMMARY"
+          echo "lots=$(cat plan.json)" >> "$GITHUB_OUTPUT"
+          echo "nombre=$(python3 -c 'import json;print(len(json.load(open("plan.json"))))')" >> "$GITHUB_OUTPUT"
+      - uses: actions/upload-artifact@v4
+        if: steps.plan.outputs.nombre != '0'
+        with:
+          name: textes
+          path: textes/*.epub
+          retention-days: 3
+
+  lire:
+    needs: plan
+    if: needs.plan.outputs.nombre != '0'
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+    strategy:
+      fail-fast: false
+      max-parallel: 20
+      matrix:
+        lot: ${{ fromJSON(needs.plan.outputs.lots) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Installer Pocket TTS
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg > /dev/null
+          pip install -q --index-url https://download.pytorch.org/whl/cpu torch
+          pip install -q pocket-tts num2words
+      - uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface
+          key: pocket-tts-french_24l-v1
+      - uses: actions/download-artifact@v4
+        with:
+          name: textes
+          path: textes
+      - name: Lire ${{ matrix.lot.titre }} (chapitres ${{ matrix.lot.chapitres }})
+        env:
+          AUTEUR: ${{ matrix.lot.auteur }}
+          TITRE: ${{ matrix.lot.titre }}
+        run: |
+          python3 scripts/synthese.py --epub "textes/${{ matrix.lot.id }}.epub" --auteur "$AUTEUR" --titre "$TITRE" \
+            --chapitres "${{ matrix.lot.chapitres }}" --voix "${{ matrix.lot.voix }}" \
+            --vitesse "${{ matrix.lot.vitesse }}" --sortie lot
+          echo '{"id": "${{ matrix.lot.id }}"}' > lot/lot.json
+          rm -f lot/*.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: lot-${{ matrix.lot.lot }}
+          path: lot/
+          retention-days: 3
+
+  publier:
+    needs: [plan, lire]
+    if: always() && needs.plan.outputs.nombre != '0'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: lot-*
+          path: lots
+      - name: Publier les chapitres dans les Releases
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git pull -q
+          python3 scripts/assembler.py --lots lots --voix "$VOIX" --vitesse "$VITESSE" | tee -a "$GITHUB_STEP_SUMMARY"
+      - name: Enregistrer l'avancement et mettre à jour la webapp
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git add donnees/synthese.json
+          if ! git diff --cached --quiet; then
+            git config user.name "github-actions"
+            git config user.email "github-actions@users.noreply.github.com"
+            git commit -m "Voix de synthèse : nouveaux chapitres publiés"
+            git push
+            gh workflow run publier.yml -R "$GITHUB_REPOSITORY"
+          fi

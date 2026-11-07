@@ -19,6 +19,22 @@ from commun import (DEPOT_EPUB, RACINE, SIECLES, URL_EPUB, duree_lisible, identi
                     lire_cache, lire_catalogue)
 
 SITE = RACINE / "site"
+SYNTHESE = RACINE / "donnees" / "synthese.json"
+DEPOT = "biblioGironde/Kit-Liseuses-Les-Classiques-En-Numerique-Audio"
+
+
+def version_ia(e):
+    """Version « voix de synthèse » d'un livre, à partir de donnees/synthese.json."""
+    base = f"https://github.com/{DEPOT}/releases/download/{e['tag']}/"
+    chapitres = [{"t": c["t"], "mp3": base + urllib.parse.quote(c["f"]), "d": c["d"]}
+                 for _, c in sorted(e["chapitres"].items(), key=lambda kv: int(kv[0]))]
+    return {
+        "voix": e["voix"], "vitesse": e["vitesse"], "modele": e.get("modele", "Pocket TTS (Kyutai)"),
+        "texte": "https://fr.wikisource.org/wiki/" + urllib.parse.quote(e.get("page", "").replace(" ", "_")) if e.get("page") else "",
+        "release": f"https://github.com/{DEPOT}/releases/tag/{e['tag']}",
+        "zip": base + urllib.parse.quote(e["zip"]) if e.get("zip") else "",
+        "duree": sum(c["d"] for c in chapitres), "chapitres": chapitres,
+    }
 
 
 def plage(texte, total):
@@ -80,23 +96,33 @@ def main():
         shutil.rmtree(SITE)
     (SITE / "livres").mkdir(parents=True)
 
-    catalogue, manquants, sources = [], [], []
+    synthese = json.loads(SYNTHESE.read_text(encoding="utf-8")) if SYNTHESE.exists() else {}
+    catalogue, manquants, sources, sources_ia = [], [], [], []
     for ligne in lignes:
         ident = identifiant(ligne)
         entree = {
             "id": ident, "siecle": ligne["siecle"], "auteur": ligne["auteur"], "titre": ligne["titre"],
             "annee": ligne["annee"], "epub": ligne["epub"], "autres": recherche_litteratureaudio(ligne),
         }
+        livre = None
         if ids_librivox(ligne):
             livre = construire_livre(ligne, cache)
             if not livre:
                 manquants.append(ligne)
-                continue
+            else:
+                entree.update(duree=livre["duree"], nb=livre["nb"], lecteurs=livre["lecteurs"][:6],
+                              nbLecteurs=len(livre["lecteurs"]))
+                sources.append((ligne, livre))
+        e = synthese.get(ident)
+        if e and e.get("termine"):
+            ia = version_ia(e)
+            livre = livre or {"parties": [], "lecteurs": [], "duree": 0, "nb": 0}
+            livre["ia"] = ia
+            entree["ia"] = {"duree": ia["duree"], "nb": len(ia["chapitres"]), "voix": ia["voix"]}
+            sources_ia.append((ligne, ia))
+        if livre:
             (SITE / "livres" / f"{ident}.json").write_text(
                 json.dumps(livre, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
-            entree.update(duree=livre["duree"], nb=livre["nb"], lecteurs=livre["lecteurs"][:6],
-                          nbLecteurs=len(livre["lecteurs"]))
-            sources.append((ligne, livre))
         catalogue.append(entree)
 
     donnees = {"siecles": SIECLES, "epub": URL_EPUB, "livres": catalogue}
@@ -104,8 +130,10 @@ def main():
                                          encoding="utf-8")
     shutil.copy(RACINE / "app" / "index.html", SITE / "index.html")
     (SITE / ".nojekyll").write_text("")
-    ecrire_sources(sources)
+    ecrire_sources(sources, sources_ia)
 
+    if sources_ia:
+        print(f"Voix de synthèse : {len(sources_ia)} livres ({duree_lisible(sum(i['duree'] for _, i in sources_ia))}).")
     ecoute = sum(1 for e in catalogue if "duree" in e)
     total = sum(e.get("duree", 0) for e in catalogue)
     print(f"Site construit : {ecoute} livres audio ({duree_lisible(total)} d'écoute), "
@@ -115,7 +143,7 @@ def main():
               f"(lancer scripts/actualiser.py)")
 
 
-def ecrire_sources(sources):
+def ecrire_sources(sources, sources_ia=()):
     lignes = [
         "# Sources et droits",
         "",
@@ -143,6 +171,16 @@ def ecrire_sources(sources):
         extrait = f" — chapitres {ligne['sections']} de l'enregistrement" if ligne["sections"] else ""
         lignes.append(f"- **{ligne['auteur']}**, *{ligne['titre']}* ({duree_lisible(livre['duree'])}{extrait}) — "
                       f"lu par {lus} — {' · '.join(liens)}")
+    if sources_ia:
+        lignes += ["", "## Voix de synthèse", "",
+                   "Ces livres ont aussi été lus par une **voix de synthèse** (intelligence artificielle) :",
+                   "Pocket TTS © [Kyutai](https://kyutai.org), licence CC BY 4.0, avec des voix fournies avec le modèle",
+                   "dont l'enregistrement d'origine est libre (CC0). Les textes viennent de Wikisource.",
+                   "Ces enregistrements sont placés dans le **domaine public (CC0 1.0)** ; les MP3 sont dans les",
+                   f"[Releases du dépôt](https://github.com/{DEPOT}/releases).", ""]
+        for ligne, ia in sources_ia:
+            lignes.append(f"- **{ligne['auteur']}**, *{ligne['titre']}* ({duree_lisible(ia['duree'])}) — voix « {ia['voix']} », "
+                          f"vitesse {str(ia['vitesse']).replace('.', ',')} — [texte Wikisource]({ia['texte']}) · [MP3]({ia['release']})")
     lignes += ["", "## Autres sites de livres audio gratuits", "",
                "Ils ne sont pas repris dans ce dépôt : la webapp y renvoie par un lien.", "",
                "- [Littérature audio](https://www.litteratureaudio.com) : très grand catalogue, écoute gratuite ; "

@@ -263,26 +263,48 @@ def sans_accents(t):
     return re.sub(r"\s+", " ", re.sub(r"[^A-Za-z0-9 \-]", "", t)).strip()
 
 
-def synthetiser(modele, voix, paragraphes, wav, silence_titre=1.2, silence_para=0.55):
+def phrases(texte):
+    """Découpe un paragraphe en phrases, pour marquer une pause entre elles."""
+    morceaux = re.split(r"(?<=[.!?…])\s+(?=[«A-ZÉÈÀÂÎÔÛÇ0-9])", texte)
+    return [m for m in morceaux if m.strip()]
+
+
+def synthetiser(modele, voix, paragraphes, wav, pause=1.0):
+    """pause : multiplie la durée des silences (1 = normal, 1.5 = lecture plus posée)."""
     import numpy as np
     import scipy.io.wavfile
     sr = modele.sample_rate
-    blocs = []
+    silence = lambda s: np.zeros(int(sr * s * pause), dtype="float32")
+    blocs = [silence(0.4)]
     for typ, txt in paragraphes:
-        audio = modele.generate_audio(voix, txt)
-        blocs.append(audio.numpy().astype("float32").reshape(-1))
-        blocs.append(np.zeros(int(sr * (silence_titre if typ == "titre" else silence_para)), dtype="float32"))
-    son = np.concatenate([np.zeros(int(sr * 0.4), dtype="float32")] + blocs)
+        morceaux = [txt] if typ == "titre" else phrases(txt)
+        for i, ph in enumerate(morceaux):
+            audio = modele.generate_audio(voix, ph)
+            blocs.append(audio.numpy().astype("float32").reshape(-1))
+            if i < len(morceaux) - 1:
+                blocs.append(silence(0.25))
+        blocs.append(silence(1.3 if typ == "titre" else 0.6))
+    son = np.concatenate(blocs)
     scipy.io.wavfile.write(wav, sr, son)
     return len(son) / sr
 
 
-def encoder_mp3(wav, mp3, tags):
+def filtre_vitesse(vitesse):
+    """Ralentit (ou accélère) sans changer la hauteur de la voix."""
+    if abs(vitesse - 1) < 0.005:
+        return ""
+    filtres = subprocess.run(["ffmpeg", "-hide_banner", "-filters"], capture_output=True, text=True).stdout
+    if re.search(r"\brubberband\b", filtres):
+        return f"rubberband=tempo={vitesse}:pitchq=quality:transients=smooth,"
+    return f"atempo={vitesse},"
+
+
+def encoder_mp3(wav, mp3, tags, vitesse=1.0):
     meta = []
     for k, v in tags.items():
         meta += ["-metadata", f"{k}={v}"]
     subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-i", str(wav),
-                    "-af", "highpass=f=60,loudnorm=I=-18:TP=-1.5:LRA=11",
+                    "-af", filtre_vitesse(vitesse) + "highpass=f=60,loudnorm=I=-18:TP=-1.5:LRA=11",
                     "-ar", "44100", "-ac", "1", "-c:a", "libmp3lame", "-b:a", "64k",
                     "-id3v2_version", "3", *meta, str(mp3)], check=True)
 
@@ -295,10 +317,16 @@ def main():
     p.add_argument("--chapitres", default="", help="« 1-3 », « 2,5 » ; vide = tous")
     p.add_argument("--lot", default="1/1", help="N/M : ne traiter qu'un chapitre sur M, en commençant au N-ième")
     p.add_argument("--voix", default="estelle", choices=sorted(VOIX_LIBRES))
+    p.add_argument("--vitesse", type=float, default=1.0,
+                   help="vitesse de lecture : 0.9 = 10 %% plus lent (sans changer la voix) ; entre 0.7 et 1.2")
+    p.add_argument("--pause", type=float, default=1.0,
+                   help="durée des silences entre phrases et paragraphes : 1.5 = 50 %% plus longs")
     p.add_argument("--sortie", default="audio")
     p.add_argument("--liste", action="store_true", help="afficher les chapitres trouvés et s'arrêter")
     p.add_argument("--texte-seul", action="store_true", help="écrire le texte préparé, sans synthèse")
     args = p.parse_args()
+    if not 0.7 <= args.vitesse <= 1.2:
+        sys.exit("--vitesse doit être comprise entre 0.7 et 1.2")
 
     epub = args.epub
     if re.match(r"https?://", epub):
@@ -342,8 +370,7 @@ def main():
         t0 = time.time()
         with tempfile.TemporaryDirectory() as tmp:
             wav = Path(tmp) / "c.wav"
-            duree = synthetiser(modele, voix, prep, wav)
-            calcul = time.time() - t0
+            synthetiser(modele, voix, prep, wav, pause=args.pause)
             encoder_mp3(wav, sortie / f"{base}.mp3", {
                 "title": nom, "artist": args.auteur, "album": args.titre, "track": f"{n}/{len(chapitres)}",
                 "genre": "Livre audio", "language": "fra",
@@ -351,7 +378,11 @@ def main():
                 "comment": (f"Voix de synthèse (IA) : Pocket TTS © Kyutai, CC BY 4.0, voix {args.voix} "
                             f"({VOIX_LIBRES[args.voix]}). Texte du domaine public (Wikisource). "
                             "Enregistrement placé dans le domaine public (CC0)."),
-            })
+            }, vitesse=args.vitesse)
+            calcul = time.time() - t0
+            duree = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of",
+                                          "csv=p=0", str(sortie / f"{base}.mp3")],
+                                         capture_output=True, text=True).stdout or 0)
         rapport.append({"chapitre": n, "titre": nom, "duree": round(duree, 1), "calcul": round(calcul, 1),
                         "caracteres": sum(len(t) for _, t in prep), "fichier": f"{base}.mp3"})
         print(f"{n:3}  {nom[:60]:60}  {duree / 60:5.1f} min d'audio en {calcul / 60:5.1f} min "

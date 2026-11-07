@@ -509,7 +509,7 @@ function majBoutons() {
   $("lPP").innerHTML = svg(enPause ? "i-play" : "i-pause");
   $("lPP").setAttribute("aria-label", enPause ? "Lecture" : "Pause");
 }
-const vitesses = [1, 1.25, 1.5, 0.8];
+const vitesses = [1, 1.25, 1.5, 0.75, 0.9];
 let iVitesse = 0;
 $("lVit").onclick = () => {
   iVitesse = (iVitesse + 1) % vitesses.length;

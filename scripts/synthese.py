@@ -269,7 +269,7 @@ def phrases(texte):
     return [m for m in morceaux if m.strip()]
 
 
-def synthetiser(modele, voix, paragraphes, wav, pause=1.0):
+def synthetiser(modele, voix, paragraphes, wav, pause=1.0, par_phrase=False):
     """pause : multiplie la durée des silences (1 = normal, 1.5 = lecture plus posée)."""
     import numpy as np
     import scipy.io.wavfile
@@ -277,7 +277,7 @@ def synthetiser(modele, voix, paragraphes, wav, pause=1.0):
     silence = lambda s: np.zeros(int(sr * s * pause), dtype="float32")
     blocs = [silence(0.4)]
     for typ, txt in paragraphes:
-        morceaux = [txt] if typ == "titre" else phrases(txt)
+        morceaux = phrases(txt) if par_phrase and typ != "titre" else [txt]
         for i, ph in enumerate(morceaux):
             audio = modele.generate_audio(voix, ph)
             blocs.append(audio.numpy().astype("float32").reshape(-1))
@@ -293,10 +293,7 @@ def filtre_vitesse(vitesse):
     """Ralentit (ou accélère) sans changer la hauteur de la voix."""
     if abs(vitesse - 1) < 0.005:
         return ""
-    filtres = subprocess.run(["ffmpeg", "-hide_banner", "-filters"], capture_output=True, text=True).stdout
-    if re.search(r"\brubberband\b", filtres):
-        return f"rubberband=tempo={vitesse}:pitchq=quality:transients=smooth,"
-    return f"atempo={vitesse},"
+    return f",atempo={vitesse}"
 
 
 def encoder_mp3(wav, mp3, tags, vitesse=1.0):
@@ -304,7 +301,7 @@ def encoder_mp3(wav, mp3, tags, vitesse=1.0):
     for k, v in tags.items():
         meta += ["-metadata", f"{k}={v}"]
     subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-i", str(wav),
-                    "-af", filtre_vitesse(vitesse) + "highpass=f=60,loudnorm=I=-18:TP=-1.5:LRA=11",
+                    "-af", "highpass=f=60,loudnorm=I=-18:TP=-1.5:LRA=11" + filtre_vitesse(vitesse),
                     "-ar", "44100", "-ac", "1", "-c:a", "libmp3lame", "-b:a", "64k",
                     "-id3v2_version", "3", *meta, str(mp3)], check=True)
 
@@ -317,10 +314,12 @@ def main():
     p.add_argument("--chapitres", default="", help="« 1-3 », « 2,5 » ; vide = tous")
     p.add_argument("--lot", default="1/1", help="N/M : ne traiter qu'un chapitre sur M, en commençant au N-ième")
     p.add_argument("--voix", default="estelle", choices=sorted(VOIX_LIBRES))
-    p.add_argument("--vitesse", type=float, default=1.0,
+    p.add_argument("--vitesse", type=float, default=0.9,
                    help="vitesse de lecture : 0.9 = 10 %% plus lent (sans changer la voix) ; entre 0.7 et 1.2")
     p.add_argument("--pause", type=float, default=1.0,
-                   help="durée des silences entre phrases et paragraphes : 1.5 = 50 %% plus longs")
+                   help="durée des silences entre paragraphes : 1.5 = 50 %% plus longs")
+    p.add_argument("--pauses-phrases", action="store_true",
+                   help="lire phrase par phrase avec un court silence entre chaque (lecture plus hachée)")
     p.add_argument("--sortie", default="audio")
     p.add_argument("--liste", action="store_true", help="afficher les chapitres trouvés et s'arrêter")
     p.add_argument("--texte-seul", action="store_true", help="écrire le texte préparé, sans synthèse")
@@ -362,7 +361,7 @@ def main():
     for n in choisis:
         prep = preparer_chapitre(chapitres[n - 1])
         nom = nom_chapitre(prep, n)
-        base = f"{n:0{chiffres}d} - {sans_accents(nom)[:70]}".strip()
+        base = f"{n:0{chiffres}d}_{sans_accents(nom)[:70].strip().replace(' ', '_')}"
         (sortie / f"{base}.txt").write_text("\n\n".join(t for _, t in prep) + "\n", encoding="utf-8")
         if args.texte_seul:
             print(f"{n:3}  {nom}")
@@ -370,7 +369,7 @@ def main():
         t0 = time.time()
         with tempfile.TemporaryDirectory() as tmp:
             wav = Path(tmp) / "c.wav"
-            synthetiser(modele, voix, prep, wav, pause=args.pause)
+            synthetiser(modele, voix, prep, wav, pause=args.pause, par_phrase=args.pauses_phrases)
             encoder_mp3(wav, sortie / f"{base}.mp3", {
                 "title": nom, "artist": args.auteur, "album": args.titre, "track": f"{n}/{len(chapitres)}",
                 "genre": "Livre audio", "language": "fra",

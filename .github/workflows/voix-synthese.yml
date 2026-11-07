@@ -29,10 +29,10 @@ on:
         options: [estelle, marius, javert, caro_davy, bill_boerst, peter_yearsley, stuart_bell]
       vitesse:
         description: "Vitesse de lecture : 1 = normale, 0.9 = 10 % plus lente, 0.85 = 15 % plus lente (la voix ne change pas)"
-        default: "0.85"
+        default: "0.9"
       pause:
-        description: "Silences entre phrases et paragraphes : 1 = normaux, 1.3 = 30 % plus longs"
-        default: "1.2"
+        description: "Silences entre paragraphes : 1 = normaux, 1.3 = 30 % plus longs"
+        default: "1"
       machines:
         description: "Nombre de machines en parallèle (1 à 20)"
         default: "3"
@@ -72,7 +72,7 @@ jobs:
           python-version: "3.12"
       - name: Installer Pocket TTS (version processeur, sans carte graphique)
         run: |
-          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg rubberband-cli > /dev/null
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg > /dev/null
           pip install -q --index-url https://download.pytorch.org/whl/cpu torch
           pip install -q pocket-tts num2words
       - uses: actions/cache@v4

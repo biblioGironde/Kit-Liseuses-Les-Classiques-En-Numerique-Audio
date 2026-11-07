@@ -126,6 +126,32 @@ Le texte de la plupart de ces œuvres est disponible en EPUB dans [Kit-Liseuses-
 - **Maurice Leblanc**, *Les Dents du tigre* (11 h 07) — lu par Bidou — [LibriVox](https://librivox.org/les-dents-du-tigre-by-maurice-leblanc/)
 - **Louis Hémon**, *Maria Chapdelaine* (5 h 06) — lu par Jc Guan — [LibriVox](https://librivox.org/maria-chapdelaine-by-louis-hemon/)
 
+## Voix de synthèse
+
+Ces livres ont aussi été lus par une **voix de synthèse** (intelligence artificielle) :
+Pocket TTS © [Kyutai](https://kyutai.org), licence CC BY 4.0, avec des voix fournies avec le modèle
+dont l'enregistrement d'origine est libre (CC0). Les textes viennent de Wikisource.
+Ces enregistrements sont placés dans le **domaine public (CC0 1.0)** ; les MP3 sont dans les
+[Releases du dépôt](https://github.com/biblioGironde/Kit-Liseuses-Les-Classiques-En-Numerique-Audio/releases).
+
+- **Joachim Du Bellay**, *Les Regrets* (2 h 11) — voix « estelle », vitesse 0,9 — [texte Wikisource](https://fr.wikisource.org/wiki/Les_Regrets_%28du_Bellay%29) · [MP3](https://github.com/biblioGironde/Kit-Liseuses-Les-Classiques-En-Numerique-Audio/releases/tag/ia-joachim-du-bellay-les-regrets)
+- **Marguerite de Navarre**, *L'Heptaméron* (43 h 03) — voix « estelle », vitesse 0,9 — [texte Wikisource](https://fr.wikisource.org/wiki/L%E2%80%99Heptam%C3%A9ron_des_nouvelles) · [MP3](https://github.com/biblioGironde/Kit-Liseuses-Les-Classiques-En-Numerique-Audio/releases/tag/ia-marguerite-de-navarre-l-heptameron)
+- **Étienne de La Boétie**, *Discours de la servitude volontaire* (3 h 39) — voix « estelle », vitesse 0,9 — [texte Wikisource](https://fr.wikisource.org/wiki/Discours_de_la_servitude_volontaire/%C3%89dition_1922) · [MP3](https://github.com/biblioGironde/Kit-Liseuses-Les-Classiques-En-Numerique-Audio/releases/tag/ia-etienne-de-la-boetie-discours-de-la-servitude-volontaire)
+- **Agrippa d'Aubigné**, *Les Tragiques* (26 min) — voix « estelle », vitesse 0,9 — [texte Wikisource](https://fr.wikisource.org/wiki/Les_Tragiques/%C3%A9d._Read) · [MP3](https://github.com/biblioGironde/Kit-Liseuses-Les-Classiques-En-Numerique-Audio/releases/tag/ia-agrippa-d-aubigne-les-tragiques)
+- **Pierre Corneille**, *Le Cid* (5 h 13) — voix « estelle », vitesse 0,9 — [texte Wikisource](https://fr.wikisource.org/wiki/Le_Cid/%C3%89dition_Marty-Laveaux) · [MP3](https://github.com/biblioGironde/Kit-Liseuses-Les-Classiques-En-Numerique-Audio/releases/tag/ia-pierre-corneille-le-cid)
+- **Jean de La Fontaine**, *Fables (livres 1 à 12)* (7 h 59) — voix « estelle », vitesse 0,9 — [texte Wikisource](https://fr.wikisource.org/wiki/Fables_de_La_Fontaine_%28%C3%A9d._1874%29) · [MP3](https://github.com/biblioGironde/Kit-Liseuses-Les-Classiques-En-Numerique-Audio/releases/tag/ia-jean-de-la-fontaine-fables-livres-1-a-12)
+- **Madame de La Fayette**, *La Princesse de Clèves* (4 h 33) — voix « estelle », vitesse 0,9 — [texte Wikisource](https://fr.wikisource.org/wiki/La_Princesse_de_Cl%C3%A8ves%2C_%C3%A9dition_Lepetit%2C_1820) · [MP3](https://github.com/biblioGironde/Kit-Liseuses-Les-Classiques-En-Numerique-Audio/releases/tag/ia-madame-de-la-fayette-la-princesse-de-cleves)
+- **Jean de La Bruyère**, *Les Caractères* (11 h 09) — voix « estelle », vitesse 0,9 — [texte Wikisource](https://fr.wikisource.org/wiki/Les_Caract%C3%A8res/%C3%89dition_Flammarion_1880) · [MP3](https://github.com/biblioGironde/Kit-Liseuses-Les-Classiques-En-Numerique-Audio/releases/tag/ia-jean-de-la-bruyere-les-caracteres)
+- **Molière**, *Le Misanthrope* (43 min) — voix « estelle », vitesse 0,9 — [texte Wikisource](https://fr.wikisource.org/wiki/Le_Misanthrope/%C3%89dition_Louandre%2C_1910) · [MP3](https://github.com/biblioGironde/Kit-Liseuses-Les-Classiques-En-Numerique-Audio/releases/tag/ia-moliere-le-misanthrope)
+- **Molière**, *Tartuffe* (1 h 32) — voix « estelle », vitesse 0,9 — [texte Wikisource](https://fr.wikisource.org/wiki/Tartuffe_ou_l%E2%80%99Imposteur/%C3%89dition_Louandre%2C_1910) · [MP3](https://github.com/biblioGironde/Kit-Liseuses-Les-Classiques-En-Numerique-Audio/releases/tag/ia-moliere-tartuffe)
+- **Molière**, *Dom Juan* (1 h 15) — voix « estelle », vitesse 0,9 — [texte Wikisource](https://fr.wikisource.org/wiki/Don_Juan_ou_le_Festin_de_pierre/%C3%89dition_Louandre%2C_1910) · [MP3](https://github.com/biblioGironde/Kit-Liseuses-Les-Classiques-En-Numerique-Audio/releases/tag/ia-moliere-dom-juan)
+- **Jean Racine**, *Phèdre* (1 h 29) — voix « estelle », vitesse 0,9 — [texte Wikisource](https://fr.wikisource.org/wiki/Ph%C3%A8dre_%28Racine%29%2C_Didot%2C_1854) · [MP3](https://github.com/biblioGironde/Kit-Liseuses-Les-Classiques-En-Numerique-Audio/releases/tag/ia-jean-racine-phedre)
+- **Jean Racine**, *Andromaque* (1 h 34) — voix « estelle », vitesse 0,9 — [texte Wikisource](https://fr.wikisource.org/wiki/Andromaque_%28Racine%2C_%C3%A9ditions_Didot%2C_1854%29) · [MP3](https://github.com/biblioGironde/Kit-Liseuses-Les-Classiques-En-Numerique-Audio/releases/tag/ia-jean-racine-andromaque)
+- **Jean Racine**, *Britannicus* (1 h 48) — voix « estelle », vitesse 0,9 — [texte Wikisource](https://fr.wikisource.org/wiki/Britannicus_%28%C3%A9ditions_Didot%2C_1854%29) · [MP3](https://github.com/biblioGironde/Kit-Liseuses-Les-Classiques-En-Numerique-Audio/releases/tag/ia-jean-racine-britannicus)
+- **Blaise Pascal**, *Pensées* (31 h 27) — voix « estelle », vitesse 0,9 — [texte Wikisource](https://fr.wikisource.org/wiki/Pens%C3%A9es_%28Pascal%2C_%C3%A9d._Brunschvicg%29) · [MP3](https://github.com/biblioGironde/Kit-Liseuses-Les-Classiques-En-Numerique-Audio/releases/tag/ia-blaise-pascal-pensees)
+- **Voltaire**, *Candide* (2 h 42) — voix « estelle », vitesse 0,9 — [texte Wikisource](https://fr.wikisource.org/wiki/Candide%2C_ou_l%E2%80%99Optimisme/Garnier_1877) · [MP3](https://github.com/biblioGironde/Kit-Liseuses-Les-Classiques-En-Numerique-Audio/releases/tag/ia-voltaire-candide)
+- **Montesquieu**, *Lettres persanes (tome 1)* (8 h 09) — voix « estelle », vitesse 0,9 — [texte Wikisource](https://fr.wikisource.org/wiki/Lettres_persanes) · [MP3](https://github.com/biblioGironde/Kit-Liseuses-Les-Classiques-En-Numerique-Audio/releases/tag/ia-montesquieu-lettres-persanes-tome-1)
+
 ## Autres sites de livres audio gratuits
 
 Ils ne sont pas repris dans ce dépôt : la webapp y renvoie par un lien.

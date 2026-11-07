@@ -49,6 +49,9 @@ EDITIONS = {
     "Candide": "Candide, ou l’Optimisme/Garnier 1877",
     "Le Comte de Monte-Cristo (tome 1)": "Le Comte de Monte-Cristo",
 }
+# Œuvres dont Wikisource propose plusieurs versions différentes : l'édition doit être choisie à la main
+# (colonne « page » de donnees/textes.csv).
+A_CHOISIR = {"L'Éducation sentimentale"}
 
 
 def requete(url, essais=4):
@@ -71,7 +74,7 @@ def ws_api(**params):
     return json.loads(requete(API_WS + "?" + urllib.parse.urlencode(params)))
 
 
-def ws_resoudre(page):
+def ws_resoudre(page, auteur=""):
     """Renvoie (page à exporter, remarque). Choisit une édition si la page est une page d'homonymie."""
     d = ws_api(action="query", titles=page, redirects=1, prop="pageprops|links", pllimit=500, plnamespace=0)
     p = d["query"]["pages"][0]
@@ -82,6 +85,12 @@ def ws_resoudre(page):
         return titre, ""
     editions = [l["title"] for l in p.get("links", [])
                 if l["title"].startswith((titre + " (", titre + "/")) and not l["title"].endswith(("/Éditions", "/Concordance"))]
+    # « L'Avare (Ésope) » : écarter les œuvres homonymes d'un autre auteur
+    nom = auteur.split()[-1].lower() if auteur else ""
+    def autre_auteur(t):
+        m = re.match(re.escape(titre) + r" \(([^)0-9]+)\)$", t)
+        return bool(m) and nom and nom not in m.group(1).lower()
+    editions = [e for e in editions if not autre_auteur(e)]
     if not editions:
         return None, "plusieurs éditions sur Wikisource : choisir la page à la main"
     # on préfère la plus récente (orthographe plus proche de l'actuelle)
@@ -154,7 +163,17 @@ def main():
         l = existant.get(ident, {})
         l.update(id=ident, auteur=ligne["auteur"], titre=ligne["titre"])
         if l.get("statut") == "ok" and not args.tout:
+            if not (CACHE / f"{ident}.epub").exists():
+                try:
+                    verifier(l)
+                except Exception as ex:  # noqa: BLE001
+                    l["statut"] = f"erreur : {ex}"
             sortie.append(l)
+            continue
+        if ligne["epub"] in A_CHOISIR and not l.get("page"):
+            l.update(statut="plusieurs versions de l'œuvre sur Wikisource : choisir la page à la main")
+            sortie.append(l)
+            print(f"  ✗ {ligne['auteur']} — {ligne['titre']} : {l['statut']}")
             continue
         try:
             if not l.get("page") and e["source"] == "wikisource" and e["statut"] == "ok":
@@ -166,7 +185,7 @@ def main():
                 tome = re.search(r"\(tome (\d+)\)", ligne["epub"])
                 if tome and "Misérables" in ligne["epub"]:
                     page = f"Les Misérables/Tome {tome.group(1)}"
-                page, remarque = ws_resoudre(page)
+                page, remarque = ws_resoudre(page, ligne["auteur"])
                 if not page:
                     l.update(statut=remarque)
                     sortie.append(l)

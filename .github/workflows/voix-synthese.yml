@@ -134,4 +134,8 @@ jobs:
           Enregistrements placés dans le domaine public (CC0 1.0)."
           gh release view "$tag" -R "$GITHUB_REPOSITORY" >/dev/null 2>&1 || \
             gh release create "$tag" -R "$GITHUB_REPOSITORY" --title "${{ inputs.titre }} — voix de synthèse (${{ inputs.voix }})" --notes "$notes"
+          # on retire les fichiers d'un essai précédent avant de déposer les nouveaux
+          gh release view "$tag" -R "$GITHUB_REPOSITORY" --json assets --jq '.assets[].name' | while read -r f; do
+            gh release delete-asset "$tag" "$f" -R "$GITHUB_REPOSITORY" -y
+          done
           gh release upload "$tag" livre/*.mp3 -R "$GITHUB_REPOSITORY" --clobber

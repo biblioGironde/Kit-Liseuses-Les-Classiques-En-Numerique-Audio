@@ -126,17 +126,6 @@ Le texte de la plupart de ces œuvres est disponible en EPUB dans [Kit-Liseuses-
 - **Maurice Leblanc**, *Les Dents du tigre* (11 h 07) — lu par Bidou — [LibriVox](https://librivox.org/les-dents-du-tigre-by-maurice-leblanc/)
 - **Louis Hémon**, *Maria Chapdelaine* (5 h 06) — lu par Jc Guan — [LibriVox](https://librivox.org/maria-chapdelaine-by-louis-hemon/)
 
-## Voix de synthèse
-
-Ces livres ont aussi été lus par une **voix de synthèse** (intelligence artificielle) :
-Pocket TTS © [Kyutai](https://kyutai.org), licence CC BY 4.0, avec des voix fournies avec le modèle
-dont l'enregistrement d'origine est libre (CC0). Les textes viennent de Wikisource.
-Ces enregistrements sont placés dans le **domaine public (CC0 1.0)** ; les MP3 sont dans les
-[Releases du dépôt](https://github.com/biblioGironde/Kit-Liseuses-Les-Classiques-En-Numerique-Audio/releases).
-
-- **Jean Racine**, *Phèdre* (4 min) — voix « estelle », vitesse 0,9 — [texte Wikisource](https://fr.wikisource.org/wiki/Ph%C3%A8dre) · [MP3](https://github.com/biblioGironde/Kit-Liseuses-Les-Classiques-En-Numerique-Audio/releases/tag/synthese-voltaire-candide-estelle)
-- **Voltaire**, *Candide* (12 min) — voix « estelle », vitesse 0,9 — [texte Wikisource](https://fr.wikisource.org/wiki/Candide%2C_ou_l%E2%80%99Optimisme/Garnier_1877) · [MP3](https://github.com/biblioGironde/Kit-Liseuses-Les-Classiques-En-Numerique-Audio/releases/tag/synthese-voltaire-candide-estelle)
-
 ## Autres sites de livres audio gratuits
 
 Ils ne sont pas repris dans ce dépôt : la webapp y renvoie par un lien.

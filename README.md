@@ -89,6 +89,37 @@ traducteur est lui aussi mort depuis plus de 70 ans.
 Un enregistrement encore en cours sur LibriVox (chapitres manquants) est ignoré jusqu'à ce
 qu'il soit terminé : il apparaîtra tout seul à la publication suivante.
 
+## Voix de synthèse (en test)
+
+Pour remplacer les lectures LibriVox de qualité inégale, le dépôt peut faire lire un livre
+par une voix de synthèse libre, **Pocket TTS** de [Kyutai](https://kyutai.org) (modèle français,
+licence CC BY 4.0), directement sur les machines gratuites de GitHub Actions.
+
+*Actions → Lire un livre en voix de synthèse → Run workflow*, puis indiquer :
+
+- l'adresse de l'EPUB exporté de **Wikisource** (texte du domaine public), de la forme
+  `https://ws-export.wmcloud.org/?lang=fr&page=<titre de la page Wikisource>&format=epub-3` ;
+- les chapitres à lire (`1-3`, ou vide pour tout le livre) et le nombre de machines en parallèle ;
+- la voix : seules les voix de Pocket TTS dont l'enregistrement d'origine est libre (CC0) sont proposées
+  (`estelle`, voix française par défaut, `marius`, `javert`, `caro_davy`…).
+
+Le script `scripts/synthese.py` découpe l'EPUB en chapitres, prépare le texte pour la lecture
+(chiffres romains et nombres en toutes lettres, abréviations, titres en majuscules), lit chaque
+chapitre, normalise le volume et produit des MP3 étiquetés « voix de synthèse ». Le bilan de
+l'action indique la vitesse obtenue ; les MP3 sont téléchargeables dans l'onglet de l'action,
+ou publiés dans une Release si la case est cochée.
+
+Les fichiers produits sont placés sous **CC0** (domaine public), avec la mention
+« Pocket TTS © Kyutai, CC BY 4.0 ».
+
+Pour voir les chapitres d'un EPUB et le texte qui sera lu, sans rien générer :
+
+```bash
+pip install num2words
+python3 scripts/synthese.py --epub "<adresse>" --liste
+python3 scripts/synthese.py --epub "<adresse>" --chapitres 1 --texte-seul --sortie essai/
+```
+
 ## Tester en local
 
 Il faut Python 3.8 ou plus récent, sans bibliothèque à installer.

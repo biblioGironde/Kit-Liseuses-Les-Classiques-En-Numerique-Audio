@@ -1,3 +1,6 @@
 site/
 __pycache__/
 .DS_Store
+textes/
+plan.json
+resume.md

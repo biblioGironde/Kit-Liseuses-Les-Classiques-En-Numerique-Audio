@@ -162,3 +162,10 @@ catalogue → Run workflow*, en cochant la case.
 ## Activer GitHub Pages (une seule fois)
 
 Dans le dépôt : *Settings → Pages → Build and deployment → Source : GitHub Actions*.
+
+## Licences
+
+- **Code** (scripts et webapp) : © Département de la Gironde — biblio.gironde, sous licence [GNU Affero General Public License v3.0](LICENSE) ou ultérieure (AGPL-3.0-or-later). Vous pouvez le réutiliser et le modifier ; toute version modifiée, redistribuée ou mise en ligne, doit être publiée sous la même licence, avec son code source.
+- **Catalogue (`catalogue.csv`) et textes de présentation** : [Licence Ouverte Etalab 2.0](https://www.etalab.gouv.fr/licence-ouverte-open-licence/), réutilisation libre, y compris commerciale, avec mention de la source « biblio.gironde ».
+- **Enregistrements LibriVox** : domaine public ; ils restent hébergés par LibriVox sur archive.org. Les lecteurs de chaque livre sont cités dans [`SOURCES.md`](SOURCES.md).
+- **Lectures en voix de synthèse** : produites avec Pocket TTS © Kyutai (CC BY 4.0) ; la mention « Pocket TTS © Kyutai, CC BY 4.0 » doit accompagner leur diffusion.

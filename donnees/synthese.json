@@ -78,6 +78,318 @@
   "zip": "agrippa-d-aubigne-les-tragiques.zip",
   "total": 2
  },
+ "alexandre-dumas-les-trois-mousquetaires": {
+  "tag": "ia-alexandre-dumas-les-trois-mousquetaires",
+  "voix": "estelle",
+  "vitesse": 0.9,
+  "modele": "Pocket TTS (Kyutai), french_24l",
+  "page": "Les Trois Mousquetaires",
+  "chapitres": {
+   "1": {
+    "t": "Préface.",
+    "d": 257,
+    "f": "01_Preface.mp3"
+   },
+   "2": {
+    "t": "Chapitre premier. Les trois présents de m. D’Artagnan père.",
+    "d": 1788,
+    "f": "02_Chapitre_premier_Les_trois_presents_de_m_D_Artagnan_pere.mp3"
+   },
+   "3": {
+    "t": "Chapitre deux. L’antichambre de m. De Tréville.",
+    "d": 1185,
+    "f": "03_Chapitre_deux_L_antichambre_de_m_De_Treville.mp3"
+   },
+   "4": {
+    "t": "Chapitre trois. L’audience.",
+    "d": 1298,
+    "f": "04_Chapitre_trois_L_audience.mp3"
+   },
+   "5": {
+    "t": "Chapitre quatre. L’épaule d’Athos, le baudrier de Porthos et le mouchoir d’Aramis.",
+    "d": 885,
+    "f": "05_Chapitre_quatre_L_epaule_d_Athos_le_baudrier_de_Porthos_et_le_mouchoir.mp3"
+   },
+   "6": {
+    "t": "Chapitre cinq. Les mousquetaires du roi et les gardes de m. Le cardinal.",
+    "d": 1205,
+    "f": "06_Chapitre_cinq_Les_mousquetaires_du_roi_et_les_gardes_de_m_Le_cardinal.mp3"
+   },
+   "7": {
+    "t": "Chapitre six. Sa Majesté le roi louis treizième.",
+    "d": 2145,
+    "f": "07_Chapitre_six_Sa_Majeste_le_roi_louis_treizieme.mp3"
+   },
+   "8": {
+    "t": "Chapitre sept. L’intérieur des mousquetaires.",
+    "d": 997,
+    "f": "08_Chapitre_sept_L_interieur_des_mousquetaires.mp3"
+   },
+   "9": {
+    "t": "Chapitre huit. Une intrigue de cour.",
+    "d": 901,
+    "f": "09_Chapitre_huit_Une_intrigue_de_cour.mp3"
+   },
+   "10": {
+    "t": "Chapitre neuf. D’Artagnan se dessine.",
+    "d": 876,
+    "f": "10_Chapitre_neuf_D_Artagnan_se_dessine.mp3"
+   },
+   "11": {
+    "t": "Chapitre dix. Une souricière au dix-septième siècle.",
+    "d": 1065,
+    "f": "11_Chapitre_dix_Une_souriciere_au_dix-septieme_siecle.mp3"
+   },
+   "12": {
+    "t": "Chapitre onze. L’intrigue se noue.",
+    "d": 1905,
+    "f": "12_Chapitre_onze_L_intrigue_se_noue.mp3"
+   },
+   "13": {
+    "t": "Chapitre douze. George Villiers, duc de Buckingham.",
+    "d": 939,
+    "f": "13_Chapitre_douze_George_Villiers_duc_de_Buckingham.mp3"
+   },
+   "14": {
+    "t": "Chapitre treize. Monsieur Bonacieux.",
+    "d": 946,
+    "f": "14_Chapitre_treize_Monsieur_Bonacieux.mp3"
+   },
+   "15": {
+    "t": "Chapitre quatorze. L’homme de meung.",
+    "d": 1119,
+    "f": "15_Chapitre_quatorze_L_homme_de_meung.mp3"
+   },
+   "16": {
+    "t": "Chapitre quinze. Gens de robe et gens d’épée.",
+    "d": 870,
+    "f": "16_Chapitre_quinze_Gens_de_robe_et_gens_d_epee.mp3"
+   },
+   "17": {
+    "t": "Chapitre seize. Où monsieur le garde des sceaux Séguier chercha plus d’une fois la cloche pour la sonner, comme il le fa",
+    "d": 1266,
+    "f": "17_Chapitre_seize_Ou_monsieur_le_garde_des_sceaux_Seguier_chercha_plus_d.mp3"
+   },
+   "18": {
+    "t": "Chapitre dix-sept. Le ménage Bonacieux.",
+    "d": 1406,
+    "f": "18_Chapitre_dix-sept_Le_menage_Bonacieux.mp3"
+   },
+   "19": {
+    "t": "Chapitre dix-huit. L’amant et le mari.",
+    "d": 754,
+    "f": "19_Chapitre_dix-huit_L_amant_et_le_mari.mp3"
+   },
+   "20": {
+    "t": "Chapitre dix-neuf. Plan de campagne.",
+    "d": 909,
+    "f": "20_Chapitre_dix-neuf_Plan_de_campagne.mp3"
+   },
+   "21": {
+    "t": "Chapitre vingt. Voyage.",
+    "d": 1304,
+    "f": "21_Chapitre_vingt_Voyage.mp3"
+   },
+   "22": {
+    "t": "Chapitre vingt et un. La comtesse de Winter.",
+    "d": 1073,
+    "f": "22_Chapitre_vingt_et_un_La_comtesse_de_Winter.mp3"
+   },
+   "23": {
+    "t": "Chapitre vingt-deux. Le ballet de la Merlaison.",
+    "d": 769,
+    "f": "23_Chapitre_vingt-deux_Le_ballet_de_la_Merlaison.mp3"
+   },
+   "24": {
+    "t": "Chapitre vingt-trois. Le rendez-vous.",
+    "d": 1155,
+    "f": "24_Chapitre_vingt-trois_Le_rendez-vous.mp3"
+   },
+   "25": {
+    "t": "Chapitre vingt-quatre. Le pavillon.",
+    "d": 1150,
+    "f": "25_Chapitre_vingt-quatre_Le_pavillon.mp3"
+   },
+   "26": {
+    "t": "Chapitre vingt-cinq. La maîtresse de Porthos.",
+    "d": 2090,
+    "f": "26_Chapitre_vingt-cinq_La_maitresse_de_Porthos.mp3"
+   },
+   "27": {
+    "t": "Chapitre vingt-six. La thèse d’Aramis.",
+    "d": 1812,
+    "f": "27_Chapitre_vingt-six_La_these_d_Aramis.mp3"
+   },
+   "28": {
+    "t": "Chapitre vingt-sept. La femme d’Athos.",
+    "d": 2133,
+    "f": "28_Chapitre_vingt-sept_La_femme_d_Athos.mp3"
+   },
+   "29": {
+    "t": "Chapitre vingt-huit. Retour.",
+    "d": 1501,
+    "f": "29_Chapitre_vingt-huit_Retour.mp3"
+   },
+   "30": {
+    "t": "Chapitre vingt-neuf. La chasse à l’équipement.",
+    "d": 934,
+    "f": "30_Chapitre_vingt-neuf_La_chasse_a_l_equipement.mp3"
+   },
+   "31": {
+    "t": "Chapitre trente. Milady.",
+    "d": 827,
+    "f": "31_Chapitre_trente_Milady.mp3"
+   },
+   "32": {
+    "t": "Chapitre trente et un. Anglais et français.",
+    "d": 808,
+    "f": "32_Chapitre_trente_et_un_Anglais_et_francais.mp3"
+   },
+   "33": {
+    "t": "Chapitre trente-deux. Un dîner de procureur.",
+    "d": 1003,
+    "f": "33_Chapitre_trente-deux_Un_diner_de_procureur.mp3"
+   },
+   "34": {
+    "t": "Chapitre trente-trois. Soubrette et maîtresse.",
+    "d": 1004,
+    "f": "34_Chapitre_trente-trois_Soubrette_et_maitresse.mp3"
+   },
+   "35": {
+    "t": "Chapitre trente-quatre. Où il est traité de l’équipement d’Aramis et de Porthos.",
+    "d": 921,
+    "f": "35_Chapitre_trente-quatre_Ou_il_est_traite_de_l_equipement_d_Aramis_et_de.mp3"
+   },
+   "36": {
+    "t": "Chapitre trente-cinq. La nuit tous les chats sont gris.",
+    "d": 871,
+    "f": "36_Chapitre_trente-cinq_La_nuit_tous_les_chats_sont_gris.mp3"
+   },
+   "37": {
+    "t": "Chapitre trente-six. Rêve de vengeance.",
+    "d": 778,
+    "f": "37_Chapitre_trente-six_Reve_de_vengeance.mp3"
+   },
+   "38": {
+    "t": "Chapitre trente-sept. Le secret de milady.",
+    "d": 775,
+    "f": "38_Chapitre_trente-sept_Le_secret_de_milady.mp3"
+   },
+   "39": {
+    "t": "Chapitre trente-huit. Comment, sans se déranger, Athos trouva son équipement.",
+    "d": 1001,
+    "f": "39_Chapitre_trente-huit_Comment_sans_se_deranger_Athos_trouva_son_equipem.mp3"
+   },
+   "40": {
+    "t": "Chapitre trente-neuf. Une vision.",
+    "d": 976,
+    "f": "40_Chapitre_trente-neuf_Une_vision.mp3"
+   },
+   "41": {
+    "t": "Chapitre quarante. Le cardinal.",
+    "d": 848,
+    "f": "41_Chapitre_quarante_Le_cardinal.mp3"
+   },
+   "42": {
+    "t": "Chapitre quarante et un. Le siége de la Rochelle.",
+    "d": 1353,
+    "f": "42_Chapitre_quarante_et_un_Le_siege_de_la_Rochelle.mp3"
+   },
+   "43": {
+    "t": "Chapitre quarante-deux. Le vin d’Anjou.",
+    "d": 820,
+    "f": "43_Chapitre_quarante-deux_Le_vin_d_Anjou.mp3"
+   },
+   "44": {
+    "t": "Chapitre quarante-trois. L’auberge du Colombier-Rouge.",
+    "d": 894,
+    "f": "44_Chapitre_quarante-trois_L_auberge_du_Colombier-Rouge.mp3"
+   },
+   "45": {
+    "t": "Chapitre quarante-quatre. De l’utilité des tuyaux de poêle.",
+    "d": 877,
+    "f": "45_Chapitre_quarante-quatre_De_l_utilite_des_tuyaux_de_poele.mp3"
+   },
+   "46": {
+    "t": "Chapitre quarante-cinq. Scène conjugale.",
+    "d": 649,
+    "f": "46_Chapitre_quarante-cinq_Scene_conjugale.mp3"
+   },
+   "47": {
+    "t": "Chapitre quarante-six. Le bastion de Saint-Gervais.",
+    "d": 739,
+    "f": "47_Chapitre_quarante-six_Le_bastion_de_Saint-Gervais.mp3"
+   },
+   "48": {
+    "t": "Chapitre quarante-sept. Le conseil des mousquetaires.",
+    "d": 1853,
+    "f": "48_Chapitre_quarante-sept_Le_conseil_des_mousquetaires.mp3"
+   },
+   "49": {
+    "t": "Chapitre quarante-huit. Affaire de famille.",
+    "d": 1538,
+    "f": "49_Chapitre_quarante-huit_Affaire_de_famille.mp3"
+   },
+   "50": {
+    "t": "Chapitre quarante-neuf. Fatalité.",
+    "d": 918,
+    "f": "50_Chapitre_quarante-neuf_Fatalite.mp3"
+   },
+   "51": {
+    "t": "Chapitre cinquante. Causerie d’un frère avec sa sœur.",
+    "d": 840,
+    "f": "51_Chapitre_cinquante_Causerie_d_un_frere_avec_sa_soeur.mp3"
+   },
+   "52": {
+    "t": "Chapitre cinquante et un. Officier!",
+    "d": 1210,
+    "f": "52_Chapitre_cinquante_et_un_Officier.mp3"
+   },
+   "53": {
+    "t": "Chapitre cinquante-deux. Première journée de captivité.",
+    "d": 791,
+    "f": "53_Chapitre_cinquante-deux_Premiere_journee_de_captivite.mp3"
+   },
+   "54": {
+    "t": "Chapitre cinquante-trois. Deuxième journée de captivité.",
+    "d": 806,
+    "f": "54_Chapitre_cinquante-trois_Deuxieme_journee_de_captivite.mp3"
+   },
+   "55": {
+    "t": "Chapitre cinquante-quatre. Troisième journée de captivité.",
+    "d": 982,
+    "f": "55_Chapitre_cinquante-quatre_Troisieme_journee_de_captivite.mp3"
+   },
+   "56": {
+    "t": "Chapitre cinquante-cinq. Quatrième journée de captivité.",
+    "d": 943,
+    "f": "56_Chapitre_cinquante-cinq_Quatrieme_journee_de_captivite.mp3"
+   },
+   "57": {
+    "t": "Chapitre cinquante-six. Cinquième journée de captivité.",
+    "d": 1644,
+    "f": "57_Chapitre_cinquante-six_Cinquieme_journee_de_captivite.mp3"
+   },
+   "58": {
+    "t": "Chapitre cinquante-sept. Un moyen de tragédie classique.",
+    "d": 723,
+    "f": "58_Chapitre_cinquante-sept_Un_moyen_de_tragedie_classique.mp3"
+   },
+   "59": {
+    "t": "Chapitre cinquante-huit. Évasion.",
+    "d": 933,
+    "f": "59_Chapitre_cinquante-huit_Evasion.mp3"
+   },
+   "60": {
+    "t": "Chapitre cinquante-neuf. Ce qui se passait à Portsmouth le vingt-trois août mille six cent vingt-huit.",
+    "d": 1162,
+    "f": "60_Chapitre_cinquante-neuf_Ce_qui_se_passait_a_Portsmouth_le_vingt-trois.mp3"
+   }
+  },
+  "termine": false,
+  "zip": "",
+  "total": 68
+ },
  "beaumarchais-le-barbier-de-seville": {
   "tag": "ia-beaumarchais-le-barbier-de-seville",
   "voix": "estelle",
@@ -1744,6 +2056,218 @@
   "zip": "denis-diderot-la-religieuse.zip",
   "total": 7
  },
+ "emile-zola-germinal": {
+  "tag": "ia-emile-zola-germinal",
+  "voix": "estelle",
+  "vitesse": 0.9,
+  "modele": "Pocket TTS (Kyutai), french_24l",
+  "page": "Germinal",
+  "chapitres": {
+   "1": {
+    "t": "Première partie. Premier.",
+    "d": 1096,
+    "f": "01_Premiere_partie_Premier.mp3"
+   },
+   "2": {
+    "t": "Deux.",
+    "d": 1042,
+    "f": "02_Deux.mp3"
+   },
+   "3": {
+    "t": "Trois.",
+    "d": 1533,
+    "f": "03_Trois.mp3"
+   },
+   "4": {
+    "t": "Quatre.",
+    "d": 1296,
+    "f": "04_Quatre.mp3"
+   },
+   "5": {
+    "t": "Cinq.",
+    "d": 1169,
+    "f": "05_Cinq.mp3"
+   },
+   "6": {
+    "t": "Six.",
+    "d": 1090,
+    "f": "06_Six.mp3"
+   },
+   "7": {
+    "t": "Deuxième partie. Premier.",
+    "d": 1170,
+    "f": "07_Deuxieme_partie_Premier.mp3"
+   },
+   "8": {
+    "t": "Deux.",
+    "d": 1229,
+    "f": "08_Deux.mp3"
+   },
+   "9": {
+    "t": "Trois.",
+    "d": 1409,
+    "f": "09_Trois.mp3"
+   },
+   "10": {
+    "t": "Quatre.",
+    "d": 1002,
+    "f": "10_Quatre.mp3"
+   },
+   "11": {
+    "t": "Cinq.",
+    "d": 1464,
+    "f": "11_Cinq.mp3"
+   },
+   "12": {
+    "t": "Troisième partie. Premier.",
+    "d": 1356,
+    "f": "12_Troisieme_partie_Premier.mp3"
+   },
+   "13": {
+    "t": "Deux.",
+    "d": 1557,
+    "f": "13_Deux.mp3"
+   },
+   "14": {
+    "t": "Trois.",
+    "d": 1166,
+    "f": "14_Trois.mp3"
+   },
+   "15": {
+    "t": "Quatre.",
+    "d": 1191,
+    "f": "15_Quatre.mp3"
+   },
+   "16": {
+    "t": "Cinq.",
+    "d": 1231,
+    "f": "16_Cinq.mp3"
+   },
+   "17": {
+    "t": "Quatrième partie. Premier.",
+    "d": 1628,
+    "f": "17_Quatrieme_partie_Premier.mp3"
+   },
+   "18": {
+    "t": "Deux.",
+    "d": 1021,
+    "f": "18_Deux.mp3"
+   },
+   "19": {
+    "t": "Trois.",
+    "d": 1210,
+    "f": "19_Trois.mp3"
+   },
+   "20": {
+    "t": "Quatre.",
+    "d": 1766,
+    "f": "20_Quatre.mp3"
+   },
+   "21": {
+    "t": "Cinq.",
+    "d": 1416,
+    "f": "21_Cinq.mp3"
+   },
+   "22": {
+    "t": "Six.",
+    "d": 1588,
+    "f": "22_Six.mp3"
+   },
+   "23": {
+    "t": "Sept.",
+    "d": 1336,
+    "f": "23_Sept.mp3"
+   },
+   "24": {
+    "t": "Cinquième partie. Premier.",
+    "d": 1113,
+    "f": "24_Cinquieme_partie_Premier.mp3"
+   },
+   "25": {
+    "t": "Deux.",
+    "d": 1349,
+    "f": "25_Deux.mp3"
+   },
+   "26": {
+    "t": "Trois.",
+    "d": 1086,
+    "f": "26_Trois.mp3"
+   },
+   "27": {
+    "t": "Quatre.",
+    "d": 1308,
+    "f": "27_Quatre.mp3"
+   },
+   "28": {
+    "t": "Cinq.",
+    "d": 1649,
+    "f": "28_Cinq.mp3"
+   },
+   "29": {
+    "t": "Six.",
+    "d": 1681,
+    "f": "29_Six.mp3"
+   },
+   "30": {
+    "t": "Sixième partie. Premier.",
+    "d": 1319,
+    "f": "30_Sixieme_partie_Premier.mp3"
+   },
+   "31": {
+    "t": "Deux.",
+    "d": 1374,
+    "f": "31_Deux.mp3"
+   },
+   "32": {
+    "t": "Trois.",
+    "d": 1130,
+    "f": "32_Trois.mp3"
+   },
+   "33": {
+    "t": "Quatre.",
+    "d": 1323,
+    "f": "33_Quatre.mp3"
+   },
+   "34": {
+    "t": "Cinq.",
+    "d": 1498,
+    "f": "34_Cinq.mp3"
+   },
+   "35": {
+    "t": "Septième partie. Premier.",
+    "d": 1378,
+    "f": "35_Septieme_partie_Premier.mp3"
+   },
+   "36": {
+    "t": "Deux.",
+    "d": 1231,
+    "f": "36_Deux.mp3"
+   },
+   "37": {
+    "t": "Trois.",
+    "d": 1780,
+    "f": "37_Trois.mp3"
+   },
+   "38": {
+    "t": "Quatre.",
+    "d": 1713,
+    "f": "38_Quatre.mp3"
+   },
+   "39": {
+    "t": "Cinq.",
+    "d": 2246,
+    "f": "39_Cinq.mp3"
+   },
+   "40": {
+    "t": "Six.",
+    "d": 1332,
+    "f": "40_Six.mp3"
+   }
+  },
+  "termine": true,
+  "zip": "emile-zola-germinal.zip",
+  "total": 40
+ },
  "etienne-de-la-boetie-discours-de-la-servitude-volontaire": {
   "tag": "ia-etienne-de-la-boetie-discours-de-la-servitude-volontaire",
   "voix": "estelle",
@@ -2093,6 +2617,648 @@
   "termine": true,
   "zip": "francois-villon-oeuvres-completes.zip",
   "total": 46
+ },
+ "gustave-flaubert-madame-bovary": {
+  "tag": "ia-gustave-flaubert-madame-bovary",
+  "voix": "estelle",
+  "vitesse": 0.9,
+  "modele": "Pocket TTS (Kyutai), french_24l",
+  "page": "Madame Bovary",
+  "chapitres": {
+   "1": {
+    "t": "Gustave Flaubert.",
+    "d": 1344,
+    "f": "01_Gustave_Flaubert.mp3"
+   },
+   "2": {
+    "t": "Premier.",
+    "d": 1068,
+    "f": "02_Premier.mp3"
+   },
+   "3": {
+    "t": "Deux.",
+    "d": 896,
+    "f": "03_Deux.mp3"
+   },
+   "4": {
+    "t": "Trois.",
+    "d": 598,
+    "f": "04_Trois.mp3"
+   },
+   "5": {
+    "t": "Quatre.",
+    "d": 615,
+    "f": "05_Quatre.mp3"
+   },
+   "6": {
+    "t": "Cinq.",
+    "d": 381,
+    "f": "06_Cinq.mp3"
+   },
+   "7": {
+    "t": "Six.",
+    "d": 572,
+    "f": "07_Six.mp3"
+   },
+   "8": {
+    "t": "Sept.",
+    "d": 688,
+    "f": "08_Sept.mp3"
+   },
+   "9": {
+    "t": "Huit.",
+    "d": 1128,
+    "f": "09_Huit.mp3"
+   },
+   "10": {
+    "t": "Neuf.",
+    "d": 1294,
+    "f": "10_Neuf.mp3"
+   },
+   "11": {
+    "t": "Premier.",
+    "d": 1091,
+    "f": "11_Premier.mp3"
+   },
+   "12": {
+    "t": "Deux.",
+    "d": 713,
+    "f": "12_Deux.mp3"
+   },
+   "13": {
+    "t": "Trois.",
+    "d": 1222,
+    "f": "13_Trois.mp3"
+   },
+   "14": {
+    "t": "Quatre.",
+    "d": 420,
+    "f": "14_Quatre.mp3"
+   },
+   "15": {
+    "t": "Cinq.",
+    "d": 985,
+    "f": "15_Cinq.mp3"
+   },
+   "16": {
+    "t": "Six.",
+    "d": 1428,
+    "f": "16_Six.mp3"
+   },
+   "17": {
+    "t": "Sept.",
+    "d": 960,
+    "f": "17_Sept.mp3"
+   },
+   "18": {
+    "t": "Huit.",
+    "d": 2546,
+    "f": "18_Huit.mp3"
+   },
+   "19": {
+    "t": "Neuf.",
+    "d": 1145,
+    "f": "19_Neuf.mp3"
+   },
+   "20": {
+    "t": "Dix.",
+    "d": 952,
+    "f": "20_Dix.mp3"
+   },
+   "21": {
+    "t": "Onze.",
+    "d": 1411,
+    "f": "21_Onze.mp3"
+   },
+   "22": {
+    "t": "Douze.",
+    "d": 1520,
+    "f": "22_Douze.mp3"
+   },
+   "23": {
+    "t": "Treize.",
+    "d": 1102,
+    "f": "23_Treize.mp3"
+   },
+   "24": {
+    "t": "Quatorze.",
+    "d": 1184,
+    "f": "24_Quatorze.mp3"
+   },
+   "25": {
+    "t": "Quinze.",
+    "d": 955,
+    "f": "25_Quinze.mp3"
+   },
+   "26": {
+    "t": "Premier.",
+    "d": 1638,
+    "f": "26_Premier.mp3"
+   },
+   "27": {
+    "t": "Deux.",
+    "d": 1079,
+    "f": "27_Deux.mp3"
+   },
+   "28": {
+    "t": "Trois.",
+    "d": 230,
+    "f": "28_Trois.mp3"
+   },
+   "29": {
+    "t": "Quatre.",
+    "d": 334,
+    "f": "29_Quatre.mp3"
+   },
+   "30": {
+    "t": "Cinq.",
+    "d": 1807,
+    "f": "30_Cinq.mp3"
+   },
+   "31": {
+    "t": "Six.",
+    "d": 1818,
+    "f": "31_Six.mp3"
+   },
+   "32": {
+    "t": "Sept.",
+    "d": 1468,
+    "f": "32_Sept.mp3"
+   },
+   "33": {
+    "t": "Huit.",
+    "d": 1949,
+    "f": "33_Huit.mp3"
+   },
+   "34": {
+    "t": "Neuf.",
+    "d": 880,
+    "f": "34_Neuf.mp3"
+   },
+   "35": {
+    "t": "Dix.",
+    "d": 647,
+    "f": "35_Dix.mp3"
+   },
+   "36": {
+    "t": "Onze.",
+    "d": 1002,
+    "f": "36_Onze.mp3"
+   },
+   "37": {
+    "t": "L’écriture de Madame Bovary. Les ébauches.",
+    "d": 553,
+    "f": "37_L_ecriture_de_Madame_Bovary_Les_ebauches.mp3"
+   },
+   "38": {
+    "t": "Scénarios.",
+    "d": 973,
+    "f": "38_Scenarios.mp3"
+   },
+   "39": {
+    "t": "Le manuscrit de Madame Bovary.",
+    "d": 133,
+    "f": "39_Le_manuscrit_de_Madame_Bovary.mp3"
+   },
+   "40": {
+    "t": "Les dernières corrections.",
+    "d": 710,
+    "f": "40_Les_dernieres_corrections.mp3"
+   },
+   "41": {
+    "t": "Publication de madame Bovary dans la Revue de Paris.",
+    "d": 213,
+    "f": "41_Publication_de_madame_Bovary_dans_la_Revue_de_Paris.mp3"
+   },
+   "42": {
+    "t": "Les poursuites.",
+    "d": 328,
+    "f": "42_Les_poursuites.mp3"
+   },
+   "43": {
+    "t": "Madame Bovary et les auteurs contemporains.",
+    "d": 384,
+    "f": "43_Madame_Bovary_et_les_auteurs_contemporains.mp3"
+   },
+   "44": {
+    "t": "Opinion de la Presse sur madame Bovary.",
+    "d": 1644,
+    "f": "44_Opinion_de_la_Presse_sur_madame_Bovary.mp3"
+   },
+   "45": {
+    "t": "La presse et la mort de Flaubert.",
+    "d": 140,
+    "f": "45_La_presse_et_la_mort_de_Flaubert.mp3"
+   },
+   "46": {
+    "t": "Opinion ­ de la critique actuelle.",
+    "d": 2446,
+    "f": "46_Opinion_de_la_critique_actuelle.mp3"
+   },
+   "47": {
+    "t": "Procès. Réquisitoire.",
+    "d": 2741,
+    "f": "47_Proces_Requisitoire.mp3"
+   },
+   "48": {
+    "t": "Plaidoirie.",
+    "d": 3662,
+    "f": "48_Plaidoirie.mp3"
+   },
+   "49": {
+    "t": "Plaidoirie (suite un).",
+    "d": 3244,
+    "f": "49_Plaidoirie_suite_un.mp3"
+   },
+   "50": {
+    "t": "Jugement.",
+    "d": 360,
+    "f": "50_Jugement.mp3"
+   }
+  },
+  "termine": true,
+  "zip": "gustave-flaubert-madame-bovary.zip",
+  "total": 50
+ },
+ "guy-de-maupassant-le-horla": {
+  "tag": "ia-guy-de-maupassant-le-horla",
+  "voix": "estelle",
+  "vitesse": 0.9,
+  "modele": "Pocket TTS (Kyutai), french_24l",
+  "page": "Le Horla (recueil, Ollendorff 1895)",
+  "chapitres": {
+   "1": {
+    "t": "Le Horla.",
+    "d": 2952,
+    "f": "01_Le_Horla.mp3"
+   },
+   "2": {
+    "t": "Amour. Trois pages du livre cinq cents.’un chasseur.",
+    "d": 603,
+    "f": "02_Amour_Trois_pages_du_livre_cinq_cents_un_chasseur.mp3"
+   },
+   "3": {
+    "t": "Le trou.",
+    "d": 720,
+    "f": "03_Le_trou.mp3"
+   },
+   "4": {
+    "t": "Sauvée.",
+    "d": 621,
+    "f": "04_Sauvee.mp3"
+   },
+   "5": {
+    "t": "Clochette.",
+    "d": 539,
+    "f": "05_Clochette.mp3"
+   },
+   "6": {
+    "t": "Le marquis de Fumerol.",
+    "d": 832,
+    "f": "06_Le_marquis_de_Fumerol.mp3"
+   },
+   "7": {
+    "t": "Le signe.",
+    "d": 663,
+    "f": "07_Le_signe.mp3"
+   },
+   "8": {
+    "t": "Le diable.",
+    "d": 837,
+    "f": "08_Le_diable.mp3"
+   },
+   "9": {
+    "t": "Les Rois.",
+    "d": 1384,
+    "f": "09_Les_Rois.mp3"
+   },
+   "10": {
+    "t": "Au bois.",
+    "d": 536,
+    "f": "10_Au_bois.mp3"
+   },
+   "11": {
+    "t": "Une famille.",
+    "d": 579,
+    "f": "11_Une_famille.mp3"
+   },
+   "12": {
+    "t": "Joseph.",
+    "d": 717,
+    "f": "12_Joseph.mp3"
+   },
+   "13": {
+    "t": "L’auberge.",
+    "d": 1501,
+    "f": "13_L_auberge.mp3"
+   },
+   "14": {
+    "t": "Le vagabond.",
+    "d": 1351,
+    "f": "14_Le_vagabond.mp3"
+   }
+  },
+  "termine": true,
+  "zip": "guy-de-maupassant-le-horla.zip",
+  "total": 14
+ },
+ "guy-de-maupassant-une-vie": {
+  "tag": "ia-guy-de-maupassant-une-vie",
+  "voix": "estelle",
+  "vitesse": 0.9,
+  "modele": "Pocket TTS (Kyutai), french_24l",
+  "page": "Une vie",
+  "chapitres": {
+   "1": {
+    "t": "Premier.",
+    "d": 1650,
+    "f": "01_Premier.mp3"
+   },
+   "2": {
+    "t": "Deux.",
+    "d": 710,
+    "f": "02_Deux.mp3"
+   },
+   "3": {
+    "t": "Trois.",
+    "d": 1562,
+    "f": "03_Trois.mp3"
+   },
+   "4": {
+    "t": "Quatre.",
+    "d": 1752,
+    "f": "04_Quatre.mp3"
+   },
+   "5": {
+    "t": "Cinq.",
+    "d": 1507,
+    "f": "05_Cinq.mp3"
+   },
+   "6": {
+    "t": "Six.",
+    "d": 1897,
+    "f": "06_Six.mp3"
+   },
+   "7": {
+    "t": "Sept.",
+    "d": 2466,
+    "f": "07_Sept.mp3"
+   },
+   "8": {
+    "t": "Huit.",
+    "d": 1275,
+    "f": "08_Huit.mp3"
+   },
+   "9": {
+    "t": "Neuf.",
+    "d": 2747,
+    "f": "09_Neuf.mp3"
+   },
+   "10": {
+    "t": "Dix.",
+    "d": 2428,
+    "f": "10_Dix.mp3"
+   },
+   "11": {
+    "t": "Onze.",
+    "d": 2358,
+    "f": "11_Onze.mp3"
+   },
+   "12": {
+    "t": "Douze.",
+    "d": 866,
+    "f": "12_Douze.mp3"
+   },
+   "13": {
+    "t": "Treize.",
+    "d": 1419,
+    "f": "13_Treize.mp3"
+   },
+   "14": {
+    "t": "Quatorze.",
+    "d": 1140,
+    "f": "14_Quatorze.mp3"
+   }
+  },
+  "termine": true,
+  "zip": "guy-de-maupassant-une-vie.zip",
+  "total": 14
+ },
+ "honore-de-balzac-eugenie-grandet": {
+  "tag": "ia-honore-de-balzac-eugenie-grandet",
+  "voix": "estelle",
+  "vitesse": 0.9,
+  "modele": "Pocket TTS (Kyutai), french_24l",
+  "page": "Eugénie Grandet",
+  "chapitres": {
+   "1": {
+    "t": "Eugénie Grandet.",
+    "d": 3383,
+    "f": "01_Eugenie_Grandet.mp3"
+   },
+   "2": {
+    "t": "Eugénie Grandet (suite un).",
+    "d": 3826,
+    "f": "02_Eugenie_Grandet_suite_un.mp3"
+   },
+   "3": {
+    "t": "Eugénie Grandet (suite deux).",
+    "d": 3993,
+    "f": "03_Eugenie_Grandet_suite_deux.mp3"
+   },
+   "4": {
+    "t": "Eugénie Grandet (suite trois).",
+    "d": 3783,
+    "f": "04_Eugenie_Grandet_suite_trois.mp3"
+   },
+   "5": {
+    "t": "Eugénie Grandet (suite quatre).",
+    "d": 3814,
+    "f": "05_Eugenie_Grandet_suite_quatre.mp3"
+   },
+   "6": {
+    "t": "Eugénie Grandet (suite cinq).",
+    "d": 1219,
+    "f": "06_Eugenie_Grandet_suite_cinq.mp3"
+   }
+  },
+  "termine": true,
+  "zip": "honore-de-balzac-eugenie-grandet.zip",
+  "total": 6
+ },
+ "honore-de-balzac-illusions-perdues": {
+  "tag": "ia-honore-de-balzac-illusions-perdues",
+  "voix": "estelle",
+  "vitesse": 0.9,
+  "modele": "Pocket TTS (Kyutai), french_24l",
+  "page": "Illusions perdues",
+  "chapitres": {
+   "1": {
+    "t": "Illusions perdues.",
+    "d": 3640,
+    "f": "01_Illusions_perdues.mp3"
+   },
+   "2": {
+    "t": "Illusions perdues (suite un).",
+    "d": 3577,
+    "f": "02_Illusions_perdues_suite_un.mp3"
+   },
+   "3": {
+    "t": "Illusions perdues (suite deux).",
+    "d": 3756,
+    "f": "03_Illusions_perdues_suite_deux.mp3"
+   },
+   "4": {
+    "t": "Illusions perdues (suite trois).",
+    "d": 3761,
+    "f": "04_Illusions_perdues_suite_trois.mp3"
+   },
+   "5": {
+    "t": "Illusions perdues (suite quatre).",
+    "d": 293,
+    "f": "05_Illusions_perdues_suite_quatre.mp3"
+   },
+   "6": {
+    "t": "Deuxième partie. Un grand homme de province à Paris.",
+    "d": 3675,
+    "f": "06_Deuxieme_partie_Un_grand_homme_de_province_a_Paris.mp3"
+   },
+   "7": {
+    "t": "Deuxième partie (suite un).",
+    "d": 3624,
+    "f": "07_Deuxieme_partie_suite_un.mp3"
+   },
+   "8": {
+    "t": "Deuxième partie (suite deux).",
+    "d": 3814,
+    "f": "08_Deuxieme_partie_suite_deux.mp3"
+   },
+   "9": {
+    "t": "Deuxième partie (suite trois).",
+    "d": 3777,
+    "f": "09_Deuxieme_partie_suite_trois.mp3"
+   },
+   "10": {
+    "t": "Deuxième partie (suite quatre).",
+    "d": 3854,
+    "f": "10_Deuxieme_partie_suite_quatre.mp3"
+   },
+   "11": {
+    "t": "Deuxième partie (suite cinq).",
+    "d": 3847,
+    "f": "11_Deuxieme_partie_suite_cinq.mp3"
+   },
+   "12": {
+    "t": "Deuxième partie (suite six).",
+    "d": 3841,
+    "f": "12_Deuxieme_partie_suite_six.mp3"
+   },
+   "13": {
+    "t": "Deuxième partie (suite sept).",
+    "d": 3763,
+    "f": "13_Deuxieme_partie_suite_sept.mp3"
+   },
+   "14": {
+    "t": "Deuxième partie (suite huit).",
+    "d": 3764,
+    "f": "14_Deuxieme_partie_suite_huit.mp3"
+   },
+   "15": {
+    "t": "Deuxième partie (suite neuf).",
+    "d": 382,
+    "f": "15_Deuxieme_partie_suite_neuf.mp3"
+   },
+   "16": {
+    "t": "Troisième partie. Ève et David.",
+    "d": 3753,
+    "f": "16_Troisieme_partie_Eve_et_David.mp3"
+   },
+   "17": {
+    "t": "Troisième partie (suite un).",
+    "d": 3864,
+    "f": "17_Troisieme_partie_suite_un.mp3"
+   },
+   "18": {
+    "t": "Troisième partie (suite deux).",
+    "d": 3699,
+    "f": "18_Troisieme_partie_suite_deux.mp3"
+   },
+   "19": {
+    "t": "Troisième partie (suite trois).",
+    "d": 3767,
+    "f": "19_Troisieme_partie_suite_trois.mp3"
+   },
+   "20": {
+    "t": "Troisième partie (suite quatre).",
+    "d": 3812,
+    "f": "20_Troisieme_partie_suite_quatre.mp3"
+   },
+   "21": {
+    "t": "Troisième partie (suite cinq).",
+    "d": 2788,
+    "f": "21_Troisieme_partie_suite_cinq.mp3"
+   }
+  },
+  "termine": true,
+  "zip": "honore-de-balzac-illusions-perdues.zip",
+  "total": 21
+ },
+ "honore-de-balzac-le-pere-goriot": {
+  "tag": "ia-honore-de-balzac-le-pere-goriot",
+  "voix": "estelle",
+  "vitesse": 0.9,
+  "modele": "Pocket TTS (Kyutai), french_24l",
+  "page": "Le Père Goriot (1910)",
+  "chapitres": {
+   "1": {
+    "t": "Chapitre 1",
+    "d": 3704,
+    "f": "01_Chapitre_1.mp3"
+   },
+   "2": {
+    "t": "Chapitre 2",
+    "d": 3812,
+    "f": "02_Chapitre_2.mp3"
+   },
+   "3": {
+    "t": "Chapitre 3",
+    "d": 1455,
+    "f": "03_Chapitre_3.mp3"
+   },
+   "4": {
+    "t": "Chapitre 4",
+    "d": 3707,
+    "f": "04_Chapitre_4.mp3"
+   },
+   "5": {
+    "t": "Chapitre 5",
+    "d": 3436,
+    "f": "05_Chapitre_5.mp3"
+   },
+   "6": {
+    "t": "Chapitre 6",
+    "d": 3875,
+    "f": "06_Chapitre_6.mp3"
+   },
+   "7": {
+    "t": "Chapitre 7",
+    "d": 2025,
+    "f": "07_Chapitre_7.mp3"
+   },
+   "8": {
+    "t": "Chapitre 8",
+    "d": 3826,
+    "f": "08_Chapitre_8.mp3"
+   },
+   "9": {
+    "t": "Chapitre 9",
+    "d": 2291,
+    "f": "09_Chapitre_9.mp3"
+   }
+  },
+  "termine": true,
+  "zip": "honore-de-balzac-le-pere-goriot.zip",
+  "total": 9
  },
  "jean-de-la-bruyere-les-caracteres": {
   "tag": "ia-jean-de-la-bruyere-les-caracteres",
@@ -6100,6 +7266,393 @@
   "zip": "pierre-de-ronsard-sonnets-pour-helene-livre-1.zip",
   "total": 65
  },
+ "stendhal-le-rouge-et-le-noir": {
+  "tag": "ia-stendhal-le-rouge-et-le-noir",
+  "voix": "estelle",
+  "vitesse": 0.9,
+  "modele": "Pocket TTS (Kyutai), french_24l",
+  "page": "Le Rouge et le Noir",
+  "chapitres": {
+   "1": {
+    "t": "Premier. Une petite Ville.",
+    "d": 382,
+    "f": "01_Premier_Une_petite_Ville.mp3"
+   },
+   "2": {
+    "t": "Deux. Un Maire.",
+    "d": 328,
+    "f": "02_Deux_Un_Maire.mp3"
+   },
+   "3": {
+    "t": "Trois. Le Bien des Pauvres.",
+    "d": 567,
+    "f": "03_Trois_Le_Bien_des_Pauvres.mp3"
+   },
+   "4": {
+    "t": "Quatre. Un Père et un Fils.",
+    "d": 435,
+    "f": "04_Quatre_Un_Pere_et_un_Fils.mp3"
+   },
+   "5": {
+    "t": "Cinq. Une Négociation.",
+    "d": 816,
+    "f": "05_Cinq_Une_Negociation.mp3"
+   },
+   "6": {
+    "t": "Six. L’Ennui.",
+    "d": 842,
+    "f": "06_Six_L_Ennui.mp3"
+   },
+   "7": {
+    "t": "Sept. Les Affinités électives.",
+    "d": 1159,
+    "f": "07_Sept_Les_Affinites_electives.mp3"
+   },
+   "8": {
+    "t": "Huit. Petits Événements.",
+    "d": 851,
+    "f": "08_Huit_Petits_Evenements.mp3"
+   },
+   "9": {
+    "t": "Neuf. Une soirée à la Campagne.",
+    "d": 873,
+    "f": "09_Neuf_Une_soiree_a_la_Campagne.mp3"
+   },
+   "10": {
+    "t": "Dix. Un grand Cœur et une petite Fortune.",
+    "d": 340,
+    "f": "10_Dix_Un_grand_Coeur_et_une_petite_Fortune.mp3"
+   },
+   "11": {
+    "t": "Onze. Une Soirée.",
+    "d": 518,
+    "f": "11_Onze_Une_Soiree.mp3"
+   },
+   "12": {
+    "t": "Douze. Un voyage.",
+    "d": 700,
+    "f": "12_Douze_Un_voyage.mp3"
+   },
+   "13": {
+    "t": "Treize. Les Bas à jour.",
+    "d": 540,
+    "f": "13_Treize_Les_Bas_a_jour.mp3"
+   },
+   "14": {
+    "t": "Quatorze. Les Ciseaux anglais.",
+    "d": 326,
+    "f": "14_Quatorze_Les_Ciseaux_anglais.mp3"
+   },
+   "15": {
+    "t": "Quinze. Le Chant du Coq.",
+    "d": 388,
+    "f": "15_Quinze_Le_Chant_du_Coq.mp3"
+   },
+   "16": {
+    "t": "Seize. Le Lendemain.",
+    "d": 496,
+    "f": "16_Seize_Le_Lendemain.mp3"
+   },
+   "17": {
+    "t": "Dix-sept. Le premier Adjoint.",
+    "d": 486,
+    "f": "17_Dix-sept_Le_premier_Adjoint.mp3"
+   },
+   "18": {
+    "t": "Dix-huit. Un Roi à Verrières.",
+    "d": 1429,
+    "f": "18_Dix-huit_Un_Roi_a_Verrieres.mp3"
+   },
+   "19": {
+    "t": "Dix-neuf. Penser fait souffrir.",
+    "d": 913,
+    "f": "19_Dix-neuf_Penser_fait_souffrir.mp3"
+   },
+   "20": {
+    "t": "Vingt. Les Lettres anonymes.",
+    "d": 409,
+    "f": "20_Vingt_Les_Lettres_anonymes.mp3"
+   },
+   "21": {
+    "t": "Vingt et un. Dialogue avec un Maître.",
+    "d": 1436,
+    "f": "21_Vingt_et_un_Dialogue_avec_un_Maitre.mp3"
+   },
+   "22": {
+    "t": "Vingt-deux. Façons d’agir en mille huit cent trente.",
+    "d": 1355,
+    "f": "22_Vingt-deux_Facons_d_agir_en_mille_huit_cent_trente.mp3"
+   },
+   "23": {
+    "t": "Vingt-trois. Chagrins d’un fonctionnaire.",
+    "d": 1496,
+    "f": "23_Vingt-trois_Chagrins_d_un_fonctionnaire.mp3"
+   },
+   "24": {
+    "t": "Vingt-quatre. Une Capitale.",
+    "d": 708,
+    "f": "24_Vingt-quatre_Une_Capitale.mp3"
+   },
+   "25": {
+    "t": "Vingt-cinq. Le Séminaire.",
+    "d": 793,
+    "f": "25_Vingt-cinq_Le_Seminaire.mp3"
+   },
+   "26": {
+    "t": "Vingt-six. Le Monde, ou ce qui manque au Riche.",
+    "d": 1105,
+    "f": "26_Vingt-six_Le_Monde_ou_ce_qui_manque_au_Riche.mp3"
+   },
+   "27": {
+    "t": "Vingt-sept. Première Expérience de la Vie.",
+    "d": 390,
+    "f": "27_Vingt-sept_Premiere_Experience_de_la_Vie.mp3"
+   },
+   "28": {
+    "t": "Vingt-huit. Une Procession.",
+    "d": 751,
+    "f": "28_Vingt-huit_Une_Procession.mp3"
+   },
+   "29": {
+    "t": "Vingt-neuf. Le premier Avancement.",
+    "d": 1640,
+    "f": "29_Vingt-neuf_Le_premier_Avancement.mp3"
+   },
+   "30": {
+    "t": "Trente. Un Ambitieux.",
+    "d": 1846,
+    "f": "30_Trente_Un_Ambitieux.mp3"
+   },
+   "31": {
+    "t": "Trente et un. Les Plaisirs de la Campagne.",
+    "d": 1136,
+    "f": "31_Trente_et_un_Les_Plaisirs_de_la_Campagne.mp3"
+   },
+   "32": {
+    "t": "Trente-deux. Entrée dans le Monde.",
+    "d": 859,
+    "f": "32_Trente-deux_Entree_dans_le_Monde.mp3"
+   },
+   "33": {
+    "t": "Trente-trois. Les premiers Pas.",
+    "d": 353,
+    "f": "33_Trente-trois_Les_premiers_Pas.mp3"
+   },
+   "34": {
+    "t": "Trente-quatre. L’Hôtel de La Mole.",
+    "d": 1312,
+    "f": "34_Trente-quatre_L_Hotel_de_La_Mole.mp3"
+   },
+   "35": {
+    "t": "Trente-cinq. La Sensibilité et une grande Dame dévote.",
+    "d": 298,
+    "f": "35_Trente-cinq_La_Sensibilite_et_une_grande_Dame_devote.mp3"
+   },
+   "36": {
+    "t": "Trente-six. Manière de prononcer.",
+    "d": 714,
+    "f": "36_Trente-six_Maniere_de_prononcer.mp3"
+   },
+   "37": {
+    "t": "Trente-sept. Une Attaque de Goutte.",
+    "d": 824,
+    "f": "37_Trente-sept_Une_Attaque_de_Goutte.mp3"
+   },
+   "38": {
+    "t": "Trente-huit. Quelle est la Décoration qui distingue.",
+    "d": 1062,
+    "f": "38_Trente-huit_Quelle_est_la_Decoration_qui_distingue.mp3"
+   },
+   "39": {
+    "t": "Trente-neuf. Le Bal.",
+    "d": 990,
+    "f": "39_Trente-neuf_Le_Bal.mp3"
+   },
+   "40": {
+    "t": "Quarante. La Reine Marguerite.",
+    "d": 874,
+    "f": "40_Quarante_La_Reine_Marguerite.mp3"
+   },
+   "41": {
+    "t": "Quarante et un. L’empire d’une jeune fille.",
+    "d": 426,
+    "f": "41_Quarante_et_un_L_empire_d_une_jeune_fille.mp3"
+   },
+   "42": {
+    "t": "Quarante-deux. Serait-ce un Danton?.",
+    "d": 626,
+    "f": "42_Quarante-deux_Serait-ce_un_Danton.mp3"
+   },
+   "43": {
+    "t": "Quarante-trois. Un Complot.",
+    "d": 957,
+    "f": "43_Quarante-trois_Un_Complot.mp3"
+   },
+   "44": {
+    "t": "Quarante-quatre. Pensées d’une jeune Fille.",
+    "d": 629,
+    "f": "44_Quarante-quatre_Pensees_d_une_jeune_Fille.mp3"
+   },
+   "45": {
+    "t": "Quarante-cinq. Est-ce un complot?",
+    "d": 546,
+    "f": "45_Quarante-cinq_Est-ce_un_complot.mp3"
+   },
+   "46": {
+    "t": "Quarante-six. Une heure du Matin.",
+    "d": 682,
+    "f": "46_Quarante-six_Une_heure_du_Matin.mp3"
+   },
+   "47": {
+    "t": "Quarante-sept. Une vieille Épée.",
+    "d": 497,
+    "f": "47_Quarante-sept_Une_vieille_Epee.mp3"
+   },
+   "48": {
+    "t": "Quarante-huit. Moments cruels.",
+    "d": 570,
+    "f": "48_Quarante-huit_Moments_cruels.mp3"
+   },
+   "49": {
+    "t": "Quarante-neuf. L’Opéra Bouffe.",
+    "d": 986,
+    "f": "49_Quarante-neuf_L_Opera_Bouffe.mp3"
+   },
+   "50": {
+    "t": "Cinquante. Le Vase du Japon.",
+    "d": 642,
+    "f": "50_Cinquante_Le_Vase_du_Japon.mp3"
+   },
+   "51": {
+    "t": "Cinquante et un. La Note secrète.",
+    "d": 525,
+    "f": "51_Cinquante_et_un_La_Note_secrete.mp3"
+   },
+   "52": {
+    "t": "Cinquante-deux. La Discussion.",
+    "d": 831,
+    "f": "52_Cinquante-deux_La_Discussion.mp3"
+   },
+   "53": {
+    "t": "Cinquante-trois. Le Clergé, les Bois, la Liberté.",
+    "d": 879,
+    "f": "53_Cinquante-trois_Le_Clerge_les_Bois_la_Liberte.mp3"
+   },
+   "54": {
+    "t": "Cinquante-quatre. Strasbourg.",
+    "d": 655,
+    "f": "54_Cinquante-quatre_Strasbourg.mp3"
+   },
+   "55": {
+    "t": "Cinquante-cinq. Le Ministère de la Vertu.",
+    "d": 712,
+    "f": "55_Cinquante-cinq_Le_Ministere_de_la_Vertu.mp3"
+   },
+   "56": {
+    "t": "Cinquante-six. L’Amour moral.",
+    "d": 377,
+    "f": "56_Cinquante-six_L_Amour_moral.mp3"
+   },
+   "57": {
+    "t": "Cinquante-sept. Les plus belles Places de l’Église.",
+    "d": 357,
+    "f": "57_Cinquante-sept_Les_plus_belles_Places_de_l_Eglise.mp3"
+   },
+   "58": {
+    "t": "Cinquante-huit. Manon Lescaut.",
+    "d": 434,
+    "f": "58_Cinquante-huit_Manon_Lescaut.mp3"
+   },
+   "59": {
+    "t": "Cinquante-neuf. L’Ennui.",
+    "d": 363,
+    "f": "59_Cinquante-neuf_L_Ennui.mp3"
+   },
+   "60": {
+    "t": "Soixante. Une Loge aux Bouffes.",
+    "d": 484,
+    "f": "60_Soixante_Une_Loge_aux_Bouffes.mp3"
+   },
+   "61": {
+    "t": "Soixante et un. Lui faire Peur.",
+    "d": 500,
+    "f": "61_Soixante_et_un_Lui_faire_Peur.mp3"
+   },
+   "62": {
+    "t": "Soixante-deux. Le Tigre.",
+    "d": 522,
+    "f": "62_Soixante-deux_Le_Tigre.mp3"
+   },
+   "63": {
+    "t": "Soixante-trois. L’Enfer de la Faiblesse.",
+    "d": 567,
+    "f": "63_Soixante-trois_L_Enfer_de_la_Faiblesse.mp3"
+   },
+   "64": {
+    "t": "Soixante-quatre. Un Homme d’esprit.",
+    "d": 668,
+    "f": "64_Soixante-quatre_Un_Homme_d_esprit.mp3"
+   },
+   "65": {
+    "t": "Soixante-cinq. Un Orage.",
+    "d": 556,
+    "f": "65_Soixante-cinq_Un_Orage.mp3"
+   },
+   "66": {
+    "t": "Soixante-six. Détails tristes.",
+    "d": 736,
+    "f": "66_Soixante-six_Details_tristes.mp3"
+   },
+   "67": {
+    "t": "Soixante-sept. Un Donjon.",
+    "d": 478,
+    "f": "67_Soixante-sept_Un_Donjon.mp3"
+   },
+   "68": {
+    "t": "Soixante-huit. Un Homme puissant.",
+    "d": 650,
+    "f": "68_Soixante-huit_Un_Homme_puissant.mp3"
+   },
+   "69": {
+    "t": "Soixante-neuf. L’Intrigue.",
+    "d": 485,
+    "f": "69_Soixante-neuf_L_Intrigue.mp3"
+   },
+   "70": {
+    "t": "Soixante-dix. La Tranquillité.",
+    "d": 425,
+    "f": "70_Soixante-dix_La_Tranquillite.mp3"
+   },
+   "71": {
+    "t": "Soixante et onze. Le Jugement.",
+    "d": 749,
+    "f": "71_Soixante_et_onze_Le_Jugement.mp3"
+   },
+   "72": {
+    "t": "Soixante-douze.",
+    "d": 569,
+    "f": "72_Soixante-douze.mp3"
+   },
+   "73": {
+    "t": "Soixante-treize.",
+    "d": 531,
+    "f": "73_Soixante-treize.mp3"
+   },
+   "74": {
+    "t": "Soixante-quatorze.",
+    "d": 802,
+    "f": "74_Soixante-quatorze.mp3"
+   },
+   "75": {
+    "t": "Soixante-quinze.",
+    "d": 715,
+    "f": "75_Soixante-quinze.mp3"
+   }
+  },
+  "termine": true,
+  "zip": "stendhal-le-rouge-et-le-noir.zip",
+  "total": 75
+ },
  "victor-hugo-les-miserables-tome-1": {
   "tag": "ia-victor-hugo-les-miserables-tome-1",
   "voix": "estelle",
@@ -7607,11 +9160,495 @@
     "t": "Vii Gavroche profond calculateur des distances.",
     "d": 397,
     "f": "72_Vii_Gavroche_profond_calculateur_des_distances.mp3"
+   },
+   "73": {
+    "t": "I buvard, bavard.",
+    "d": 1005,
+    "f": "73_I_buvard_bavard.mp3"
+   },
+   "74": {
+    "t": "Ii le gamin ennemi des lumières.",
+    "d": 464,
+    "f": "74_Ii_le_gamin_ennemi_des_lumieres.mp3"
+   },
+   "75": {
+    "t": "Iii pendant que Cosette et Toussaint dorment.",
+    "d": 160,
+    "f": "75_Iii_pendant_que_Cosette_et_Toussaint_dorment.mp3"
+   },
+   "76": {
+    "t": "Iv les excès de zèle de Gavroche.",
+    "d": 422,
+    "f": "76_Iv_les_exces_de_zele_de_Gavroche.mp3"
    }
   },
-  "termine": false,
-  "zip": "",
+  "termine": true,
+  "zip": "victor-hugo-les-miserables-tome-4.zip",
   "total": 76
+ },
+ "victor-hugo-les-miserables-tome-5": {
+  "tag": "ia-victor-hugo-les-miserables-tome-5",
+  "voix": "estelle",
+  "vitesse": 0.9,
+  "modele": "Pocket TTS (Kyutai), french_24l",
+  "page": "Les Misérables/Tome 5",
+  "chapitres": {
+   "1": {
+    "t": "I la charybde du faubourg saint-Antoine et la scylla du faubourg du Temple.",
+    "d": 913,
+    "f": "01_I_la_charybde_du_faubourg_saint-Antoine_et_la_scylla_du_faubourg_du_Te.mp3"
+   },
+   "2": {
+    "t": "Ii que faire dans l’abîme à moins que l’on ne cause.",
+    "d": 461,
+    "f": "02_Ii_que_faire_dans_l_abime_a_moins_que_l_on_ne_cause.mp3"
+   },
+   "3": {
+    "t": "Iii éclaircissement et assombrissement.",
+    "d": 185,
+    "f": "03_Iii_eclaircissement_et_assombrissement.mp3"
+   },
+   "4": {
+    "t": "Iv cinq de moins, un de plus.",
+    "d": 768,
+    "f": "04_Iv_cinq_de_moins_un_de_plus.mp3"
+   },
+   "5": {
+    "t": "V quel horizon on voit du haut de la barricade.",
+    "d": 476,
+    "f": "05_V_quel_horizon_on_voit_du_haut_de_la_barricade.mp3"
+   },
+   "6": {
+    "t": "Vi Marius hagard, Javert laconique.",
+    "d": 211,
+    "f": "06_Vi_Marius_hagard_Javert_laconique.mp3"
+   },
+   "7": {
+    "t": "Vii la situation s’aggrave.",
+    "d": 464,
+    "f": "07_Vii_la_situation_s_aggrave.mp3"
+   },
+   "8": {
+    "t": "Viii les artilleurs se font prendre au sérieux.",
+    "d": 330,
+    "f": "08_Viii_les_artilleurs_se_font_prendre_au_serieux.mp3"
+   },
+   "9": {
+    "t": "Ix emploi de ce vieux talent de braconnier et de ce coup de fusil infaillible qui a influé sur la condamnation de mille ",
+    "d": 200,
+    "f": "09_Ix_emploi_de_ce_vieux_talent_de_braconnier_et_de_ce_coup_de_fusil_infa.mp3"
+   },
+   "10": {
+    "t": "X aurore.",
+    "d": 422,
+    "f": "10_X_aurore.mp3"
+   },
+   "11": {
+    "t": "Xi le coup de fusil qui ne manque rien et qui ne tue personne.",
+    "d": 135,
+    "f": "11_Xi_le_coup_de_fusil_qui_ne_manque_rien_et_qui_ne_tue_personne.mp3"
+   },
+   "12": {
+    "t": "Xii le désordre partisan de l’ordre.",
+    "d": 369,
+    "f": "12_Xii_le_desordre_partisan_de_l_ordre.mp3"
+   },
+   "13": {
+    "t": "Xiii lueurs qui passent.",
+    "d": 216,
+    "f": "13_Xiii_lueurs_qui_passent.mp3"
+   },
+   "14": {
+    "t": "Xiv où on lira le nom de la maîtresse d’Enjolras.",
+    "d": 237,
+    "f": "14_Xiv_ou_on_lira_le_nom_de_la_maitresse_d_Enjolras.mp3"
+   },
+   "15": {
+    "t": "Xv Gavroche dehors.",
+    "d": 318,
+    "f": "15_Xv_Gavroche_dehors.mp3"
+   },
+   "16": {
+    "t": "Xvi comment de frère on devient père.",
+    "d": 976,
+    "f": "16_Xvi_comment_de_frere_on_devient_pere.mp3"
+   },
+   "17": {
+    "t": "Xvii mortuus pater filium moriturum expectat.",
+    "d": 194,
+    "f": "17_Xvii_mortuus_pater_filium_moriturum_expectat.mp3"
+   },
+   "18": {
+    "t": "Xviii le vautour devenu proie.",
+    "d": 437,
+    "f": "18_Xviii_le_vautour_devenu_proie.mp3"
+   },
+   "19": {
+    "t": "Xix Jean Valjean se venge.",
+    "d": 296,
+    "f": "19_Xix_Jean_Valjean_se_venge.mp3"
+   },
+   "20": {
+    "t": "Xx les morts ont raison et les vivants n’ont pas tort.",
+    "d": 1058,
+    "f": "20_Xx_les_morts_ont_raison_et_les_vivants_n_ont_pas_tort.mp3"
+   },
+   "21": {
+    "t": "Xxi les héros.",
+    "d": 514,
+    "f": "21_Xxi_les_heros.mp3"
+   },
+   "22": {
+    "t": "Xxii pied à pied.",
+    "d": 405,
+    "f": "22_Xxii_pied_a_pied.mp3"
+   },
+   "23": {
+    "t": "Xxiii oreste à jeun et pylade ivre.",
+    "d": 380,
+    "f": "23_Xxiii_oreste_a_jeun_et_pylade_ivre.mp3"
+   },
+   "24": {
+    "t": "Xxiv prisonnier.",
+    "d": 307,
+    "f": "24_Xxiv_prisonnier.mp3"
+   },
+   "25": {
+    "t": "I la terre appauvrie par la mer.",
+    "d": 470,
+    "f": "25_I_la_terre_appauvrie_par_la_mer.mp3"
+   },
+   "26": {
+    "t": "Ii l’histoire ancienne de l’égout.",
+    "d": 397,
+    "f": "26_Ii_l_histoire_ancienne_de_l_egout.mp3"
+   },
+   "27": {
+    "t": "Iii Bruneseau.",
+    "d": 329,
+    "f": "27_Iii_Bruneseau.mp3"
+   },
+   "28": {
+    "t": "Iv détails ignorés.",
+    "d": 424,
+    "f": "28_Iv_details_ignores.mp3"
+   },
+   "29": {
+    "t": "V progrès actuel.",
+    "d": 147,
+    "f": "29_V_progres_actuel.mp3"
+   },
+   "30": {
+    "t": "Vi progrès futur.",
+    "d": 541,
+    "f": "30_Vi_progres_futur.mp3"
+   },
+   "31": {
+    "t": "I le cloaque et ses surprises.",
+    "d": 716,
+    "f": "31_I_le_cloaque_et_ses_surprises.mp3"
+   },
+   "32": {
+    "t": "Ii explication.",
+    "d": 252,
+    "f": "32_Ii_explication.mp3"
+   },
+   "33": {
+    "t": "Iii l’homme filé.",
+    "d": 486,
+    "f": "33_Iii_l_homme_file.mp3"
+   },
+   "34": {
+    "t": "Iv lui aussi porte sa croix.",
+    "d": 406,
+    "f": "34_Iv_lui_aussi_porte_sa_croix.mp3"
+   },
+   "35": {
+    "t": "V pour le sable comme pour la femme il y a une finesse qui est perfidie.",
+    "d": 563,
+    "f": "35_V_pour_le_sable_comme_pour_la_femme_il_y_a_une_finesse_qui_est_perfidi.mp3"
+   },
+   "36": {
+    "t": "Vi le fontis.",
+    "d": 236,
+    "f": "36_Vi_le_fontis.mp3"
+   },
+   "37": {
+    "t": "Vii quelquefois on échoue où l’on croit débarquer.",
+    "d": 279,
+    "f": "37_Vii_quelquefois_on_echoue_ou_l_on_croit_debarquer.mp3"
+   },
+   "38": {
+    "t": "Viii le pan de l’habit déchiré.",
+    "d": 562,
+    "f": "38_Viii_le_pan_de_l_habit_dechire.mp3"
+   },
+   "39": {
+    "t": "Ix Marius fait l’effet d’être mort à quelqu’un qui s’y connaît.",
+    "d": 486,
+    "f": "39_Ix_Marius_fait_l_effet_d_etre_mort_a_quelqu_un_qui_s_y_connait.mp3"
+   },
+   "40": {
+    "t": "X rentrée de l’enfant prodigue de sa vie.",
+    "d": 217,
+    "f": "40_X_rentree_de_l_enfant_prodigue_de_sa_vie.mp3"
+   },
+   "41": {
+    "t": "Xi ébranlement dans l’absolu.",
+    "d": 190,
+    "f": "41_Xi_ebranlement_dans_l_absolu.mp3"
+   },
+   "42": {
+    "t": "Xii l’aïeul.",
+    "d": 652,
+    "f": "42_Xii_l_aieul.mp3"
+   },
+   "43": {
+    "t": "Livre quatrième. Javert déraillé. Javert déraillé.",
+    "d": 1479,
+    "f": "43_Livre_quatrieme_Javert_deraille_Javert_deraille.mp3"
+   },
+   "44": {
+    "t": "I où l’on revoit l’arbre à l’emplâtre de zinc.",
+    "d": 391,
+    "f": "44_I_ou_l_on_revoit_l_arbre_a_l_emplatre_de_zinc.mp3"
+   },
+   "45": {
+    "t": "Ii Marius, en sortant de la guerre civile, s’apprête à la guerre domestique.",
+    "d": 546,
+    "f": "45_Ii_Marius_en_sortant_de_la_guerre_civile_s_apprete_a_la_guerre_domesti.mp3"
+   },
+   "46": {
+    "t": "Iii Marius attaque.",
+    "d": 350,
+    "f": "46_Iii_Marius_attaque.mp3"
+   },
+   "47": {
+    "t": "Iv mademoiselle Gillenormand finit par ne plus trouver mauvais que m. Fauchelevent soit entré avec quelque chose sous le",
+    "d": 575,
+    "f": "47_Iv_mademoiselle_Gillenormand_finit_par_ne_plus_trouver_mauvais_que_m_F.mp3"
+   },
+   "48": {
+    "t": "V déposez plutôt votre argent dans telle forêt que chez tel notaire.",
+    "d": 137,
+    "f": "48_V_deposez_plutot_votre_argent_dans_telle_foret_que_chez_tel_notaire.mp3"
+   },
+   "49": {
+    "t": "Vi les deux vieillards font tout, chacun à leur façon, pour que Cosette soit heureuse.",
+    "d": 954,
+    "f": "49_Vi_les_deux_vieillards_font_tout_chacun_a_leur_facon_pour_que_Cosette.mp3"
+   },
+   "50": {
+    "t": "Vii les effets de rêve mêlés au bonheur.",
+    "d": 278,
+    "f": "50_Vii_les_effets_de_reve_meles_au_bonheur.mp3"
+   },
+   "51": {
+    "t": "Viii deux hommes impossibles à retrouver.",
+    "d": 461,
+    "f": "51_Viii_deux_hommes_impossibles_a_retrouver.mp3"
+   },
+   "52": {
+    "t": "I le seize février mille huit cent trente-trois.",
+    "d": 1039,
+    "f": "52_I_le_seize_fevrier_mille_huit_cent_trente-trois.mp3"
+   },
+   "53": {
+    "t": "Ii Jean Valjean a toujours son bras en écharpe.",
+    "d": 1098,
+    "f": "53_Ii_Jean_Valjean_a_toujours_son_bras_en_echarpe.mp3"
+   },
+   "54": {
+    "t": "Iii l’inséparable.",
+    "d": 276,
+    "f": "54_Iii_l_inseparable.mp3"
+   },
+   "55": {
+    "t": "Iv immortale jecur.",
+    "d": 558,
+    "f": "55_Iv_immortale_jecur.mp3"
+   },
+   "56": {
+    "t": "I le septième cercle et le huitième ciel.",
+    "d": 1996,
+    "f": "56_I_le_septieme_cercle_et_le_huitieme_ciel.mp3"
+   },
+   "57": {
+    "t": "Ii les obscurités que peut contenir une révélation.",
+    "d": 947,
+    "f": "57_Ii_les_obscurites_que_peut_contenir_une_revelation.mp3"
+   },
+   "58": {
+    "t": "I la chambre d’en bas.",
+    "d": 539,
+    "f": "58_I_la_chambre_d_en_bas.mp3"
+   },
+   "59": {
+    "t": "Ii autre pas en arrière.",
+    "d": 295,
+    "f": "59_Ii_autre_pas_en_arriere.mp3"
+   },
+   "60": {
+    "t": "Iii ils se souviennent du jardin de la rue Plumet.",
+    "d": 519,
+    "f": "60_Iii_ils_se_souviennent_du_jardin_de_la_rue_Plumet.mp3"
+   },
+   "61": {
+    "t": "Iv l’attraction et l’extinction.",
+    "d": 195,
+    "f": "61_Iv_l_attraction_et_l_extinction.mp3"
+   },
+   "62": {
+    "t": "I pitié pour les malheureux, mais indulgence pour les heureux.",
+    "d": 244,
+    "f": "62_I_pitie_pour_les_malheureux_mais_indulgence_pour_les_heureux.mp3"
+   },
+   "63": {
+    "t": "Ii dernières palpitations de la lampe sans huile.",
+    "d": 195,
+    "f": "63_Ii_dernieres_palpitations_de_la_lampe_sans_huile.mp3"
+   },
+   "64": {
+    "t": "Iii une plume pèse à qui soulevait la charrette fauchelevent.",
+    "d": 315,
+    "f": "64_Iii_une_plume_pese_a_qui_soulevait_la_charrette_fauchelevent.mp3"
+   },
+   "65": {
+    "t": "Iv bouteille d’encre qui ne réussit qu’à blanchir.",
+    "d": 2170,
+    "f": "65_Iv_bouteille_d_encre_qui_ne_reussit_qu_a_blanchir.mp3"
+   },
+   "66": {
+    "t": "V nuit derrière laquelle il y a le jour.",
+    "d": 1156,
+    "f": "66_V_nuit_derriere_laquelle_il_y_a_le_jour.mp3"
+   },
+   "67": {
+    "t": "Vi l’herbe cache et la pluie efface.",
+    "d": 83,
+    "f": "67_Vi_l_herbe_cache_et_la_pluie_efface.mp3"
+   }
+  },
+  "termine": true,
+  "zip": "victor-hugo-les-miserables-tome-5.zip",
+  "total": 67
+ },
+ "victor-hugo-notre-dame-de-paris": {
+  "tag": "ia-victor-hugo-notre-dame-de-paris",
+  "voix": "estelle",
+  "vitesse": 0.9,
+  "modele": "Pocket TTS (Kyutai), french_24l",
+  "page": "Notre-Dame de Paris",
+  "chapitres": {
+   "14": {
+    "t": "Livre huitième. I l’écu changé en feuille sèche.",
+    "d": 3981,
+    "f": "14_Livre_huitieme_I_l_ecu_change_en_feuille_seche.mp3"
+   },
+   "15": {
+    "t": "Livre huitième (suite un).",
+    "d": 1897,
+    "f": "15_Livre_huitieme_suite_un.mp3"
+   },
+   "16": {
+    "t": "Livre neuvième. I fièvre.",
+    "d": 3782,
+    "f": "16_Livre_neuvieme_I_fievre.mp3"
+   },
+   "17": {
+    "t": "Livre dixième. I Gringoire a plusieurs bonnes idées de suite rue des Bernardins.",
+    "d": 3996,
+    "f": "17_Livre_dixieme_I_Gringoire_a_plusieurs_bonnes_idees_de_suite_rue_des_Be.mp3"
+   },
+   "18": {
+    "t": "Livre dixième (suite un).",
+    "d": 4047,
+    "f": "18_Livre_dixieme_suite_un.mp3"
+   },
+   "19": {
+    "t": "Livre dixième (suite deux).",
+    "d": 301,
+    "f": "19_Livre_dixieme_suite_deux.mp3"
+   },
+   "20": {
+    "t": "Livre onzième. I le petit soulier.",
+    "d": 3954,
+    "f": "20_Livre_onzieme_I_le_petit_soulier.mp3"
+   },
+   "21": {
+    "t": "Livre onzième (suite un).",
+    "d": 1104,
+    "f": "21_Livre_onzieme_suite_un.mp3"
+   },
+   "1": {
+    "t": "Chapitre 1",
+    "d": 92,
+    "f": "01_Chapitre_1.mp3"
+   },
+   "2": {
+    "t": "Chapitre 2",
+    "d": 452,
+    "f": "02_Chapitre_2.mp3"
+   },
+   "3": {
+    "t": "Notre-dame de Paris. Livre premier. I la grand’salle.",
+    "d": 3970,
+    "f": "03_Notre-dame_de_Paris_Livre_premier_I_la_grand_salle.mp3"
+   },
+   "4": {
+    "t": "Notre-Dame de Paris (suite un).",
+    "d": 1440,
+    "f": "04_Notre-Dame_de_Paris_suite_un.mp3"
+   },
+   "5": {
+    "t": "Livre deuxième. I de charybde en scylla.",
+    "d": 3975,
+    "f": "05_Livre_deuxieme_I_de_charybde_en_scylla.mp3"
+   },
+   "6": {
+    "t": "Livre deuxième (suite un).",
+    "d": 1544,
+    "f": "06_Livre_deuxieme_suite_un.mp3"
+   },
+   "7": {
+    "t": "Livre troisième. I notre-Dame.",
+    "d": 3750,
+    "f": "07_Livre_troisieme_I_notre-Dame.mp3"
+   },
+   "8": {
+    "t": "Livre quatrième. I les bonnes âmes.",
+    "d": 2796,
+    "f": "08_Livre_quatrieme_I_les_bonnes_ames.mp3"
+   },
+   "9": {
+    "t": "Livre cinquième. I Abbas beati Martini.",
+    "d": 2897,
+    "f": "09_Livre_cinquieme_I_Abbas_beati_Martini.mp3"
+   },
+   "10": {
+    "t": "Livre sixième. I coup d’œil impartial sur l’ancienne magistrature.",
+    "d": 3872,
+    "f": "10_Livre_sixieme_I_coup_d_oeil_impartial_sur_l_ancienne_magistrature.mp3"
+   },
+   "11": {
+    "t": "Livre sixième (suite un).",
+    "d": 1254,
+    "f": "11_Livre_sixieme_suite_un.mp3"
+   },
+   "12": {
+    "t": "Livre septième. I du danger de confier son secret à une chèvre.",
+    "d": 3916,
+    "f": "12_Livre_septieme_I_du_danger_de_confier_son_secret_a_une_chevre.mp3"
+   },
+   "13": {
+    "t": "Livre septième (suite un).",
+    "d": 3436,
+    "f": "13_Livre_septieme_suite_un.mp3"
+   }
+  },
+  "termine": true,
+  "zip": "victor-hugo-notre-dame-de-paris.zip",
+  "total": 21
  },
  "voltaire-candide": {
   "tag": "ia-voltaire-candide",

@@ -78,6 +78,248 @@
   "zip": "agrippa-d-aubigne-les-tragiques.zip",
   "total": 2
  },
+ "alain-fournier-le-grand-meaulnes": {
+  "tag": "ia-alain-fournier-le-grand-meaulnes",
+  "voix": "estelle",
+  "vitesse": 0.9,
+  "modele": "Pocket TTS (Kyutai), french_24l",
+  "page": "Le Grand Meaulnes",
+  "chapitres": {
+   "1": {
+    "t": "Chapitre premier. Le pensionnaire.",
+    "d": 657,
+    "f": "01_Chapitre_premier_Le_pensionnaire.mp3"
+   },
+   "2": {
+    "t": "Chapitre deux. Après quatre heures...",
+    "d": 252,
+    "f": "02_Chapitre_deux_Apres_quatre_heures.mp3"
+   },
+   "3": {
+    "t": "Chapitre trois. « je fréquentais la boutique d’un vannier ».",
+    "d": 386,
+    "f": "03_Chapitre_trois_je_frequentais_la_boutique_d_un_vannier.mp3"
+   },
+   "4": {
+    "t": "Chapitre quatre. L’évasion.",
+    "d": 376,
+    "f": "04_Chapitre_quatre_L_evasion.mp3"
+   },
+   "5": {
+    "t": "Chapitre cinq. La voiture qui revient.",
+    "d": 324,
+    "f": "05_Chapitre_cinq_La_voiture_qui_revient.mp3"
+   },
+   "6": {
+    "t": "Chapitre six. On frappe au carreau.",
+    "d": 499,
+    "f": "06_Chapitre_six_On_frappe_au_carreau.mp3"
+   },
+   "7": {
+    "t": "Chapitre sept. Le gilet de soie.",
+    "d": 534,
+    "f": "07_Chapitre_sept_Le_gilet_de_soie.mp3"
+   },
+   "8": {
+    "t": "Chapitre huit. L’aventure.",
+    "d": 297,
+    "f": "08_Chapitre_huit_L_aventure.mp3"
+   },
+   "9": {
+    "t": "Chapitre neuf. Une halte.",
+    "d": 329,
+    "f": "09_Chapitre_neuf_Une_halte.mp3"
+   },
+   "10": {
+    "t": "Chapitre dix. La bergerie.",
+    "d": 254,
+    "f": "10_Chapitre_dix_La_bergerie.mp3"
+   },
+   "11": {
+    "t": "Chapitre onze. Le domaine mystérieux.",
+    "d": 396,
+    "f": "11_Chapitre_onze_Le_domaine_mysterieux.mp3"
+   },
+   "12": {
+    "t": "Chapitre douze. La chambre de Wellington.",
+    "d": 227,
+    "f": "12_Chapitre_douze_La_chambre_de_Wellington.mp3"
+   },
+   "13": {
+    "t": "Chapitre treize. La fête étrange.",
+    "d": 357,
+    "f": "13_Chapitre_treize_La_fete_etrange.mp3"
+   },
+   "14": {
+    "t": "Chapitre quatorze. La fête étrange (suite).",
+    "d": 465,
+    "f": "14_Chapitre_quatorze_La_fete_etrange_suite.mp3"
+   },
+   "15": {
+    "t": "Chapitre quinze. La rencontre.",
+    "d": 718,
+    "f": "15_Chapitre_quinze_La_rencontre.mp3"
+   },
+   "16": {
+    "t": "Chapitre seize. Frantz de Galais.",
+    "d": 491,
+    "f": "16_Chapitre_seize_Frantz_de_Galais.mp3"
+   },
+   "17": {
+    "t": "Chapitre dix-sept. La fête étrange (fin).",
+    "d": 353,
+    "f": "17_Chapitre_dix-sept_La_fete_etrange_fin.mp3"
+   },
+   "18": {
+    "t": "Chapitre premier. Le grand jeu.",
+    "d": 451,
+    "f": "18_Chapitre_premier_Le_grand_jeu.mp3"
+   },
+   "19": {
+    "t": "Chapitre deux. Nous tombons dans une embuscade.",
+    "d": 376,
+    "f": "19_Chapitre_deux_Nous_tombons_dans_une_embuscade.mp3"
+   },
+   "20": {
+    "t": "Chapitre trois. Le bohémien à l’école.",
+    "d": 568,
+    "f": "20_Chapitre_trois_Le_bohemien_a_l_ecole.mp3"
+   },
+   "21": {
+    "t": "Chapitre quatre. Où il est question du domaine mystérieux.",
+    "d": 496,
+    "f": "21_Chapitre_quatre_Ou_il_est_question_du_domaine_mysterieux.mp3"
+   },
+   "22": {
+    "t": "Chapitre cinq. L’homme aux espadrilles.",
+    "d": 346,
+    "f": "22_Chapitre_cinq_L_homme_aux_espadrilles.mp3"
+   },
+   "23": {
+    "t": "Chapitre six. Une dispute dans la coulisse.",
+    "d": 356,
+    "f": "23_Chapitre_six_Une_dispute_dans_la_coulisse.mp3"
+   },
+   "24": {
+    "t": "Chapitre sept. Le bohémien enlève son bandeau.",
+    "d": 263,
+    "f": "24_Chapitre_sept_Le_bohemien_enleve_son_bandeau.mp3"
+   },
+   "25": {
+    "t": "Chapitre huit. Les gendarmes!",
+    "d": 212,
+    "f": "25_Chapitre_huit_Les_gendarmes.mp3"
+   },
+   "26": {
+    "t": "Chapitre neuf. À la recherche du sentier perdu.",
+    "d": 655,
+    "f": "26_Chapitre_neuf_A_la_recherche_du_sentier_perdu.mp3"
+   },
+   "27": {
+    "t": "Chapitre dix. La lessive.",
+    "d": 325,
+    "f": "27_Chapitre_dix_La_lessive.mp3"
+   },
+   "28": {
+    "t": "Chapitre onze. Je trahis...",
+    "d": 394,
+    "f": "28_Chapitre_onze_Je_trahis.mp3"
+   },
+   "29": {
+    "t": "Chapitre douze. Les trois lettres de Meaulnes.",
+    "d": 399,
+    "f": "29_Chapitre_douze_Les_trois_lettres_de_Meaulnes.mp3"
+   },
+   "30": {
+    "t": "Chapitre premier. La baignade.",
+    "d": 517,
+    "f": "30_Chapitre_premier_La_baignade.mp3"
+   },
+   "31": {
+    "t": "Chapitre deux. Chez Florentin.",
+    "d": 808,
+    "f": "31_Chapitre_deux_Chez_Florentin.mp3"
+   },
+   "32": {
+    "t": "Chapitre trois. Une apparition.",
+    "d": 664,
+    "f": "32_Chapitre_trois_Une_apparition.mp3"
+   },
+   "33": {
+    "t": "Chapitre quatre. La grande nouvelle.",
+    "d": 516,
+    "f": "33_Chapitre_quatre_La_grande_nouvelle.mp3"
+   },
+   "34": {
+    "t": "Chapitre cinq. La partie de plaisir.",
+    "d": 534,
+    "f": "34_Chapitre_cinq_La_partie_de_plaisir.mp3"
+   },
+   "35": {
+    "t": "Chapitre six. La partie de plaisir (fin).",
+    "d": 691,
+    "f": "35_Chapitre_six_La_partie_de_plaisir_fin.mp3"
+   },
+   "36": {
+    "t": "Chapitre sept. Le jour des noces.",
+    "d": 264,
+    "f": "36_Chapitre_sept_Le_jour_des_noces.mp3"
+   },
+   "37": {
+    "t": "Chapitre huit. L’appel de Frantz.",
+    "d": 408,
+    "f": "37_Chapitre_huit_L_appel_de_Frantz.mp3"
+   },
+   "38": {
+    "t": "Chapitre neuf. Les gens heureux.",
+    "d": 459,
+    "f": "38_Chapitre_neuf_Les_gens_heureux.mp3"
+   },
+   "39": {
+    "t": "Chapitre dix. La « maison de Frantz ».",
+    "d": 618,
+    "f": "39_Chapitre_dix_La_maison_de_Frantz.mp3"
+   },
+   "40": {
+    "t": "Chapitre onze. Conversation sous la pluie.",
+    "d": 489,
+    "f": "40_Chapitre_onze_Conversation_sous_la_pluie.mp3"
+   },
+   "41": {
+    "t": "Chapitre douze. Le fardeau.",
+    "d": 639,
+    "f": "41_Chapitre_douze_Le_fardeau.mp3"
+   },
+   "42": {
+    "t": "Chapitre treize. Le cahier de devoirs Mensuels.",
+    "d": 249,
+    "f": "42_Chapitre_treize_Le_cahier_de_devoirs_Mensuels.mp3"
+   },
+   "43": {
+    "t": "Chapitre quatorze. Le secret.",
+    "d": 535,
+    "f": "43_Chapitre_quatorze_Le_secret.mp3"
+   },
+   "44": {
+    "t": "Chapitre quinze. Le secret (suite).",
+    "d": 557,
+    "f": "44_Chapitre_quinze_Le_secret_suite.mp3"
+   },
+   "45": {
+    "t": "Chapitre seize. Le secret (fin).",
+    "d": 372,
+    "f": "45_Chapitre_seize_Le_secret_fin.mp3"
+   },
+   "46": {
+    "t": "Épilogue.",
+    "d": 336,
+    "f": "46_Epilogue.mp3"
+   }
+  },
+  "termine": true,
+  "zip": "alain-fournier-le-grand-meaulnes.zip",
+  "total": 46
+ },
  "alexandre-dumas-le-comte-de-monte-cristo": {
   "tag": "ia-alexandre-dumas-le-comte-de-monte-cristo",
   "voix": "estelle",
@@ -1026,6 +1268,317 @@
   "termine": true,
   "zip": "alexandre-dumas-les-trois-mousquetaires.zip",
   "total": 68
+ },
+ "alfred-de-musset-lorenzaccio": {
+  "tag": "ia-alfred-de-musset-lorenzaccio",
+  "voix": "estelle",
+  "vitesse": 0.9,
+  "modele": "Pocket TTS (Kyutai), french_24l",
+  "page": "Lorenzaccio",
+  "chapitres": {
+   "1": {
+    "t": "Acte premier. Scène première.",
+    "d": 3040,
+    "f": "01_Acte_premier_Scene_premiere.mp3"
+   },
+   "2": {
+    "t": "Acte deuxième. Scène première.",
+    "d": 3093,
+    "f": "02_Acte_deuxieme_Scene_premiere.mp3"
+   },
+   "3": {
+    "t": "Acte troisième. Scène première.",
+    "d": 3582,
+    "f": "03_Acte_troisieme_Scene_premiere.mp3"
+   },
+   "4": {
+    "t": "Acte quatrième. Scène première.",
+    "d": 2422,
+    "f": "04_Acte_quatrieme_Scene_premiere.mp3"
+   },
+   "5": {
+    "t": "Chapitre 5",
+    "d": 86,
+    "f": "05_Chapitre_5.mp3"
+   },
+   "6": {
+    "t": "Traduction du livre quinze. Des chroniques florentines.",
+    "d": 732,
+    "f": "06_Traduction_du_livre_quinze_Des_chroniques_florentines.mp3"
+   }
+  },
+  "termine": true,
+  "zip": "alfred-de-musset-lorenzaccio.zip",
+  "total": 6
+ },
+ "andre-gide-la-symphonie-pastorale": {
+  "tag": "ia-andre-gide-la-symphonie-pastorale",
+  "voix": "estelle",
+  "vitesse": 0.9,
+  "modele": "Pocket TTS (Kyutai), french_24l",
+  "page": "La Symphonie pastorale",
+  "chapitres": {
+   "1": {
+    "t": "Premier cahier.",
+    "d": 3813,
+    "f": "01_Premier_cahier.mp3"
+   },
+   "2": {
+    "t": "Deuxième cahier.",
+    "d": 2054,
+    "f": "02_Deuxieme_cahier.mp3"
+   }
+  },
+  "termine": true,
+  "zip": "andre-gide-la-symphonie-pastorale.zip",
+  "total": 2
+ },
+ "arthur-rimbaud-poesies": {
+  "tag": "ia-arthur-rimbaud-poesies",
+  "voix": "estelle",
+  "vitesse": 0.9,
+  "modele": "Pocket TTS (Kyutai), french_24l",
+  "page": "Poésies (Rimbaud)/éd. Vanier, 1895",
+  "chapitres": {
+   "1": {
+    "t": "Chapitre 1",
+    "d": 810,
+    "f": "01_Chapitre_1.mp3"
+   },
+   "2": {
+    "t": "Les étrennes des Orphelins.",
+    "d": 288,
+    "f": "02_Les_etrennes_des_Orphelins.mp3"
+   },
+   "3": {
+    "t": "Voyelles.",
+    "d": 44,
+    "f": "03_Voyelles.mp3"
+   },
+   "4": {
+    "t": "Oraison du soir.",
+    "d": 40,
+    "f": "04_Oraison_du_soir.mp3"
+   },
+   "5": {
+    "t": "Les Assis.",
+    "d": 118,
+    "f": "05_Les_Assis.mp3"
+   },
+   "6": {
+    "t": "Les effarés.",
+    "d": 75,
+    "f": "06_Les_effares.mp3"
+   },
+   "7": {
+    "t": "Les chercheuses de poux.",
+    "d": 55,
+    "f": "07_Les_chercheuses_de_poux.mp3"
+   },
+   "8": {
+    "t": "Bateau ivre.",
+    "d": 260,
+    "f": "08_Bateau_ivre.mp3"
+   },
+   "9": {
+    "t": "Les premières communions.",
+    "d": 376,
+    "f": "09_Les_premieres_communions.mp3"
+   },
+   "10": {
+    "t": "L’orgie parisienne ou Paris se repeuple.",
+    "d": 205,
+    "f": "10_L_orgie_parisienne_ou_Paris_se_repeuple.mp3"
+   },
+   "11": {
+    "t": "Accroupissements.",
+    "d": 90,
+    "f": "11_Accroupissements.mp3"
+   },
+   "12": {
+    "t": "Les Pauvres à l’église.",
+    "d": 96,
+    "f": "12_Les_Pauvres_a_l_eglise.mp3"
+   },
+   "13": {
+    "t": "Ce qui retient nina.",
+    "d": 219,
+    "f": "13_Ce_qui_retient_nina.mp3"
+   },
+   "14": {
+    "t": "Vénus anadyomène.",
+    "d": 45,
+    "f": "14_Venus_anadyomene.mp3"
+   },
+   "15": {
+    "t": "Chapitre 15",
+    "d": 49,
+    "f": "15_Chapitre_15.mp3"
+   },
+   "16": {
+    "t": "Comédie en trois baisers.",
+    "d": 57,
+    "f": "16_Comedie_en_trois_baisers.mp3"
+   },
+   "17": {
+    "t": "Sensation.",
+    "d": 25,
+    "f": "17_Sensation.mp3"
+   },
+   "18": {
+    "t": "Bal des pendus.",
+    "d": 121,
+    "f": "18_Bal_des_pendus.mp3"
+   },
+   "19": {
+    "t": "Roman.",
+    "d": 100,
+    "f": "19_Roman.mp3"
+   },
+   "20": {
+    "t": "Rages de césars.",
+    "d": 40,
+    "f": "20_Rages_de_cesars.mp3"
+   },
+   "21": {
+    "t": "Le mal.",
+    "d": 40,
+    "f": "21_Le_mal.mp3"
+   },
+   "22": {
+    "t": "Ophélie.",
+    "d": 105,
+    "f": "22_Ophelie.mp3"
+   },
+   "23": {
+    "t": "Le châtiment de Tartufe.",
+    "d": 40,
+    "f": "23_Le_chatiment_de_Tartufe.mp3"
+   },
+   "24": {
+    "t": "À la musique.",
+    "d": 97,
+    "f": "24_A_la_musique.mp3"
+   },
+   "25": {
+    "t": "Le forgeron.",
+    "d": 472,
+    "f": "25_Le_forgeron.mp3"
+   },
+   "26": {
+    "t": "Soleil et chair.",
+    "d": 348,
+    "f": "26_Soleil_et_chair.mp3"
+   },
+   "27": {
+    "t": "Le dormeur du val.",
+    "d": 42,
+    "f": "27_Le_dormeur_du_val.mp3"
+   },
+   "28": {
+    "t": "Au Cabaret-Vert.",
+    "d": 44,
+    "f": "28_Au_Cabaret-Vert.mp3"
+   },
+   "29": {
+    "t": "La maline.",
+    "d": 40,
+    "f": "29_La_maline.mp3"
+   },
+   "30": {
+    "t": "L’éclatante victoire de sarrebruck.",
+    "d": 57,
+    "f": "30_L_eclatante_victoire_de_sarrebruck.mp3"
+   },
+   "31": {
+    "t": "Rêvé pour l’hiver.",
+    "d": 39,
+    "f": "31_Reve_pour_l_hiver.mp3"
+   },
+   "32": {
+    "t": "Le buffet.",
+    "d": 41,
+    "f": "32_Le_buffet.mp3"
+   },
+   "33": {
+    "t": "Ma bohême.",
+    "d": 44,
+    "f": "33_Ma_boheme.mp3"
+   },
+   "34": {
+    "t": "Entends comme brame.",
+    "d": 29,
+    "f": "34_Entends_comme_brame.mp3"
+   },
+   "35": {
+    "t": "Chant de guerre parisien.",
+    "d": 58,
+    "f": "35_Chant_de_guerre_parisien.mp3"
+   },
+   "36": {
+    "t": "Mes petites amoureuses.",
+    "d": 83,
+    "f": "36_Mes_petites_amoureuses.mp3"
+   },
+   "37": {
+    "t": "Les poètes de sept ans.",
+    "d": 174,
+    "f": "37_Les_poetes_de_sept_ans.mp3"
+   },
+   "38": {
+    "t": "Le cœur volé.",
+    "d": 44,
+    "f": "38_Le_coeur_vole.mp3"
+   },
+   "39": {
+    "t": "Tête de Faune.",
+    "d": 30,
+    "f": "39_Tete_de_Faune.mp3"
+   },
+   "40": {
+    "t": "Poison perdu.",
+    "d": 27,
+    "f": "40_Poison_perdu.mp3"
+   },
+   "41": {
+    "t": "Les corbeaux.",
+    "d": 47,
+    "f": "41_Les_corbeaux.mp3"
+   },
+   "42": {
+    "t": "Patience.",
+    "d": 55,
+    "f": "42_Patience.mp3"
+   },
+   "43": {
+    "t": "Jeune ménage.",
+    "d": 55,
+    "f": "43_Jeune_menage.mp3"
+   },
+   "44": {
+    "t": "Mémoire.",
+    "d": 125,
+    "f": "44_Memoire.mp3"
+   },
+   "45": {
+    "t": "Chapitre 45",
+    "d": 23,
+    "f": "45_Chapitre_45.mp3"
+   },
+   "46": {
+    "t": "Fêtes de la faim.",
+    "d": 46,
+    "f": "46_Fetes_de_la_faim.mp3"
+   },
+   "47": {
+    "t": "I flairy.",
+    "d": 422,
+    "f": "47_I_flairy.mp3"
+   }
+  },
+  "termine": true,
+  "zip": "arthur-rimbaud-poesies.zip",
+  "total": 47
  },
  "arthur-rimbaud-une-saison-en-enfer": {
   "tag": "ia-arthur-rimbaud-une-saison-en-enfer",
@@ -4293,6 +4846,163 @@
   "zip": "francois-villon-oeuvres-completes.zip",
   "total": 46
  },
+ "gaston-leroux-le-mystere-de-la-chambre-jaune": {
+  "tag": "ia-gaston-leroux-le-mystere-de-la-chambre-jaune",
+  "voix": "estelle",
+  "vitesse": 0.9,
+  "modele": "Pocket TTS (Kyutai), french_24l",
+  "page": "Le Mystère de la chambre jaune (Édition Lafitte 1910)",
+  "chapitres": {
+   "11": {
+    "t": "Onze. Où Frédéric Larsan explique comment l’assassin a pu sortir de la chambre Jaune.",
+    "d": 2374,
+    "f": "11_Onze_Ou_Frederic_Larsan_explique_comment_l_assassin_a_pu_sortir_de_la.mp3"
+   },
+   "12": {
+    "t": "Douze. La canne de Frédéric Larsan.",
+    "d": 565,
+    "f": "12_Douze_La_canne_de_Frederic_Larsan.mp3"
+   },
+   "13": {
+    "t": "Treize. « le presbytère n’a rien perdu de son charme ni le jardin de son éclat ».",
+    "d": 1306,
+    "f": "13_Treize_le_presbytere_n_a_rien_perdu_de_son_charme_ni_le_jardin_de_son.mp3"
+   },
+   "14": {
+    "t": "Quatorze. « j’attends l’assassin, ce soir ».",
+    "d": 724,
+    "f": "14_Quatorze_j_attends_l_assassin_ce_soir.mp3"
+   },
+   "15": {
+    "t": "Quinze. Traquenard.",
+    "d": 1208,
+    "f": "15_Quinze_Traquenard.mp3"
+   },
+   "16": {
+    "t": "Seize. Étrange phénomène de dissociation de la matière.",
+    "d": 316,
+    "f": "16_Seize_Etrange_phenomene_de_dissociation_de_la_matiere.mp3"
+   },
+   "17": {
+    "t": "Dix-sept. La galerie inexplicable.",
+    "d": 810,
+    "f": "17_Dix-sept_La_galerie_inexplicable.mp3"
+   },
+   "18": {
+    "t": "Dix-huit. Rouletabille a dessiné un cercle entre les deux bosses de son front.",
+    "d": 265,
+    "f": "18_Dix-huit_Rouletabille_a_dessine_un_cercle_entre_les_deux_bosses_de_son.mp3"
+   },
+   "19": {
+    "t": "Dix-neuf. Rouletabille m’offre à déjeuner à l’auberge du « donjon ».",
+    "d": 1403,
+    "f": "19_Dix-neuf_Rouletabille_m_offre_a_dejeuner_a_l_auberge_du_donjon.mp3"
+   },
+   "20": {
+    "t": "Vingt. Un geste de m Stangerson.",
+    "d": 505,
+    "f": "20_Vingt_Un_geste_de_m_Stangerson.mp3"
+   },
+   "21": {
+    "t": "Vingt et un. À l’affut.",
+    "d": 959,
+    "f": "21_Vingt_et_un_A_l_affut.mp3"
+   },
+   "22": {
+    "t": "Vingt-deux. Le cadavre incroyable.",
+    "d": 477,
+    "f": "22_Vingt-deux_Le_cadavre_incroyable.mp3"
+   },
+   "23": {
+    "t": "Vingt-trois. La double piste.",
+    "d": 493,
+    "f": "23_Vingt-trois_La_double_piste.mp3"
+   },
+   "24": {
+    "t": "Vingt-quatre. Rouletabille connait les deux moitiés de l’assassin.",
+    "d": 992,
+    "f": "24_Vingt-quatre_Rouletabille_connait_les_deux_moities_de_l_assassin.mp3"
+   },
+   "25": {
+    "t": "Vingt-cinq. Rouletabille part en voyage.",
+    "d": 100,
+    "f": "25_Vingt-cinq_Rouletabille_part_en_voyage.mp3"
+   },
+   "26": {
+    "t": "Vingt-six. Joseph Rouletabille est impatiemment attendu.",
+    "d": 749,
+    "f": "26_Vingt-six_Joseph_Rouletabille_est_impatiemment_attendu.mp3"
+   },
+   "27": {
+    "t": "Vingt-sept. Joseph Rouletabille apparaît dans toute sa gloire.",
+    "d": 3749,
+    "f": "27_Vingt-sept_Joseph_Rouletabille_apparait_dans_toute_sa_gloire.mp3"
+   },
+   "28": {
+    "t": "Vingt-huit. Où il est prouvé qu’on ne pense pas toujours à tout.",
+    "d": 580,
+    "f": "28_Vingt-huit_Ou_il_est_prouve_qu_on_ne_pense_pas_toujours_a_tout.mp3"
+   },
+   "29": {
+    "t": "Vingt-neuf. Le mystère de m Stangerson.",
+    "d": 676,
+    "f": "29_Vingt-neuf_Le_mystere_de_m_Stangerson.mp3"
+   },
+   "1": {
+    "t": "Premier. Où l’on commence à ne pas comprendre.",
+    "d": 963,
+    "f": "01_Premier_Ou_l_on_commence_a_ne_pas_comprendre.mp3"
+   },
+   "2": {
+    "t": "Deux. Où apparaît pour la première fois Joseph Rouletabille.",
+    "d": 676,
+    "f": "02_Deux_Ou_apparait_pour_la_premiere_fois_Joseph_Rouletabille.mp3"
+   },
+   "3": {
+    "t": "Trois. « un homme a passé comme une ombre à travers les volets ».",
+    "d": 1052,
+    "f": "03_Trois_un_homme_a_passe_comme_une_ombre_a_travers_les_volets.mp3"
+   },
+   "4": {
+    "t": "Quatre. « au sein d’une nature sauvage ».",
+    "d": 516,
+    "f": "04_Quatre_au_sein_d_une_nature_sauvage.mp3"
+   },
+   "5": {
+    "t": "Cinq. Où Joseph Rouletabille adresse à m. Robert Darzac une phrase qui produit son petit effet.",
+    "d": 507,
+    "f": "05_Cinq_Ou_Joseph_Rouletabille_adresse_a_m_Robert_Darzac_une_phrase_qui_p.mp3"
+   },
+   "6": {
+    "t": "Six. Au fond de la Chênaie.",
+    "d": 1308,
+    "f": "06_Six_Au_fond_de_la_Chenaie.mp3"
+   },
+   "7": {
+    "t": "Sept. Où Rouletabille part en expédition sous le lit.",
+    "d": 956,
+    "f": "07_Sept_Ou_Rouletabille_part_en_expedition_sous_le_lit.mp3"
+   },
+   "8": {
+    "t": "Huit. Le juge d’instruction interroge m Stangerson.",
+    "d": 702,
+    "f": "08_Huit_Le_juge_d_instruction_interroge_m_Stangerson.mp3"
+   },
+   "9": {
+    "t": "Neuf. Reporter et policier.",
+    "d": 899,
+    "f": "09_Neuf_Reporter_et_policier.mp3"
+   },
+   "10": {
+    "t": "Dix. « maintenant, il va falloir manger du saignant ».",
+    "d": 831,
+    "f": "10_Dix_maintenant_il_va_falloir_manger_du_saignant.mp3"
+   }
+  },
+  "termine": true,
+  "zip": "gaston-leroux-le-mystere-de-la-chambre-jaune.zip",
+  "total": 29
+ },
  "george-sand-la-mare-au-diable": {
   "tag": "ia-george-sand-la-mare-au-diable",
   "voix": "estelle",
@@ -4414,6 +5124,610 @@
   "termine": true,
   "zip": "george-sand-la-mare-au-diable.zip",
   "total": 22
+ },
+ "guillaume-apollinaire-alcools": {
+  "tag": "ia-guillaume-apollinaire-alcools",
+  "voix": "estelle",
+  "vitesse": 0.9,
+  "modele": "Pocket TTS (Kyutai), french_24l",
+  "page": "Alcools",
+  "chapitres": {
+   "1": {
+    "t": "Zone.",
+    "d": 479,
+    "f": "01_Zone.mp3"
+   },
+   "2": {
+    "t": "Le pont Mirabeau.",
+    "d": 34,
+    "f": "02_Le_pont_Mirabeau.mp3"
+   },
+   "3": {
+    "t": "La chanson du mal-aimé.",
+    "d": 319,
+    "f": "03_La_chanson_du_mal-aime.mp3"
+   },
+   "4": {
+    "t": "Les colchiques.",
+    "d": 22,
+    "f": "04_Les_colchiques.mp3"
+   },
+   "5": {
+    "t": "Palais.",
+    "d": 82,
+    "f": "05_Palais.mp3"
+   },
+   "6": {
+    "t": "Crépuscule.",
+    "d": 35,
+    "f": "06_Crepuscule.mp3"
+   },
+   "7": {
+    "t": "Annie.",
+    "d": 20,
+    "f": "07_Annie.mp3"
+   },
+   "8": {
+    "t": "La maison des morts.",
+    "d": 191,
+    "f": "08_La_maison_des_morts.mp3"
+   },
+   "9": {
+    "t": "Clotilde.",
+    "d": 17,
+    "f": "09_Clotilde.mp3"
+   },
+   "10": {
+    "t": "Cortège.",
+    "d": 142,
+    "f": "10_Cortege.mp3"
+   },
+   "11": {
+    "t": "Marizibill.",
+    "d": 19,
+    "f": "11_Marizibill.mp3"
+   },
+   "12": {
+    "t": "Le voyageur.",
+    "d": 103,
+    "f": "12_Le_voyageur.mp3"
+   },
+   "13": {
+    "t": "Marie.",
+    "d": 34,
+    "f": "13_Marie.mp3"
+   },
+   "14": {
+    "t": "La blanche neige.",
+    "d": 19,
+    "f": "14_La_blanche_neige.mp3"
+   },
+   "15": {
+    "t": "Poème lu au mariage d’André Salmon.",
+    "d": 154,
+    "f": "15_Poeme_lu_au_mariage_d_Andre_Salmon.mp3"
+   },
+   "16": {
+    "t": "Salomé.",
+    "d": 34,
+    "f": "16_Salome.mp3"
+   },
+   "17": {
+    "t": "La porte.",
+    "d": 19,
+    "f": "17_La_porte.mp3"
+   },
+   "18": {
+    "t": "Merlin et la vieille femme.",
+    "d": 109,
+    "f": "18_Merlin_et_la_vieille_femme.mp3"
+   },
+   "19": {
+    "t": "Saltimbanques.",
+    "d": 22,
+    "f": "19_Saltimbanques.mp3"
+   },
+   "20": {
+    "t": "Le larron.",
+    "d": 261,
+    "f": "20_Le_larron.mp3"
+   },
+   "21": {
+    "t": "Le vent nocturne.",
+    "d": 25,
+    "f": "21_Le_vent_nocturne.mp3"
+   },
+   "22": {
+    "t": "Lul de faltenin.",
+    "d": 53,
+    "f": "22_Lul_de_faltenin.mp3"
+   },
+   "23": {
+    "t": "La tzigane.",
+    "d": 19,
+    "f": "23_La_tzigane.mp3"
+   },
+   "24": {
+    "t": "L’ermite.",
+    "d": 196,
+    "f": "24_L_ermite.mp3"
+   },
+   "25": {
+    "t": "Automne.",
+    "d": 20,
+    "f": "25_Automne.mp3"
+   },
+   "26": {
+    "t": "L’émigrant de landor road.",
+    "d": 104,
+    "f": "26_L_emigrant_de_landor_road.mp3"
+   },
+   "27": {
+    "t": "Rosemonde.",
+    "d": 22,
+    "f": "27_Rosemonde.mp3"
+   },
+   "28": {
+    "t": "Le brasier.",
+    "d": 105,
+    "f": "28_Le_brasier.mp3"
+   },
+   "29": {
+    "t": "Rhénanes. Nuit rhénane.",
+    "d": 31,
+    "f": "29_Rhenanes_Nuit_rhenane.mp3"
+   },
+   "30": {
+    "t": "Mai.",
+    "d": 30,
+    "f": "30_Mai.mp3"
+   },
+   "31": {
+    "t": "La synagogue.",
+    "d": 64,
+    "f": "31_La_synagogue.mp3"
+   },
+   "32": {
+    "t": "Les cloches.",
+    "d": 24,
+    "f": "32_Les_cloches.mp3"
+   },
+   "33": {
+    "t": "La Loreley.",
+    "d": 69,
+    "f": "33_La_Loreley.mp3"
+   },
+   "34": {
+    "t": "Schinderhannes.",
+    "d": 45,
+    "f": "34_Schinderhannes.mp3"
+   },
+   "35": {
+    "t": "Rhénane d’automne.",
+    "d": 81,
+    "f": "35_Rhenane_d_automne.mp3"
+   },
+   "36": {
+    "t": "Les sapins.",
+    "d": 32,
+    "f": "36_Les_sapins.mp3"
+   },
+   "37": {
+    "t": "Les femmes.",
+    "d": 90,
+    "f": "37_Les_femmes.mp3"
+   },
+   "38": {
+    "t": "Signe.",
+    "d": 18,
+    "f": "38_Signe.mp3"
+   },
+   "39": {
+    "t": "Un soir.",
+    "d": 28,
+    "f": "39_Un_soir.mp3"
+   },
+   "40": {
+    "t": "Les fiançailles.",
+    "d": 170,
+    "f": "40_Les_fiancailles.mp3"
+   },
+   "41": {
+    "t": "Clair de lune.",
+    "d": 22,
+    "f": "41_Clair_de_lune.mp3"
+   },
+   "42": {
+    "t": "mille neuf cent neuf.",
+    "d": 37,
+    "f": "42_mille_neuf_cent_neuf.mp3"
+   },
+   "43": {
+    "t": "À la santé. Premier.",
+    "d": 88,
+    "f": "43_A_la_sante_Premier.mp3"
+   },
+   "44": {
+    "t": "Automne malade.",
+    "d": 25,
+    "f": "44_Automne_malade.mp3"
+   },
+   "45": {
+    "t": "Hôtels.",
+    "d": 25,
+    "f": "45_Hotels.mp3"
+   },
+   "46": {
+    "t": "Cors de chasse.",
+    "d": 20,
+    "f": "46_Cors_de_chasse.mp3"
+   },
+   "47": {
+    "t": "Vendémiaire.",
+    "d": 388,
+    "f": "47_Vendemiaire.mp3"
+   }
+  },
+  "termine": true,
+  "zip": "guillaume-apollinaire-alcools.zip",
+  "total": 47
+ },
+ "guillaume-apollinaire-calligrammes": {
+  "tag": "ia-guillaume-apollinaire-calligrammes",
+  "voix": "estelle",
+  "vitesse": 0.9,
+  "modele": "Pocket TTS (Kyutai), french_24l",
+  "page": "Calligrammes",
+  "chapitres": {
+   "1": {
+    "t": "Chapitre 1",
+    "d": 29,
+    "f": "01_Chapitre_1.mp3"
+   },
+   "2": {
+    "t": "Chapitre 2",
+    "d": 68,
+    "f": "02_Chapitre_2.mp3"
+   },
+   "3": {
+    "t": "Paysage.",
+    "d": 26,
+    "f": "03_Paysage.mp3"
+   },
+   "4": {
+    "t": "Chapitre 4",
+    "d": 362,
+    "f": "04_Chapitre_4.mp3"
+   },
+   "5": {
+    "t": "Arbre.",
+    "d": 107,
+    "f": "05_Arbre.mp3"
+   },
+   "6": {
+    "t": "Lundi rue christine.",
+    "d": 74,
+    "f": "06_Lundi_rue_christine.mp3"
+   },
+   "7": {
+    "t": "Chapitre 7",
+    "d": 80,
+    "f": "07_Chapitre_7.mp3"
+   },
+   "8": {
+    "t": "Chapitre 8",
+    "d": 203,
+    "f": "08_Chapitre_8.mp3"
+   },
+   "9": {
+    "t": "Chapitre 9",
+    "d": 29,
+    "f": "09_Chapitre_9.mp3"
+   },
+   "10": {
+    "t": "Chapitre 10",
+    "d": 190,
+    "f": "10_Chapitre_10.mp3"
+   },
+   "11": {
+    "t": "Chapitre 11",
+    "d": 33,
+    "f": "11_Chapitre_11.mp3"
+   },
+   "12": {
+    "t": "Chapitre 12",
+    "d": 71,
+    "f": "12_Chapitre_12.mp3"
+   },
+   "13": {
+    "t": "Chapitre 13",
+    "d": 30,
+    "f": "13_Chapitre_13.mp3"
+   },
+   "14": {
+    "t": "Chapitre 14",
+    "d": 80,
+    "f": "14_Chapitre_14.mp3"
+   },
+   "15": {
+    "t": "Chapitre 15",
+    "d": 20,
+    "f": "15_Chapitre_15.mp3"
+   },
+   "16": {
+    "t": "À Nîmes.",
+    "d": 56,
+    "f": "16_A_Nimes.mp3"
+   },
+   "17": {
+    "t": "Chapitre 17",
+    "d": 60,
+    "f": "17_Chapitre_17.mp3"
+   },
+   "18": {
+    "t": "Chapitre 18",
+    "d": 28,
+    "f": "18_Chapitre_18.mp3"
+   },
+   "19": {
+    "t": "Chapitre 19",
+    "d": 44,
+    "f": "19_Chapitre_19.mp3"
+   },
+   "20": {
+    "t": "Chapitre 20",
+    "d": 35,
+    "f": "20_Chapitre_20.mp3"
+   },
+   "21": {
+    "t": "Chapitre 21",
+    "d": 17,
+    "f": "21_Chapitre_21.mp3"
+   },
+   "22": {
+    "t": "Chapitre 22",
+    "d": 28,
+    "f": "22_Chapitre_22.mp3"
+   },
+   "23": {
+    "t": "Chapitre 23",
+    "d": 20,
+    "f": "23_Chapitre_23.mp3"
+   },
+   "24": {
+    "t": "Chapitre 24",
+    "d": 26,
+    "f": "24_Chapitre_24.mp3"
+   },
+   "25": {
+    "t": "Oracles.",
+    "d": 20,
+    "f": "25_Oracles.mp3"
+   },
+   "26": {
+    "t": "Chapitre 26",
+    "d": 20,
+    "f": "26_Chapitre_26.mp3"
+   },
+   "27": {
+    "t": "Chapitre 27",
+    "d": 25,
+    "f": "27_Chapitre_27.mp3"
+   },
+   "28": {
+    "t": "Chapitre 28",
+    "d": 33,
+    "f": "28_Chapitre_28.mp3"
+   },
+   "29": {
+    "t": "Chapitre 29",
+    "d": 20,
+    "f": "29_Chapitre_29.mp3"
+   },
+   "30": {
+    "t": "Chapitre 30",
+    "d": 67,
+    "f": "30_Chapitre_30.mp3"
+   },
+   "31": {
+    "t": "Chapitre 31",
+    "d": 32,
+    "f": "31_Chapitre_31.mp3"
+   },
+   "32": {
+    "t": "Chapitre 32",
+    "d": 35,
+    "f": "32_Chapitre_32.mp3"
+   },
+   "33": {
+    "t": "Chapitre 33",
+    "d": 39,
+    "f": "33_Chapitre_33.mp3"
+   },
+   "34": {
+    "t": "Chapitre 34",
+    "d": 50,
+    "f": "34_Chapitre_34.mp3"
+   },
+   "35": {
+    "t": "Chapitre 35",
+    "d": 15,
+    "f": "35_Chapitre_35.mp3"
+   },
+   "36": {
+    "t": "Chapitre 36",
+    "d": 19,
+    "f": "36_Chapitre_36.mp3"
+   },
+   "37": {
+    "t": "Chapitre 37",
+    "d": 14,
+    "f": "37_Chapitre_37.mp3"
+   },
+   "38": {
+    "t": "Chapitre 38",
+    "d": 15,
+    "f": "38_Chapitre_38.mp3"
+   },
+   "39": {
+    "t": "Chapitre 39",
+    "d": 17,
+    "f": "39_Chapitre_39.mp3"
+   },
+   "40": {
+    "t": "Chapitre 40",
+    "d": 15,
+    "f": "40_Chapitre_40.mp3"
+   },
+   "41": {
+    "t": "Chapitre 41",
+    "d": 17,
+    "f": "41_Chapitre_41.mp3"
+   },
+   "42": {
+    "t": "Chapitre 42",
+    "d": 204,
+    "f": "42_Chapitre_42.mp3"
+   },
+   "43": {
+    "t": "Chapitre 43",
+    "d": 19,
+    "f": "43_Chapitre_43.mp3"
+   },
+   "44": {
+    "t": "Chapitre 44",
+    "d": 49,
+    "f": "44_Chapitre_44.mp3"
+   },
+   "45": {
+    "t": "Chapitre 45",
+    "d": 93,
+    "f": "45_Chapitre_45.mp3"
+   },
+   "46": {
+    "t": "Chapitre 46",
+    "d": 62,
+    "f": "46_Chapitre_46.mp3"
+   },
+   "47": {
+    "t": "Chapitre 47",
+    "d": 66,
+    "f": "47_Chapitre_47.mp3"
+   },
+   "48": {
+    "t": "Chapitre 48",
+    "d": 112,
+    "f": "48_Chapitre_48.mp3"
+   },
+   "49": {
+    "t": "Chapitre 49",
+    "d": 45,
+    "f": "49_Chapitre_49.mp3"
+   },
+   "50": {
+    "t": "Merveille de la guerre.",
+    "d": 137,
+    "f": "50_Merveille_de_la_guerre.mp3"
+   },
+   "51": {
+    "t": "Chapitre 51",
+    "d": 18,
+    "f": "51_Chapitre_51.mp3"
+   },
+   "52": {
+    "t": "Chapitre 52",
+    "d": 282,
+    "f": "52_Chapitre_52.mp3"
+   },
+   "53": {
+    "t": "Chapitre 53",
+    "d": 15,
+    "f": "53_Chapitre_53.mp3"
+   },
+   "54": {
+    "t": "Chapitre 54",
+    "d": 119,
+    "f": "54_Chapitre_54.mp3"
+   },
+   "55": {
+    "t": "Chapitre 55",
+    "d": 22,
+    "f": "55_Chapitre_55.mp3"
+   },
+   "56": {
+    "t": "Chapitre 56",
+    "d": 48,
+    "f": "56_Chapitre_56.mp3"
+   },
+   "57": {
+    "t": "Chapitre 57",
+    "d": 31,
+    "f": "57_Chapitre_57.mp3"
+   },
+   "58": {
+    "t": "Chapitre 58",
+    "d": 38,
+    "f": "58_Chapitre_58.mp3"
+   },
+   "59": {
+    "t": "Chapitre 59",
+    "d": 135,
+    "f": "59_Chapitre_59.mp3"
+   },
+   "60": {
+    "t": "Chapitre 60",
+    "d": 49,
+    "f": "60_Chapitre_60.mp3"
+   },
+   "61": {
+    "t": "Chapitre 61",
+    "d": 20,
+    "f": "61_Chapitre_61.mp3"
+   },
+   "62": {
+    "t": "Chapitre 62",
+    "d": 18,
+    "f": "62_Chapitre_62.mp3"
+   },
+   "63": {
+    "t": "Chapitre 63",
+    "d": 31,
+    "f": "63_Chapitre_63.mp3"
+   },
+   "64": {
+    "t": "Chapitre 64",
+    "d": 75,
+    "f": "64_Chapitre_64.mp3"
+   },
+   "65": {
+    "t": "Chapitre 65",
+    "d": 143,
+    "f": "65_Chapitre_65.mp3"
+   },
+   "66": {
+    "t": "Chapitre 66",
+    "d": 46,
+    "f": "66_Chapitre_66.mp3"
+   },
+   "67": {
+    "t": "Chapitre 67",
+    "d": 20,
+    "f": "67_Chapitre_67.mp3"
+   },
+   "68": {
+    "t": "Chapitre 68",
+    "d": 161,
+    "f": "68_Chapitre_68.mp3"
+   },
+   "69": {
+    "t": "Chapitre 69",
+    "d": 103,
+    "f": "69_Chapitre_69.mp3"
+   }
+  },
+  "termine": true,
+  "zip": "guillaume-apollinaire-calligrammes.zip",
+  "total": 69
  },
  "gustave-flaubert-madame-bovary": {
   "tag": "ia-gustave-flaubert-madame-bovary",
@@ -7374,6 +8688,58 @@
   "zip": "jules-verne-vingt-mille-lieues-sous-les-mers.zip",
   "total": 47
  },
+ "louis-pergaud-la-guerre-des-boutons": {
+  "tag": "ia-louis-pergaud-la-guerre-des-boutons",
+  "voix": "estelle",
+  "vitesse": 0.9,
+  "modele": "Pocket TTS (Kyutai), french_24l",
+  "page": "La Guerre des boutons",
+  "chapitres": {
+   "1": {
+    "t": "Préface.",
+    "d": 110,
+    "f": "01_Preface.mp3"
+   },
+   "2": {
+    "t": "Chapitre premier. La déclaration de guerre.",
+    "d": 4028,
+    "f": "02_Chapitre_premier_La_declaration_de_guerre.mp3"
+   },
+   "3": {
+    "t": "Chapitre premier (suite un).",
+    "d": 3414,
+    "f": "03_Chapitre_premier_suite_un.mp3"
+   },
+   "4": {
+    "t": "Chapitre premier. Le trésor de guerre.",
+    "d": 3962,
+    "f": "04_Chapitre_premier_Le_tresor_de_guerre.mp3"
+   },
+   "5": {
+    "t": "Chapitre premier (suite un).",
+    "d": 2282,
+    "f": "05_Chapitre_premier_suite_un.mp3"
+   },
+   "6": {
+    "t": "Chapitre premier. La construction de la cabane.",
+    "d": 3955,
+    "f": "06_Chapitre_premier_La_construction_de_la_cabane.mp3"
+   },
+   "7": {
+    "t": "Chapitre premier (suite un).",
+    "d": 4047,
+    "f": "07_Chapitre_premier_suite_un.mp3"
+   },
+   "8": {
+    "t": "Chapitre premier (suite deux).",
+    "d": 786,
+    "f": "08_Chapitre_premier_suite_deux.mp3"
+   }
+  },
+  "termine": true,
+  "zip": "louis-pergaud-la-guerre-des-boutons.zip",
+  "total": 8
+ },
  "louise-labe-sonnets": {
   "tag": "ia-louise-labe-sonnets",
   "voix": "estelle",
@@ -7537,6 +8903,98 @@
   "termine": true,
   "zip": "madame-de-la-fayette-la-princesse-de-cleves.zip",
   "total": 4
+ },
+ "marcel-proust-du-cote-de-chez-swann": {
+  "tag": "ia-marcel-proust-du-cote-de-chez-swann",
+  "voix": "estelle",
+  "vitesse": 0.9,
+  "modele": "Pocket TTS (Kyutai), french_24l",
+  "page": "Du côté de chez Swann",
+  "chapitres": {
+   "1": {
+    "t": "Première partie. Combray. Premier.",
+    "d": 3512,
+    "f": "01_Premiere_partie_Combray_Premier.mp3"
+   },
+   "2": {
+    "t": "Première partie (suite un).",
+    "d": 3499,
+    "f": "02_Premiere_partie_suite_un.mp3"
+   },
+   "3": {
+    "t": "Première partie (suite deux).",
+    "d": 3518,
+    "f": "03_Premiere_partie_suite_deux.mp3"
+   },
+   "4": {
+    "t": "Première partie (suite trois).",
+    "d": 3510,
+    "f": "04_Premiere_partie_suite_trois.mp3"
+   },
+   "5": {
+    "t": "Première partie (suite quatre).",
+    "d": 3546,
+    "f": "05_Premiere_partie_suite_quatre.mp3"
+   },
+   "6": {
+    "t": "Première partie (suite cinq).",
+    "d": 3374,
+    "f": "06_Premiere_partie_suite_cinq.mp3"
+   },
+   "7": {
+    "t": "Première partie (suite six).",
+    "d": 419,
+    "f": "07_Premiere_partie_suite_six.mp3"
+   },
+   "8": {
+    "t": "Deuxième partie. Un amour de Swann.",
+    "d": 3594,
+    "f": "08_Deuxieme_partie_Un_amour_de_Swann.mp3"
+   },
+   "9": {
+    "t": "Deuxième partie (suite un).",
+    "d": 3408,
+    "f": "09_Deuxieme_partie_suite_un.mp3"
+   },
+   "10": {
+    "t": "Deuxième partie (suite deux).",
+    "d": 3519,
+    "f": "10_Deuxieme_partie_suite_deux.mp3"
+   },
+   "11": {
+    "t": "Deuxième partie (suite trois).",
+    "d": 3532,
+    "f": "11_Deuxieme_partie_suite_trois.mp3"
+   },
+   "12": {
+    "t": "Deuxième partie (suite quatre).",
+    "d": 3526,
+    "f": "12_Deuxieme_partie_suite_quatre.mp3"
+   },
+   "13": {
+    "t": "Deuxième partie (suite cinq).",
+    "d": 3468,
+    "f": "13_Deuxieme_partie_suite_cinq.mp3"
+   },
+   "14": {
+    "t": "Deuxième partie (suite six).",
+    "d": 1536,
+    "f": "14_Deuxieme_partie_suite_six.mp3"
+   },
+   "15": {
+    "t": "Troisième partie. Noms de pays: le nom.",
+    "d": 3473,
+    "f": "15_Troisieme_partie_Noms_de_pays_le_nom.mp3"
+   },
+   "16": {
+    "t": "Troisième partie (suite un).",
+    "d": 1695,
+    "f": "16_Troisieme_partie_suite_un.mp3"
+   }
+  },
+  "termine": true,
+  "zip": "marcel-proust-du-cote-de-chez-swann.zip",
+  "total": 16
  },
  "marguerite-de-navarre-l-heptameron": {
   "tag": "ia-marguerite-de-navarre-l-heptameron",
@@ -8204,6 +9662,73 @@
   "termine": true,
   "zip": "marguerite-de-navarre-l-heptameron.zip",
   "total": 131
+ },
+ "maurice-leblanc-arsene-lupin-gentleman-cambrioleur": {
+  "tag": "ia-maurice-leblanc-arsene-lupin-gentleman-cambrioleur",
+  "voix": "estelle",
+  "vitesse": 0.9,
+  "modele": "Pocket TTS (Kyutai), french_24l",
+  "page": "Arsène Lupin gentleman-cambrioleur",
+  "chapitres": {
+   "1": {
+    "t": "Chapitre 1",
+    "d": 22,
+    "f": "01_Chapitre_1.mp3"
+   },
+   "2": {
+    "t": "Préface.",
+    "d": 416,
+    "f": "02_Preface.mp3"
+   },
+   "3": {
+    "t": "L’arrestation d’Arsène Lupin.",
+    "d": 1556,
+    "f": "03_L_arrestation_d_Arsene_Lupin.mp3"
+   },
+   "4": {
+    "t": "Arsène Lupin en prison.",
+    "d": 2159,
+    "f": "04_Arsene_Lupin_en_prison.mp3"
+   },
+   "5": {
+    "t": "L’évasion d’Arsène Lupin.",
+    "d": 2322,
+    "f": "05_L_evasion_d_Arsene_Lupin.mp3"
+   },
+   "6": {
+    "t": "Le mystérieux voyageur.",
+    "d": 1820,
+    "f": "06_Le_mysterieux_voyageur.mp3"
+   },
+   "7": {
+    "t": "Le collier de la reine.",
+    "d": 1836,
+    "f": "07_Le_collier_de_la_reine.mp3"
+   },
+   "8": {
+    "t": "Le sept de cœur.",
+    "d": 3711,
+    "f": "08_Le_sept_de_coeur.mp3"
+   },
+   "9": {
+    "t": "Le coffre-fort de madame Imbert.",
+    "d": 1276,
+    "f": "09_Le_coffre-fort_de_madame_Imbert.mp3"
+   },
+   "10": {
+    "t": "La perle noire.",
+    "d": 1576,
+    "f": "10_La_perle_noire.mp3"
+   },
+   "11": {
+    "t": "Herlock Sholmès arrive trop tard.",
+    "d": 2786,
+    "f": "11_Herlock_Sholmes_arrive_trop_tard.mp3"
+   }
+  },
+  "termine": true,
+  "zip": "maurice-leblanc-arsene-lupin-gentleman-cambrioleur.zip",
+  "total": 11
  },
  "michel-de-montaigne-essais-livre-i": {
   "tag": "ia-michel-de-montaigne-essais-livre-i",
@@ -9825,6 +11350,33 @@
   "termine": true,
   "zip": "pierre-de-ronsard-sonnets-pour-helene-livre-1.zip",
   "total": 65
+ },
+ "raymond-radiguet-le-diable-au-corps": {
+  "tag": "ia-raymond-radiguet-le-diable-au-corps",
+  "voix": "estelle",
+  "vitesse": 0.9,
+  "modele": "Pocket TTS (Kyutai), french_24l",
+  "page": "Le Diable au corps",
+  "chapitres": {
+   "1": {
+    "t": "Chapitre 1",
+    "d": 3801,
+    "f": "01_Chapitre_1.mp3"
+   },
+   "2": {
+    "t": "Chapitre 2",
+    "d": 3744,
+    "f": "02_Chapitre_2.mp3"
+   },
+   "3": {
+    "t": "Chapitre 3",
+    "d": 1916,
+    "f": "03_Chapitre_3.mp3"
+   }
+  },
+  "termine": true,
+  "zip": "raymond-radiguet-le-diable-au-corps.zip",
+  "total": 3
  },
  "stendhal-la-chartreuse-de-parme": {
   "tag": "ia-stendhal-la-chartreuse-de-parme",
